@@ -71,8 +71,6 @@ const CustomDrawer = (props) => {
 
     var currentRouteIndex = props.navigation.getState().index
 
-
-
     return (
         <View style={{ flex: 1, backgroundColor: "#01e0c5", }}>
             <View style={{ flex: 1, justifyContent: "space-around" }}>
