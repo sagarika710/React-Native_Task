@@ -83,7 +83,11 @@ export default function Screen3() {
                         infoDoctorData.map((list, index) => {
                             return (
 
-                                <View View style={styles.cardInnerContainer} key={index}>
+                                <TouchableOpacity onPress={() => {
+                                    navigation.navigate("profile", {
+
+                                    })
+                                }} View style={styles.cardInnerContainer} key={index}>
                                     <View style={styles.cardImageContainer}>
                                         {list.isonline ? <View style={styles.cardOnlineLabel} /> : null}
                                         <Image source={list.image} style={{ borderRadius: 50, height: 100, width: 100 }} resizeMode={"contain"} />
@@ -99,7 +103,7 @@ export default function Screen3() {
                                         <Text>{list.reviews}</Text>
 
                                     </View>
-                                </View>
+                                </TouchableOpacity>
 
                             );
                         })

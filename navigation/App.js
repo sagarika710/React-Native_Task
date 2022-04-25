@@ -8,6 +8,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import BottomNavigator from './src/navigator/BottomNavigator';
 const Stack = createNativeStackNavigator();
 
+// 
+import Profile from './src/screens/Profile';
+
 function App() {
   return (
 
@@ -16,6 +19,11 @@ function App() {
         <Stack.Screen
           name="BottonNavigator"
           component={BottomNavigator}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="profile"
+          component={Profile}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

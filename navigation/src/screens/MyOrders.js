@@ -7,4 +7,4 @@ export default function MyOrders() {
             <Text>MyOrders</Text>
         </View>
     )
-}
+} 

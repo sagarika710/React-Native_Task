@@ -10,11 +10,6 @@ import Ionicicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 //import screen
-//import HomeScreen from '../screens/HomeScreen';
-//import Screen2 from '../screens/Screen2';
-//import Screen3 from '../screens/Screen3';
-// import Profile from '../screens/Profile';
-// import Settings from '../screens/Settings';
 
 import Home from '../screens/Home'
 import Clinics from '../screens/Clinics';
