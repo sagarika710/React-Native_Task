@@ -69,17 +69,7 @@ const CustomDrawer = (props) => {
         },
     ]
 
-
-    // const [currentRouteIndex, setCurrentRouteIndex] = useState(0);
     var currentRouteIndex = props.navigation.getState().index
-
-    // useEffect(() => {
-
-    //     setCurrentRouteIndex(props.navigation.getState().index)
-    //     return () => {
-
-    //     }
-    // }, [props.navigation.getState()])
 
 
 
