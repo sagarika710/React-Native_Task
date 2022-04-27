@@ -91,40 +91,39 @@ export default function Clinics() {
             </View>
             {/* search bar view end */}
             {/*  */}
-            <ScrollView>
-                <View>
-                    {/* start flat list*/}
-                    <FlatList
-                        numColumns={2}
-                        data={infoDoctorData}
-                        renderItem={({ item }) => {
-                            return (
-                                <View style={styles.clinicImage}>
-                                    <Image style={styles.imageView}
-                                        source={item.image}
-                                        resizeMode={"cover"} />
-                                    <View style={styles.clinicButton}>
-                                        <TouchableOpacity onPress={() => {
-                                            navigation.navigate("Patholabs", {
+            <View>
+                {/* start flat list*/}
+                <FlatList
+                    numColumns={2}
+                    data={infoDoctorData}
+                    renderItem={({ item }) => {
+                        return (
+                            <View style={styles.clinicImage}>
+                                <Image style={styles.imageView}
+                                    source={item.image}
+                                    resizeMode={"cover"} />
+                                <View style={styles.clinicButton}>
+                                    <TouchableOpacity onPress={() => {
+                                        navigation.navigate("Patholabs", {
 
-                                            })
-                                        }}>
-                                            <Text style={styles.clinicName}>{item.clinicname}</Text>
-                                            <View style={{ flexDirection: "row" }}>
-                                                <Ionicons name="location-outline" size={15} color="#979797" />
-                                                <Text style={{ fontSize: 8, marginLeft: 3, color: "#979797" }}>{item.address}</Text>
-                                            </View>
-                                        </TouchableOpacity>
-                                    </View>
-
+                                        })
+                                    }}>
+                                        <Text style={styles.clinicName}>{item.clinicname}</Text>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Ionicons name="location-outline" size={15} color="#979797" />
+                                            <Text style={{ fontSize: 8, marginLeft: 3, color: "#979797" }}>{item.address}</Text>
+                                        </View>
+                                    </TouchableOpacity>
                                 </View>
 
-                            )
-                        }}
-                    />
-                    {/* end */}
-                </View>
-            </ScrollView>
+                            </View>
+
+                        )
+                    }}
+                />
+                {/* end */}
+            </View>
+
 
         </View >
         // end here
