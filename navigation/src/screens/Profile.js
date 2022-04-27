@@ -122,7 +122,11 @@ export default function Profile() {
 
                         </TouchableOpacity>
                     </View>
-
+                    <View style={{ marginVertical: 20 }}>
+                        <TouchableOpacity style={{ backgroundColor: "#00E0C5", padding: 15, justifyContent: "center", alignItems: "center", borderRadius: 40 }}>
+                            <Text style={{ color: "#ffff" }}>Take A Appointment</Text>
+                        </TouchableOpacity>
+                    </View>
 
                 </View>
 
