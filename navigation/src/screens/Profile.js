@@ -76,9 +76,13 @@ export default function Profile() {
                 {/* AboutDoctor */}
                 <View style={{ marginTop: 15, paddingHorizontal: 10 }}>
                     <Text style={{ fontSize: 18, fontFamily: "Mulish", letterSpacing: 0.3 }}>About Doctor</Text>
-                    <Text>
-                        Dr. Kate Rose is a top specialist at Delhi AIIMS Hospital. She has achieved several awards and recognition for is contribution and service in her own field. She is available for private consultation.
-                    </Text>
+                    <View style={{ marginTop: 10 }}>
+
+                        <Text style={{ fontSize: 12, lineHeight: 15, letterSpacing: .3 }}>
+                            Dr. Kate Rose is a top specialist at Delhi AIIMS Hospital. She has achieved several awards and recognition for is contribution and service in her own field. She is available for private consultation.
+                        </Text>
+                    </View>
+
                 </View>
                 <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
                     <Text style={{ fontSize: 18, fontFamily: "Mulish" }}>Work Time</Text>
