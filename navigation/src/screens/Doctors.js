@@ -17,7 +17,7 @@ export default function Screen3() {
                 "specialist": "Viralogist",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/doctorimage1.jpg")
+                "image": require("../assests/1.png")
             },
             {
                 "title": "Dr Mensah T",
@@ -25,7 +25,7 @@ export default function Screen3() {
                 "specialist": "Oncologists",
                 "rating": "4.3",
                 "reviews": "(130 reviews)",
-                "image": require("../assests/doctorimage2.jpg")
+                "image": require("../assests/2.png")
             },
             {
                 "title": "Dr Klimisch j",
@@ -33,7 +33,7 @@ export default function Screen3() {
                 "specialist": "Surgon",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/doctorimage3.jpg")
+                "image": require("../assests/3.png")
             },
             {
                 "title": "Dr Martinez K",
@@ -41,7 +41,7 @@ export default function Screen3() {
                 "specialist": "Pediatrician",
                 "rating": "4.3",
                 "reviews": "(130 reviews)",
-                "image": require("../assests/doctorimage4.jpg")
+                "image": require("../assests/4.png")
             },
             {
                 "title": "Dr.Marc M",
@@ -49,7 +49,7 @@ export default function Screen3() {
                 "specialist": "Rheumatologists",
                 "rating": "4.3",
                 "reviews": "(130 reviews)",
-                "image": require("../assests/doctorimage5.jpg")
+                "image": require("../assests/5.png")
             },
             {
                 "title": "Dr.O'Boyle J",
@@ -57,7 +57,7 @@ export default function Screen3() {
                 "specialist": "Radiologists",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/doctorimage6.jpg")
+                "image": require("../assests/6.png")
             }
 
         ]
@@ -73,8 +73,8 @@ export default function Screen3() {
             </View>
             <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginHorizontal: 10 }}>
 
-                <FontAwesome5Icons name="map-pin" size={15} color="blue" />
-                <Text style={{ color: "blue", marginLeft: 3 }}>Patia ,Bhubaneswar</Text>
+                <FontAwesome5Icons name="map-pin" size={15} color="#009987" />
+                <Text style={{ color: "#009987", marginLeft: 3 }}>Patia ,Bhubaneswar</Text>
 
             </View>
             {/* start try map */}
@@ -95,10 +95,10 @@ export default function Screen3() {
                                     </View>
 
                                     <Text>{list.title}</Text>
-                                    <Text>{list.rating}</Text>
+                                    <Text>{list.specialist}</Text>
                                     <View style={{ flexDirection: "row" }}>
                                         <Text>
-                                            <FontAwesome5Icons name='star' />
+                                            <FontAwesome5Icons name='star' color={"gold"} />
                                             {list.rating}
                                         </Text>
                                         <Text>{list.reviews}</Text>
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     },
     cardOnlineLabel:
     {
-        height: 15, width: 15, backgroundColor: "green", borderRadius: 50,
+        height: 15, width: 15, backgroundColor: "#009987", borderRadius: 50,
         position: "absolute",
         top: 8, right: 5,
         zIndex: 1
