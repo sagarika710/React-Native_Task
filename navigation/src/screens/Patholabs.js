@@ -28,18 +28,26 @@ const Patholabs = () => {
                     source={require("../assests/clinic2.png")}
                     resizeMode={"cover"} />
             </View>
-            <View style={{ marginTop: 20, marginLeft: 10, }}>
-                <Text style={{ fontSize: 18, fontWeight: "800", fontFamily: "Mulish", letterSpacing: 1, color: "#009987", textTransform: "capitalize" }}>Homopathetic Clinic</Text>
-                <View style={{ marginTop: 10 }}>
-                    <Text style={{ fontSize: 10, fontFamily: "Mulish" }}>Nandan Bihar , Patia, Bhubaneswar,</Text>
-                    <Text style={{ fontSize: 10, fontFamily: "Mulish" }}>Pincode:751024</Text>
-                    <View style={{ flexDirection: "row" }}>
-                        <Text style={{ fontSize: 10 }}>
-                            <FontAwesomeIcon name='star' size={10} color={"gold"} />4.5
-                        </Text>
-                        <Text style={{ fontSize: 10 }}>(135 reviews)</Text>
+            <View style={{ marginTop: 20, marginLeft: 10, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                <View>
+                    <Text style={{ fontSize: 18, fontWeight: "800", fontFamily: "Mulish", letterSpacing: 1, color: "#009987", textTransform: "capitalize" }}>Homopathetic Clinic</Text>
+                    <View style={{ marginTop: 10 }}>
+                        <Text style={{ fontSize: 10, fontFamily: "Mulish" }}>Nandan Bihar , Patia, Bhubaneswar,</Text>
+                        <Text style={{ fontSize: 10, fontFamily: "Mulish" }}>Pincode:751024</Text>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ fontSize: 10 }}>
+                                <FontAwesomeIcon name='star' size={10} color={"gold"} />4.5
+                            </Text>
+                            <Text style={{ fontSize: 10 }}>(135 reviews)</Text>
 
+                        </View>
                     </View>
+                </View>
+                <View style={{}}>
+                    <FontAwesomeIcon name="diamond-turn-right" />
+                    <Text style={{
+                        fontSize: 8, color: "#009987"
+                    }}>Get Direction</Text>
                 </View>
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
@@ -60,15 +68,22 @@ const Patholabs = () => {
             </View>
             <View>
                 <ScrollView showsHorizontalScrollIndicator={false} style={styles.cardContainer} horizontal={true}>
-                    <TouchableOpacity onPress={() => {
-                        navigation.navigate("Doctors", {
+                    <View
 
-                        })
-                    }} >
+                    >
                         <View style={styles.CardContainer}>
-                            <View style={styles.innerCardContainer}>
+                            <TouchableOpacity
+                                onPress={() => {
+                                    navigation.navigate("Doctors", {
+
+                                    })
+                                }}
+                                style={styles.innerCardContainer}>
                                 <View style={styles.detailsCardContainer}>
-                                    <Image source={require('../assests/image2.png')} resizeMode={"stretch"} />
+                                    <Image source={require('../assests/image2.png')}
+                                        style={styles.DoctorCardImage}
+
+                                    />
                                 </View>
                                 <Text style={{ fontSize: 10 }}>Dr Kate Rose</Text>
                                 <Text style={{ fontSize: 10 }}>pediatrician</Text>
@@ -80,11 +95,18 @@ const Patholabs = () => {
                                     <FontAwesomeIcon name="star" color="gold" />
 
                                 </View>
-                            </View>
+                            </TouchableOpacity>
                             {/*  */}
-                            <View style={styles.innerCardContainer}>
+                            <TouchableOpacity onPress={() => {
+                                navigation.navigate("Doctors", {
+
+                                })
+                            }} style={styles.innerCardContainer}>
                                 <View style={styles.detailsCardContainer}>
-                                    <Image source={require('../assests/image3.png')} resizeMode={"stretch"} />
+                                    <Image source={require('../assests/image3.png')}
+
+                                        style={styles.DoctorCardImage}
+                                    />
                                 </View>
                                 <Text style={{ fontSize: 10 }}>Dr Kate Rose</Text>
                                 <Text style={{ fontSize: 10 }}>pediatrician</Text>
@@ -96,10 +118,16 @@ const Patholabs = () => {
                                     <FontAwesomeIcon name="star" color="gold" />
 
                                 </View>
-                            </View>
-                            <View style={styles.innerCardContainer}>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => {
+                                navigation.navigate("Doctors", {
+
+                                })
+                            }} style={styles.innerCardContainer}>
                                 <View style={styles.detailsCardContainer}>
-                                    <Image source={require('../assests/image2.png')} resizeMode={"stretch"} />
+                                    <Image source={require('../assests/image2.png')}
+                                        style={styles.DoctorCardImage}
+                                    />
                                 </View>
                                 <Text style={{ fontSize: 10 }}>Dr Kate Rose</Text>
                                 <Text style={{ fontSize: 10 }}>pediatrician</Text>
@@ -111,11 +139,11 @@ const Patholabs = () => {
                                     <FontAwesomeIcon name="star" color="gold" />
 
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
 
                         </View>
-                    </TouchableOpacity>
+                    </View>
                     {/* end */}
 
                 </ScrollView>
@@ -140,6 +168,7 @@ const styles = StyleSheet.create({
         // backgroundColor: "lightblue",
         justifyContent: "center",
         alignItems: "center",
+        marginBottom: 30
 
 
 
@@ -159,20 +188,35 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "white",
-        paddingVertical: 10,
+        paddingVertical: 15,
+        paddingHorizontal: 15,
         marginHorizontal: 10,
         marginVertical: 5,
         borderRadius: 20,
+        //
+        // 
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.20,
+        shadowRadius: 1.41,
+        elevation: 2,
 
     },
     detailsCardContainer: {
         backgroundColor: "#009987",
-        height: 120, width: 120,
+        height: 120,
+        width: "100%",
         justifyContent: "flex-end",
         alignItems: "center",
-        borderRadius: 20,
+        borderRadius: 10,
         //borderBottomLeftRadius: 20,
-        paddingVertical: 5
+
     },
+    DoctorCardImage: {
+        height: 120
+    }
 
 })

@@ -69,7 +69,10 @@ const CustomDrawer = (props) => {
         },
     ]
 
-    var currentRouteIndex = props.navigation.getState().index
+    // var currentRouteIndex = props.navigation.getState().index
+
+    const [currentRouteIndex, setCurrentRouteIndex] = useState(0);
+
 
     return (
         <View style={{ flex: 1, backgroundColor: "#01e0c5", }}>
@@ -93,7 +96,10 @@ const CustomDrawer = (props) => {
                                     }} />}
 
                                 activeBackgroundColor={"white"}
-                                onPress={() => props.navigation.navigate(item.routeName)}
+                                onPress={() => {
+                                    setCurrentRouteIndex(index);
+                                    props.navigation.navigate(item.routeName);
+                                }}
                                 focused={currentRouteIndex == index ? true : false}
                                 labelStyle={{ fontWeight: "bold", color: currentRouteIndex == index ? "#01e0c5" : "white" }}
 
@@ -145,8 +151,8 @@ const BottomNavigator = () => {
             />
             <Drawer.Screen name="Doctors" component={Doctors}
             />
-            <Drawer.Screen name="Patholabs" component={Patholabs}
-            />
+            {/* <Drawer.Screen name="Patholabs" component={Patholabs}
+            /> */}
             <Drawer.Screen name="Clinics" component={Clinics}
             />
             <Drawer.Screen name="ReferAndEarns" component={ReferAndEarns}

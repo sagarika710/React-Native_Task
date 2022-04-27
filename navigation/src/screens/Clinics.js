@@ -91,7 +91,7 @@ export default function Clinics() {
             </View>
             {/* search bar view end */}
             {/*  */}
-            <View>
+            <View style={{ flex: 1 }}>
                 {/* start flat list*/}
                 <FlatList
                     numColumns={2}
@@ -105,7 +105,6 @@ export default function Clinics() {
                                 <View style={styles.clinicButton}>
                                     <TouchableOpacity onPress={() => {
                                         navigation.navigate("Patholabs", {
-
                                         })
                                     }}>
                                         <Text style={styles.clinicName}>{item.clinicname}</Text>
@@ -152,14 +151,15 @@ const styles = StyleSheet.create({
         marginHorizontal: 3,
         height: 150,
         position: "relative",
-        marginBottom: 5
+        marginVertical: 7
     },
     imageView:
     {
         width: "100%",
         height: "100%",
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10
+        borderRadius: 10
+        // borderTopLeftRadius: 10,
+        // borderTopRightRadius: 10
 
     },
     clinicButton: {
@@ -171,8 +171,9 @@ const styles = StyleSheet.create({
         width: "100%",
         borderTopStartRadius: 10,
         borderTopEndRadius: 10,
-        borderBottomLeftRadius: 1,
-        borderBottomRightRadius: 1
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+
 
     },
     clinicName:
