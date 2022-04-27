@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     },
     clinicImage: {
         flex: 1,
-        marginHorizontal: 10,
+        marginHorizontal: 3,
         height: 150,
         position: "relative",
         marginBottom: 5

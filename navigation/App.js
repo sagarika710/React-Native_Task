@@ -11,6 +11,7 @@ const Stack = createNativeStackNavigator();
 // 
 import Profile from './src/screens/Profile';
 import Patholabs from './src/screens/Patholabs';
+import Doctors from './src/screens/Doctors'
 function App() {
   return (
 
@@ -26,6 +27,12 @@ function App() {
           component={Patholabs}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Doctors"
+          component={Doctors}
+          options={{ headerShown: false }}
+        />
+
         <Stack.Screen
           name="profile"
           component={Profile}
