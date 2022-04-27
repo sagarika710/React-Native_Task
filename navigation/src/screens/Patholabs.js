@@ -65,42 +65,56 @@ const Patholabs = () => {
 
                         })
                     }} >
-                        <View style={{ marginBottom: 20 }} >
-                            {/* start */}
-
-                            <View style={{ flex: 1, marginHorizontal: 10, marginVertical: 10 }}>
-                                <Image style={{
-                                    width: "90%", height: 100, borderTopLeftRadius: 10, borderTopRightRadius: 10, backgroundColor: "#009987"
-
-                                }}
-                                    source={require("../assests/image2.png")}
-                                    resizeMode={"contain"} />
-                                <View style={{ paddingHorizontal: 25 }}>
-                                    <View style={{ flexDirection: "row", }}>
-                                        <View style={{ width: "100%", }}>
-                                            <Text style={{ fontSize: 10, fontWeight: "bold", fontFamily: "Roboto", letterSpacing: 2 }}>Dr. Kote Rose</Text>
-
-                                            <Text style={{ fontSize: 10 }}>Cardiologist</Text>
-
-                                            <View style={{ flex: 1, flexDirection: "row" }}>
-                                                <FontAwesomeIcon color={"gold"} size={20} name="star" />
-                                                <FontAwesomeIcon color={"gold"} size={20} name="star" />
-                                                <FontAwesomeIcon color={"gold"} size={20} name="star" />
-                                                <FontAwesomeIcon color={"gold"} size={20} name="star" />
-                                                <FontAwesomeIcon color={"gold"} size={20} name="star" />
-                                            </View>
-                                        </View>
-
-
-
-                                    </View>
+                        <View style={styles.CardContainer}>
+                            <View style={styles.innerCardContainer}>
+                                <View style={styles.detailsCardContainer}>
+                                    <Image source={require('../assests/image2.png')} resizeMode={"stretch"} />
                                 </View>
+                                <Text style={{ fontSize: 10 }}>Dr Kate Rose</Text>
+                                <Text style={{ fontSize: 10 }}>pediatrician</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
 
+                                </View>
                             </View>
-                            <View />
+                            {/*  */}
+                            <View style={styles.innerCardContainer}>
+                                <View style={styles.detailsCardContainer}>
+                                    <Image source={require('../assests/image3.png')} resizeMode={"stretch"} />
+                                </View>
+                                <Text style={{ fontSize: 10 }}>Dr Kate Rose</Text>
+                                <Text style={{ fontSize: 10 }}>pediatrician</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+
+                                </View>
+                            </View>
+                            <View style={styles.innerCardContainer}>
+                                <View style={styles.detailsCardContainer}>
+                                    <Image source={require('../assests/image2.png')} resizeMode={"stretch"} />
+                                </View>
+                                <Text style={{ fontSize: 10 }}>Dr Kate Rose</Text>
+                                <Text style={{ fontSize: 10 }}>pediatrician</Text>
+                                <View style={{ flexDirection: "row" }}>
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+                                    <FontAwesomeIcon name="star" color="gold" />
+
+                                </View>
+                            </View>
+
 
                         </View>
-
                     </TouchableOpacity>
                     {/* end */}
 
@@ -116,4 +130,49 @@ const Patholabs = () => {
 
 export default Patholabs
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+    CardContainer: {
+        flexDirection: "row",
+        backgroundColor: "#F4F4F5",
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        // backgroundColor: "lightblue",
+        justifyContent: "center",
+        alignItems: "center",
+
+
+
+    },
+    CardContainer: {
+        flexDirection: "row",
+        backgroundColor: "#F4F4F5",
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5,
+        // backgroundColor: "lightblue",
+        justifyContent: "center",
+        alignItems: "center",
+
+    },
+    innerCardContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "white",
+        paddingVertical: 10,
+        marginHorizontal: 10,
+        marginVertical: 5,
+        borderRadius: 20,
+
+    },
+    detailsCardContainer: {
+        backgroundColor: "#009987",
+        height: 120, width: 120,
+        justifyContent: "flex-end",
+        alignItems: "center",
+        borderRadius: 20,
+        //borderBottomLeftRadius: 20,
+        paddingVertical: 5
+    },
+
+})
