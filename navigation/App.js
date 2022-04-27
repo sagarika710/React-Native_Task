@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 
 // 
 import Profile from './src/screens/Profile';
-
+import Patholabs from './src/screens/Patholabs';
 function App() {
   return (
 
@@ -19,6 +19,11 @@ function App() {
         <Stack.Screen
           name="BottonNavigator"
           component={BottomNavigator}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Patholabs"
+          component={Patholabs}
           options={{ headerShown: false }}
         />
         <Stack.Screen

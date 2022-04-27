@@ -2,6 +2,7 @@ import { View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity
 import React from 'react'
 import FontAwesome5Icons from 'react-native-vector-icons/FontAwesome5'
 import { useNavigation } from "@react-navigation/native"
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const { height, width } = Dimensions.get("screen");
 export default function Screen3() {
@@ -63,10 +64,10 @@ export default function Screen3() {
     return (
         <View style={styles.doctorContainer}>
             <View style={{ marginVertical: 5, flexDirection: "row", alignItems: "center", marginHorizontal: 10 }}>
-                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "grey", }} onPress={() => {
+                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "white", }} onPress={() => {
                     navigation.goBack()
                 }} >
-                    <FontAwesome5Icons name="caret-left" color={"white"} size={20} />
+                    <Ionicons name="chevron-back-outline" color={"gray"} size={20} />
                 </TouchableOpacity>
                 <Text style={{ fontWeight: "bold", marginLeft: 8 }}>Doctors</Text>
             </View>

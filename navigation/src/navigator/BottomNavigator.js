@@ -75,7 +75,7 @@ const CustomDrawer = (props) => {
         <View style={{ flex: 1, backgroundColor: "#01e0c5", }}>
             <View style={{ flex: 1, justifyContent: "space-around" }}>
                 <View style={{ height: 80, alignItems: "flex-end", justifyContent: "center" }}>
-                    <Text>Sagarika Mohanty</Text>
+                    <Text style={{ color: "white" }}>Deepti Padhy</Text>
                 </View>
 
                 <DrawerContentScrollView >
@@ -118,20 +118,21 @@ const CustomDrawer = (props) => {
 }
 const BottomNavigator = () => {
     return (
-        <Drawer.Navigator screenOptions={{
-            headerStyle:
-            {
-                backgroundColor: "#009387",
-            },
-            headeTintColor: "fff",
-            headerTitleStyle:
-            {
-                fontWeight: "bold"
-            },
-            headerTitle: "",
-            //drawerPosition: "right"
-
-        }}
+        <Drawer.Navigator
+            screenOptions={{
+                //     // headerStyle:
+                //     // {
+                //     //     backgroundColor: "white",
+                //     // },
+                //     // headeTintColor: "fff",
+                //     // headerTitleStyle:
+                //     // {
+                //     //     fontWeight: "bold"
+                //     // },
+                //     // headerTitle: "",
+                //     // //drawerPosition: "right"
+                headerShown: false
+            }}
             drawerContent={(props) => <CustomDrawer {...props} />}
         >
             {/* <Drawer.Screen name="Home" component={Home}
