@@ -1,96 +1,232 @@
 import React from 'react';
-import {
-  View,
-  TextInput,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import {View, Image, Text, StyleSheet} from 'react-native';
 
 const Screen = ({navigation}) => {
-    return (
-      <View style={styles.container}>
-          <Text style={styles.Heading}>
-              Please enter your MRN Number
-          </Text>
-          <TextInput style={styles.input} placeholder={'Enter MRN Number'}></TextInput>
-          <Text style={styles.Or}>OR</Text>
-          <View style={styles.div}>
-          <Text style={styles.txt}>Please upload images of your prescription</Text>
-          <View style={styles.div1}>
-          <Text style={styles.txt1}>Upload Prescription</Text>
-          </View>
-          </View>
-          <TouchableOpacity style={styles.btn}>
-             <Text style={styles.btn1} onPress= {() => navigation.navigate('Screen1')}>Get your Medicines</Text>
-          </TouchableOpacity>
+  return (
+    <View style={styles.container}>
+
+      <Image style={styles.img} source={require('../assets/mediimg.png')} />
+      <View style={styles.v1}>
+        <View style={styles.r1}>
+          <Text style={styles.txt}>Apollo Medicine Store</Text>
+        </View>
+        <View style={styles.r2}>
+          <Image style={styles.img1} source={require('../assets/Vector.png')} />
+          <Text style={styles.txt2} onPress= {() => navigation.navigate('Screen1')}>Get Direction</Text>
+        </View>
       </View>
-    );
-  };
-  
-  const styles = StyleSheet.create({
-    btn: {
-        marginLeft: 10,
-        marginTop: 350,
-        borderWidth: 1,
-        paddingHorizontal: 115,
-        paddingVertical: 10,
-        marginLeft: 20,
-        width: 370,
-      borderRadius: 20,
-      backgroundColor: '#37a987',
-      borderColor: '#37a987',
+      <View style={styles.txt1}>
+        <Text style={styles.add}>Nandan Vihar,Patia, Bhubaneswar,</Text>
+        <Text style={styles.add}>Pincode-751024</Text>
+        <Text style={styles.star}>⭐️ 4.5 (135 reviews)</Text>
+      </View>
+      <Text style={styles.shop}>Shop By Category</Text>
+      <View  style={styles.Row1}>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/soap.png')} />
+        <View style={styles.Text}>
+        <Text style={styles.text}>    Covid</Text>
+        <Text style={styles.text}>Essentials</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/babycare.png')} />
+        <View style={styles.Text1}>
+        <Text style={styles.text1}>Baby & Mom</Text>
+        <Text style={styles.text1}>       Care</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/horlicks.png')} />
+        <View style={styles.Text2}>
+        <Text style={styles.text2}>Healthy Food &</Text>
+        <Text style={styles.text2}>      Drinks</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/sensodyne.png')} />
+        <View style={styles.Text3}>
+        <Text style={styles.text3}>Personal Care</Text>
+        </View>        
+        </View>
+      </View>
+      <View  style={styles.Row2}>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/soap.png')} />
+        <View style={styles.Text}>
+        <Text style={styles.text}>    Covid</Text>
+        <Text style={styles.text}>Essentials</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/babycare.png')} />
+        <View style={styles.Text1}>
+        <Text style={styles.text1}>Baby & Mom</Text>
+        <Text style={styles.text1}>       Care</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/horlicks.png')} />
+        <View style={styles.Text2}>
+        <Text style={styles.text2}>Healthy Food &</Text>
+        <Text style={styles.text2}>      Drinks</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/sensodyne.png')} />
+        <View style={styles.Text3}>
+        <Text style={styles.text3}>Personal Care</Text>
+        </View>        
+        </View>
+      </View>
+      <View  style={styles.Row3}>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/soap.png')} />
+        <View style={styles.Text}>
+        <Text style={styles.text}>    Covid</Text>
+        <Text style={styles.text}>Essentials</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/babycare.png')} />
+        <View style={styles.Text1}>
+        <Text style={styles.text1}>Baby & Mom</Text>
+        <Text style={styles.text1}>       Care</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/horlicks.png')} />
+        <View style={styles.Text2}>
+        <Text style={styles.text2}>Healthy Food &</Text>
+        <Text style={styles.text2}>      Drinks</Text>
+        </View>        
+        </View>
+        <View style={styles.Box}>
+        <Image style={styles.img2} source={require('../assets/sensodyne.png')} />
+        <View style={styles.Text3}>
+        <Text style={styles.text3}>Personal Care</Text>
+        </View>        
+        </View>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+
+  container: {
+    backgroundColor: 'white',
+  },
+  Row1: {
+   flexDirection: 'row',
+  },
+  Row2: {
+    flexDirection: 'row',
+   },
+   Row3: {
+    flexDirection: 'row',
+    marginBottom: 50,
+   },
+  img2: {
+   marginLeft: 12,
+   marginTop: 15,
+  },
+  text: {
+    fontSize: 7,
+    marginLeft: 20,
+    color: 'black',
+  },
+  text1: {
+    fontSize: 7,
+    marginLeft: 20,
+    color: 'black',
+  },
+  text2: {
+    fontSize: 7,
+    marginLeft: 20,
+    color: 'black',
+  },
+  text3: {
+    fontSize: 7,
+    marginLeft: 20,
+    color: 'black',
+  },
+  Text: {
+   marginTop: 10,
+  },
+  Text1: {
+    marginTop: 18,
+   },
+   Text2: {
+    marginTop: 22,
+   },
+   Text3: {
+    marginTop: 13,
+   },
+
+  Box: {
+    borderColor:  '#E1E1E1',
+    borderWidth: 1,
+    width: 90,
+    marginTop: 5,
+    marginLeft: 10,
+    height: 120,
+    borderRadius: 10,
+    backgroundColor: 'white',
+  },
+    star: {
+        marginTop: 10,
     },
-    btn1: {
-        color: 'white',
-       },
-    Heading: {
-        marginLeft: 20,
-        marginTop: 80,
+    add: {
+        fontSize: 11,
         color: 'black',
-      fontSize: 13,
     },
-    Or: {
-       marginVertical: 30,
-       marginLeft: 200,
-       color: 'black',
-    },
-    input: {
-        borderWidth: 1,
-        borderRadius: 10,
-        width: 375,
-        marginLeft: 20,
-        marginTop: 20,
-        paddingLeft: 8,
-        height: 40,
-        fontSize: 12,
-        borderColor: '#E1E1E1',
-    },
-  div: {
-      borderWidth: 1,
-      width: 375,
-      marginLeft: 20,
-      height: 130,
-      borderColor: '#E1E1E1',
-      borderRadius: 10,
+  shop: {
+    marginLeft: 15,
+    marginTop: 20,
+    paddingBottom: 15,
+    fontSize: 17,
+    color: 'black',
+  },
+  img1: {
+    padding: 5,
+    marginTop: 30,
+    marginLeft: 140,
+  },
+  txt2: {
+    color: '#009987',
+    fontSize: 10,
+    fontWeight: 'bold',
+    // paddingTop: 20,
+    // paddingBottom: 2,
+    marginLeft: 110,
+  },
+  r2: {
+    justifyContent: 'space-evenly',
+  },
+  v1: {
+    flexDirection: 'row',
+  },
+  img: {
+    marginLeft: 15,
+    marginTop: 50,
+    flexDirection: 'row',
+    borderRadius: 5,
+    width: 385,
   },
   txt: {
-      marginVertical: 22,
-      color: 'black',
-      fontSize: 13,
-      marginLeft: 20,
+    color: '#009987',
+    fontSize: 18,
+    fontWeight: 'bold',
+    paddingTop: 20,
+    // paddingBottom: 2,
+    marginLeft: 15,
   },
-  txt1:{
-     borderWidth: 1,
-     borderColor: 'cyan',
-     width: 340,
-     marginLeft: 15,
-     paddingVertical: 6,
-     borderRadius: 10,
-     paddingHorizontal: 100,
-     color: '#37a987',
-  }
-  })
+  txt1: {
+    marginTop: 5,
+    color: 'black',
+    marginLeft: 17,
+  },
+});
 
-  export default Screen;
-  
+export default Screen;

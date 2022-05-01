@@ -1,256 +1,178 @@
-import React from 'react';
-import {
-  View,
-  TextInput,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import React from "react";
+import {View,TextInput,Image,Text,TouchableOpacity,StyleSheet} from 'react-native'
+// import LinearGradient from 'react-native-linear-gradient';
 
 
-const Screen1 = ({navigation}) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.head}>Orders</Text>
-
-      <View style={styles.div}>
-        <Text style={styles.Order}>Order detailes</Text>
-        <View style={styles.Row}>
-          <Text style={styles.txt1}>Montec LC 500MG</Text>
-          <Text style={styles.txt2}>x 2</Text>
-          <Text style={styles.txt3}>₹ 40.00</Text>
-        </View>
-        <View style={styles.Row}>
-          <Text style={styles.txt4}>Paracetamol</Text>
-          <Text style={styles.txt5}>x 10</Text>
-          <Text style={styles.txt6}>₹ 100.00</Text>
-        </View>
-        <View style={styles.Row}>
-          <Text style={styles.txt4}>Dolo-650</Text>
-          <Text style={styles.txt7}>x 5</Text>
-          <Text style={styles.txt8}>₹ 540.00</Text>
-        </View>
-        <View style={styles.Row}>
-          <Text style={styles.txt4}>Glucose-D</Text>
-          <Text style={styles.txt9}>x 4</Text>
-          <Text style={styles.txt10}>₹ 450.00</Text>
-        </View>
-        <View style={styles.line}></View>
-        <View><Text style={styles.payment}>Payment Summary</Text></View>
-        <View style={styles.div1}>
-        <View style={styles.Row1}>
-          <Text style={styles.last1}>Total MRP</Text>
-          <Text style={styles.last2}>₹1240.00</Text>
-        </View>
-        <View style={styles.Row1}>
-          <Text style={styles.last3}>Total Discount</Text>
-          <Text style={styles.last4}>₹240.00</Text>
-        </View>
-        <View style={styles.Row1}>
-          <Text style={styles.last5}>GST</Text>
-          <Text style={styles.last6}>₹40.00</Text>
-        </View>
-        <View style={styles.Row1}>
-          <Text style={styles.last7}>Shipping Fee</Text>
-          <Text style={styles.last8}>Free</Text>
-        </View>
-        </View>
-        <View style={styles.line}></View>
-        <View style={styles.Row1}>
-          <Text style={styles.last9}>Grand Total</Text>
-          <Text style={styles.last10}>₹1040.00</Text>
-        </View>
+const Screen1  = ({navigation}) => {
+    return (
+      <View style={styles.container}>
+               <View style={styles.div1}>
+        <Text style={styles.Heading}>Medicines</Text>
       </View>
-      <View><Text style={styles.time}>Deliver By 26 Feb 2022 | 10.00 PM</Text></View>
-      <View style={styles.add}>
-            <Text style={styles.add1}>Add New Address</Text> 
-            </View>
-            <TouchableOpacity style={styles.btn}>
-             <Text style={styles.btn1} onPress= {() => navigation.navigate('Screen2')}>Proceed to Pay</Text>
+          <View style={styles.search}>
+               <TextInput placeholder="Search Medicine & Health Product"></TextInput>
+          <Image style={styles.img1} source={require('../assets/search.png')}/>
+          </View>
+          <View style={styles.row1}>
+             <View style={styles.box1}>
+          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+          <View style={styles.txt1}>
+          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
+          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+
+          <TouchableOpacity style={styles.btn}>
+             <Text style={styles.btn1}>Buy Now</Text>
           </TouchableOpacity>
-    </View>
-  );
+   
+          </View>
+             </View>
+             <View style={styles.box2}>
+          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+          <View style={styles.txt1}>
+          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
+          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+          <TouchableOpacity style={styles.btn}>
+             <Text style={styles.btn1}>Buy Now</Text>
+          </TouchableOpacity>
+          </View>
+             </View>
+          </View> 
+          <View style={styles.row1}>
+             <View style={styles.box1}>
+          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+          <View style={styles.txt1}>
+          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
+          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+          <TouchableOpacity style={styles.btn}>
+             <Text style={styles.btn1}>Buy Now</Text>
+          </TouchableOpacity>
+          </View>
+             </View>
+             <View style={styles.box2}>
+          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+          <View style={styles.txt1}>
+          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
+          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+          <TouchableOpacity style={styles.btn}>
+             <Text style={styles.btn1}>Buy Now</Text>
+          </TouchableOpacity>
+          </View>
+             </View>
+          </View> 
+          <View style={styles.row1}>
+             <View style={styles.box1}>
+          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+          <View style={styles.txt1}>
+          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.des}>₹ 80.00 100 <Text style={styles.clr}> 10% off</Text></Text>
+          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+          <TouchableOpacity style={styles.btn}>
+             <Text style={styles.btn1}>Buy Now</Text>
+          </TouchableOpacity>
+          </View>
+             </View>
+             <View style={styles.box2}>
+          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+          <View style={styles.txt1}>
+          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
+          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+          <TouchableOpacity style={styles.btn}>
+             <Text style={styles.btn1} onPress= {() => navigation.navigate('Screen2')}>Buy Now</Text>
+          </TouchableOpacity>
+          </View>
+             </View>
+          </View> 
+      </View>
+    )
 };
 
 const styles = StyleSheet.create({
+   Heading: {
+      marginTop: 20,
+      color: 'black',
+      marginLeft: 80,
+     },
+   clr: {
+      color:  '#009987',
+   },
+   container: {
+      backgroundColor: 'white',
+      height: 1100,
+   },
+   med: {
+      color: 'black',
+      fontSize: 13,
+   },
+   des: {
+      color: 'black',
+      fontSize: 10,
+   },
+   img2: {
+        marginLeft: 35,
+        marginTop: 18,
+   },
+    btn: {
+        paddingHorizontal: 16,
+        paddingVertical: 3,
+        borderRadius: 20,
+        backgroundColor: '#009987',
+        marginRight: 15,
+        marginTop: 10,
+    },
     btn1: {
+     fontSize: 11,
+     marginLeft: 29,
      color: 'white',
     },
-    time: {
-        marginLeft: 22,
-        marginTop: 16,
-    color: 'black',
-    fontSize: 12,
-    },
-    btn: {
-        marginLeft: 10,
-        marginTop: 80,
+    box1: {
         borderWidth: 1,
-        paddingHorizontal: 125,
-        paddingVertical: 10,
-        marginLeft: 20,
-        width: 370,
-      borderRadius: 20,
-      backgroundColor: '#37a987',
-      borderColor: '#37a987',
+    borderColor: '#E1E1E1',
+    borderRadius: 15,
+    width: 170,
+    height: 186,
+    marginLeft: 27,
     },
-    add1: {
-        fontSize: 10,
+    box2: {
+      borderWidth: 1,
+  borderColor: '#E1E1E1',
+  borderRadius: 15,
+  width: 170,
+  height: 186,
+  marginLeft: 12,
+  },
+    row1: {
+        marginTop: 20,
+        flexDirection: 'row',
+    },
+    row2: {
+      marginTop: 20,
+      flexDirection: 'row',
+  },
+    txt1: {
+        marginTop: 7,
+        marginLeft: 15,
+    },
+    search: {
+        flexDirection: 'row',
+        borderWidth: 1,
+        borderColor: '#EFF3FA',
+        borderRadius: 15,
+        width: 365,
         marginLeft: 22,
         marginTop: 20,
-        borderWidth: 1,
-         width: 366,
-         paddingHorizontal: 138,
-         paddingVertical: 8,
-         borderRadius: 5,
-       color: '#009987',
-       borderColor: '#37a987',
-       },
-    last1: {
-        marginLeft: 16,
-        marginTop: 16,
-        fontSize: 12,
-      },
-      last3: {
-        marginLeft: 16,
-        marginTop: 8,
-        fontSize: 12,
-      },
-      last5: {
-        marginLeft: 16,
-        marginTop: 8,
-        fontSize: 12,
-      },
-      last7: {
-        marginLeft: 16,
-        marginTop: 8,
-        fontSize: 12,
-      },
-      last2: {
-        marginLeft: 210,
-        marginTop: 16,
-        fontSize: 12,
-      },
-      last4: {
-        marginLeft: 187,
-        marginTop: 8,
-        fontSize: 12,
-      },
-      last6: {
-        marginLeft: 248,
-        marginTop: 8,
-        fontSize: 12,
-      },
-      last8: {
-        marginLeft: 197,
-        color: '#009987',
-        marginTop: 8,
-        fontSize: 14,
-      },
-      last9: {
-        marginLeft: 18,
-        marginTop: 15,
-        fontSize: 12,
-      },
-      last10: {
-        marginLeft: 197,
-        marginTop: 15,
-        fontSize: 12,
-      },
-
-    payment: {
-        marginLeft: 17,
-        marginTop: 12,
-    color: 'black',
+        backgroundColor: '#EFF3FA',
+        paddingLeft: 10,
     },
-    Row1: {
-    flexDirection: 'row',
+    img1: {
+        height: 22,
+        marginTop: 14,
+        marginLeft: 85,
     },
-    container: {
-        backgroundColor: 'white',
-    },
-    line: {
-        borderBottomWidth: 1.5,
-        borderBottomColor: '#E1E1E1',
-        width: 340,
-        marginLeft: 12,
-        marginTop: 30,
-    },
-  txt1: {
-    marginLeft: 16,
-    marginTop: 16,
-    fontSize: 12,
-  },
-  txt2: {
-    marginLeft: 25,
-    marginTop: 16,
-    fontSize: 12,
-  },
-  txt3: {
-    marginLeft: 120,
-    marginTop: 16,
-    fontSize: 12,
-  },
-  txt4: {
-    marginLeft: 16,
-    marginTop: 8,
-    fontSize: 12,
-  },
-  txt5: {
-    marginLeft: 60,
-    marginTop: 8,
-    fontSize: 12,
-  },
-  txt6: {
-    marginLeft: 113,
-    marginTop: 8,
-    fontSize: 12,
-  },
-  txt7: {
-    marginLeft: 82,
-    marginTop: 8,
-    fontSize: 12,
-  },
-  txt8: {
-    marginLeft: 120,
-    marginTop: 8,
-    fontSize: 12,
-  },
-  txt9: {
-    marginLeft: 76,
-    marginTop: 8,
-    fontSize: 12,
-  },
-  txt10: {
-    marginLeft: 120,
-    marginTop: 8,
-    fontSize: 12,
-  },
-  head: {
-    color: 'black',
-    marginLeft: 60,
-    marginTop: 56,
-    fontSize: 17,
-  },
-  Order: {
-    color: 'black',
-    borderBottomWidth: 1.5,
-    borderBottomColor: '#E1E1E1',
-    width: 340,
-    marginLeft: 10,
-    padding: 12,
-  },
-  Row: {
-    flexDirection: 'row',
-  },
-  div: {
-    borderWidth: 2,
-    height: 430,
-    width: 370,
-    marginLeft: 20,
-    marginTop: 50,
-    borderColor: '#E1E1E1',
-    borderRadius: 10,
-  },
 });
+
 export default Screen1;
