@@ -43,12 +43,12 @@ const Patholabs = () => {
                         </View>
                     </View>
                 </View>
-                <View style={{}}>
-                    <FontAwesomeIcon name="diamond-turn-right" />
+                {/* <View style={{}}>
+
                     <Text style={{
                         fontSize: 8, color: "#009987"
                     }}>Get Direction</Text>
-                </View>
+                </View> */}
             </View>
             <View style={{ marginTop: 20, paddingHorizontal: 10 }}>
                 <View style={{ marginBottom: 10 }}>
