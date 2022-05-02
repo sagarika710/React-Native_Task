@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         marginVertical: 10,
-        marginLeft: 15
+        marginLeft: 10
     },
     paymentInnerText:
     {
