@@ -91,9 +91,19 @@ export default function Screen3() {
                     {/* map end */}
                     {/* coupn start */}
                     <View style={styles.textInputContainer1}>
+                        < TouchableOpacity onPress={() => {
+                            navigation.navigate("CoupnsField", {
 
-                        <Text style={styles.couponText}>Use coupons
-                        </Text>
+                            })
+                        }}>
+
+                            <View>
+                                <Text style={styles.couponText}>Use coupons
+                                </Text>
+
+                            </View>
+                        </TouchableOpacity>
+
                         <Text style={[styles.couponText, { color: "#009987" }]}>
                             Apply
                         </Text>

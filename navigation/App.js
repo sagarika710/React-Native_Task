@@ -10,6 +10,7 @@ const Stack = createNativeStackNavigator();
 
 // 
 import Profile from './src/screens/Profile';
+import CoupnsField from './src/screens/CoupnsField';
 import Patholabs from './src/screens/Patholabs';
 import Doctors from './src/screens/Doctors'
 function App() {
@@ -38,6 +39,12 @@ function App() {
           component={Profile}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="CoupnsField"
+          component={CoupnsField}
+          options={{ headerShown: false }}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
