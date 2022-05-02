@@ -30,10 +30,11 @@ export default function Screen3() {
 
             </View>
             {/* search bar view end */}
-            <View>
-                <Text style={styles.couponText1}>Available Coupons</Text>
-            </View>
             < ScrollView>
+                <View>
+                    <Text style={styles.couponText1}>Available Coupons</Text>
+                </View>
+
                 <View style={styles.couponOrderInnerContainer}>
                     <View>
                         <Text style={{
