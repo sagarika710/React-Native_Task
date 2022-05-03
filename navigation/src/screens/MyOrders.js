@@ -13,27 +13,46 @@ export default function Screen3() {
         [
             {
                 "mediciname": "MontecLC500MG",
-                "total": "x2",
+                "medicinquantity": "x2",
                 "price": "₹ 40.00",
             },
             {
                 "mediciname": "Paracetomal",
-                "total": "x10",
+                "medicinquantity": "x10",
                 "price": "₹100.00",
             },
             {
                 "mediciname": "Dolo-650",
-                "total": "x5",
+                "medicinquantity": "x5",
                 "price": "₹540.00",
             },
             {
                 "mediciname": "Glucose-D",
-                "total": "x4",
+                "medicinquantity": "x4",
                 "price": "₹450.00",
             },
 
         ]
+    const MedicinPriceData =
+        [
+            {
+                "bouns": "TotalMRP",
+                "price": "₹1240.00",
+            },
+            {
+                "bouns": "TotalDiscount",
+                "price": "₹240.00",
+            },
+            {
+                "bouns": "GST",
+                "price": "₹40.00",
+            },
+            {
+                "bouns": "ShippingFee",
+                "price": "Free",
+            },
 
+        ]
 
     return (
         <View style={styles.orderContainer}>
@@ -54,7 +73,7 @@ export default function Screen3() {
 
                     <View style={styles.textInputContainer}>
                         <Text style={{
-                            fontSize: 12, fontFamily: "Mulish", lineHeight: 15.06, letterSpacing: 0.2, textTransform: "capitalize", color: "#222222", marginLeft: 8
+                            fontSize: 12, fontFamily: "Mulish", lineHeight: 15.06, letterSpacing: 0.2, textTransform: "capitalize", color: "#222222", marginLeft: 4
                         }}>Order detailes</Text>
                         <TextInput style={styles.textInput
                         }
@@ -66,14 +85,14 @@ export default function Screen3() {
                         {
                             MedicinOrderData.map((list, index) => {
                                 return (
-                                    <View style={styles.textInputField}>
-                                        <Text style={styles.textField}>{list.mediciname}</Text>
-                                        <View>
-                                            <Text style={styles.textField}>{list.total}</Text>
+                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                                        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 5, marginLeft: 4 }}>
+                                            <Text style={styles.textField}>{list.mediciname}</Text>
+                                            <Text style={styles.textField}>{list.medicinquantity}</Text>
 
-                                        </View >
-                                        <Text style={styles.textField}></Text>
-                                        <View>
+                                        </View>
+
+                                        <View style={{ marginLeft: 60, marginRight: 10, justifyContent: "flex-start" }}>
                                             <Text style={styles.textField}>{list.price}</Text>
                                         </View>
 
@@ -97,7 +116,7 @@ export default function Screen3() {
                             })
                         }}>
 
-                            <View>
+                            <View style={{ marginLeft: -5 }}>
                                 <Text style={styles.couponText}>Use coupons
                                 </Text>
 
@@ -117,29 +136,34 @@ export default function Screen3() {
 
                     </View>
                     {/* coupn end */}
-                    <View style={{ marginTop: -40, marginLeft: 10, marginBottom: 10 }}>
+                    <View style={{ marginTop: -40, marginBottom: 10, marginLeft: 4 }}>
                         <Text style={styles.paymentInnerText}>Payment Summary</Text>
 
                     </View>
-                    <View style={{ flex: 1 }}>
-                        <View style={styles.paymentText}>
-                            <Text style={styles.couponText}>Total MRP</Text>
-                            <Text style={styles.couponText}>₹ 1240.00 </Text>
-                        </View>
-                        <View style={styles.paymentText}>
-                            <Text style={styles.couponText}>Total Discount</Text>
-                            <Text style={styles.couponText}>₹ 240.00 </Text>
-                        </View>
+                    {/* map start */}
+                    <View>
+                        {
+                            MedicinPriceData.map((list, index) => {
+                                return (
+                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                                        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 7, marginLeft: 4 }}>
+                                            <Text style={styles.textField}>{list.bouns}</Text>
+                                        </View>
 
-                        <View style={styles.paymentText}>
-                            <Text style={styles.couponText}> GST</Text>
-                            <Text style={styles.couponText}>₹ 40.00 </Text>
-                        </View>
+                                        <View style={{ marginLeft: 40, marginRight: 10 }}>
+                                            <Text style={styles.textField}>{list.price}</Text>
+                                        </View>
 
-                        <View style={styles.paymentText}>
-                            <Text style={styles.couponText}>Shipping Fee</Text>
-                            <Text style={[styles.couponText,]}>Free</Text>
-                        </View>
+                                    </View>
+
+
+
+                                );
+                            })
+                        }
+
+
+
                     </View>
                     <View style={[styles.textInputContainer, { marginTop: -40 }]}>
                         <TextInput style={styles.textInput
@@ -274,11 +298,12 @@ const styles = StyleSheet.create({
 
     textInputField:
     {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginVertical: 10,
-        marginHorizontal: 15,
+        flex: 1
+        // flexDirection: "row",
+        // justifyContent: "space-between",
+        // alignItems: "center",
+        // marginVertical: 10,
+        // marginHorizontal: 15,
 
     },
     textField:
