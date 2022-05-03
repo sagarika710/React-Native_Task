@@ -84,9 +84,9 @@ export default function Screen3() {
                     </View>
 
                     <View style={{ marginLeft: 10 }}>
-                        <Unorderedlist bulletUnicode={0x2022} color='red' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Applicable only on select medicine store.</Text></Unorderedlist>
-                        <Unorderedlist bulletUnicode={0x2022} color='red' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Applicable maximum 3 times in a day.</Text></Unorderedlist>
-                        <Unorderedlist bulletUnicode={0x2022} color='red' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Other T&Cs may apply.</Text></Unorderedlist>
+                        <Unorderedlist bulletUnicode={0x2022} color='#00E0C5' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Applicable only on select medicine store.</Text></Unorderedlist>
+                        <Unorderedlist bulletUnicode={0x2022} color='#00E0C5' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Applicable maximum 3 times in a day.</Text></Unorderedlist>
+                        <Unorderedlist bulletUnicode={0x2022} color='#00E0C5' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Other T&Cs may apply.</Text></Unorderedlist>
                     </View>
 
                 </View>
