@@ -12,24 +12,24 @@ export default function Screen3() {
     const MedicinOrderData =
         [
             {
-                "mediciname": "Montec LC 500MG",
-                "total": "x 2",
+                "mediciname": "MontecLC500MG",
+                "total": "x2",
                 "price": "₹ 40.00",
             },
             {
                 "mediciname": "Paracetomal",
-                "total": "x 10",
-                "price": "₹ 100.00",
+                "total": "x10",
+                "price": "₹100.00",
             },
             {
                 "mediciname": "Dolo-650",
-                "total": "x 5",
-                "price": "₹ 540.00",
+                "total": "x5",
+                "price": "₹540.00",
             },
             {
                 "mediciname": "Glucose-D",
-                "total": "x 4",
-                "price": "₹ 450.00",
+                "total": "x4",
+                "price": "₹450.00",
             },
 
         ]
@@ -291,7 +291,9 @@ const styles = StyleSheet.create({
     },
     couponText:
     {
-        fontSize: 12, fontFamily: "Mulish", lineHeight: 15.06, letterSpacing: 0.2, color: "#222222", marginLeft: 8
+        fontSize: 12, fontFamily: "Mulish", lineHeight: 15.06,
+        letterSpacing: 0.2, marginLeft: 8,
+        fontWeight: "bold"
     },
     paymentText:
     {

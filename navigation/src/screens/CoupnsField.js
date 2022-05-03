@@ -3,7 +3,7 @@ import React from 'react'
 import FontAwesome5Icons from 'react-native-vector-icons/FontAwesome5'
 import { useNavigation } from "@react-navigation/native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
+import Unorderedlist from 'react-native-unordered-list';
 const { height, width } = Dimensions.get("screen");
 export default function Screen3() {
 
@@ -55,50 +55,12 @@ export default function Screen3() {
                         </TouchableOpacity>
                         <Text style={{ color: "#009987" }}>Applied</Text>
                     </View>
-                    <View style={{ marginVertical: 10, marginHorizontal: 5 }}>
-                        <View >
-
-                            <Text style={{ fontSize: 12 }} >
-                                <Image style={{
-                                    height: 7, width: 7, marginRight: 10
-
-                                }}
-                                    source={require("../assests/Vector.png")}
-                                    resizeMode={"cover"}
-                                />
-
-                                Applicable only on select medicine store.</Text>
-
-                        </View>
-                        <View >
-
-                            <Text style={{ fontSize: 12 }}>
-                                <Image style={{
-                                    height: 7, width: 7
-                                }}
-                                    source={require("../assests/Vector.png")}
-                                    resizeMode={"cover"}
-                                />
-
-                                Applicable maximum 3 times in a day.</Text>
-
-                        </View>
-
-                        <View >
-
-                            <Text style={{ fontSize: 12, marginRight: 20 }}>
-                                <Image style={{
-                                    height: 7, width: 7
-                                }}
-                                    source={require("../assests/Vector.png")}
-                                    resizeMode={"cover"}
-                                />
-
-                                Other T&Cs may apply.</Text>
-
-                        </View>
-
+                    <View style={{ marginLeft: 10 }}>
+                        <Unorderedlist bulletUnicode={0x2022}><Text style={{ fontSize: 12 }}> Applicable only on select medicine store.</Text></Unorderedlist>
+                        <Unorderedlist bulletUnicode={0x2022}><Text style={{ fontSize: 12 }}> Applicable maximum 3 times in a day.</Text></Unorderedlist>
+                        <Unorderedlist bulletUnicode={0x2022}><Text style={{ fontSize: 12 }}> Other T&Cs may apply.</Text></Unorderedlist>
                     </View>
+
                 </View>
                 <View style={styles.couponOrderInnerContainer}>
                     <View>
@@ -120,51 +82,15 @@ export default function Screen3() {
                         </TouchableOpacity>
                         <Text>Applied</Text>
                     </View>
-                    <View style={{ marginVertical: 10, marginHorizontal: 5 }}>
-                        <View >
 
-                            <Text style={{ fontSize: 12 }} >
-                                <Image style={{
-                                    height: 7, width: 7, marginRight: 10
-
-                                }}
-                                    source={require("../assests/Vector.png")}
-                                    resizeMode={"cover"}
-                                />
-
-                                Applicable only on select medicine store.</Text>
-
-                        </View>
-                        <View >
-
-                            <Text style={{ fontSize: 12 }}>
-                                <Image style={{
-                                    height: 7, width: 7
-                                }}
-                                    source={require("../assests/Vector.png")}
-                                    resizeMode={"cover"}
-                                />
-
-                                Applicable maximum 3 times in a day.</Text>
-
-                        </View>
-
-                        <View >
-
-                            <Text style={{ fontSize: 12, marginRight: 20 }}>
-                                <Image style={{
-                                    height: 7, width: 7
-                                }}
-                                    source={require("../assests/Vector.png")}
-                                    resizeMode={"cover"}
-                                />
-
-                                Other T&Cs may apply.</Text>
-
-                        </View>
-
+                    <View style={{ marginLeft: 10 }}>
+                        <Unorderedlist bulletUnicode={0x2022} color='red' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Applicable only on select medicine store.</Text></Unorderedlist>
+                        <Unorderedlist bulletUnicode={0x2022} color='red' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Applicable maximum 3 times in a day.</Text></Unorderedlist>
+                        <Unorderedlist bulletUnicode={0x2022} color='red' style={{ fontSize: 15 }}><Text style={{ fontSize: 12 }}> Other T&Cs may apply.</Text></Unorderedlist>
                     </View>
+
                 </View>
+
             </ScrollView>
 
         </View >
