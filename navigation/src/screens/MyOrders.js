@@ -85,7 +85,7 @@ export default function Screen3() {
                         {
                             MedicinOrderData.map((list, index) => {
                                 return (
-                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} key={index}>
                                         <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 5, marginLeft: 4 }}>
                                             <Text style={styles.textField}>{list.mediciname}</Text>
                                             <Text style={styles.textField}>{list.medicinquantity}</Text>
@@ -145,7 +145,7 @@ export default function Screen3() {
                         {
                             MedicinPriceData.map((list, index) => {
                                 return (
-                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} key={index}>
                                         <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 7, marginLeft: 4 }}>
                                             <Text style={styles.textField}>{list.bouns}</Text>
                                         </View>
