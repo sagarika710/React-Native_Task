@@ -3,10 +3,12 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, TextInput 
 import Medicine from '../components/medicine'
 import Medicine2 from '../components/medicine2'
 import Medicine3 from '../components/medicine3';
-import Icon1 from 'react-native-vector-icons/AntDesign';
+import Icon1 from 'react-native-vector-icons/EvilIcons';
+import Icon2 from 'react-native-vector-icons/AntDesign';
 
 
 const Med = ({ navigation }) => {
+
     var api = [
         {
            
@@ -70,6 +72,7 @@ const Med = ({ navigation }) => {
         <ScrollView style={styles.contrainer}>
                 <View style={styles.search}>
                     <TextInput placeholder='Search Medicines & Health Products'></TextInput>
+                    <View><Icon1 name='search' style={styles.backicon} size={35} /></View>
                 </View>
 
 
@@ -88,7 +91,7 @@ const Med = ({ navigation }) => {
             </ScrollView>
 
             <ScrollView >
-                <View style={styles.king}>
+                <View style={styles.king2}>
 
                     {
                         bpi.map((dinesh) => {
@@ -100,7 +103,7 @@ const Med = ({ navigation }) => {
                 </View>
             </ScrollView>
             <ScrollView >
-                <View style={styles.king}>
+                <View style={styles.king2}>
 
                     {
                         bpi.map((dinesh) => {
@@ -126,7 +129,7 @@ const Med = ({ navigation }) => {
             </ScrollView>
 
             <TouchableOpacity>
-                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Orderhistory')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
+                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Orderhistory')}> <Icon2 name='right' style={styles.backicon} size={35} /></Text>
             </TouchableOpacity>
 
 
@@ -145,6 +148,15 @@ const styles = StyleSheet.create({
     king: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
+     
+      
+        
+    },
+    king2: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        paddingHorizontal:10,
+     
         
     },
     search:{
@@ -154,6 +166,9 @@ const styles = StyleSheet.create({
             borderRadius:13,
             backgroundColor:'#EFF3FA',
             paddingHorizontal:10,
+            flexDirection:'row',
+            justifyContent:'space-between',
+            alignItems:'center',
 
     },
 

@@ -3,9 +3,10 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
  import Icon from 'react-native-vector-icons/AntDesign';
+ import { useNavigation } from '@react-navigation/native';
 
-const Headingorder = (props) => {
-    
+const Orderheadingcomp = (props) => {
+    const navigation = useNavigation();
 
     return (
        
@@ -14,13 +15,13 @@ const Headingorder = (props) => {
            
             <View style={styles.twonodiv}>
            <View style={styles.bookings}>
-            <Text style={styles.bookingstext}>{props.data.booking}</Text>
+            <Text style={styles.bookingstext} onPress={() => navigation.navigate('Orderhistory')}>{props.data.booking}</Text>
            </View>
            <View style={styles.orders}>
-           <Text >{props.data.order}</Text>     
+           <Text  style={styles.orderstext} onPress={() => navigation.navigate('Orderheading')}>{props.data.order}</Text>     
            </View>
            <View style={styles.tests}>
-           <Text>{props.data.test}</Text>
+           <Text onPress={() => navigation.navigate('Testhistory')}>{props.data.test}</Text>
            </View>
             </View>
             
@@ -33,7 +34,7 @@ const Headingorder = (props) => {
 
 };
 
-export default Headingorder
+export default Orderheadingcomp
 
 
 const styles = StyleSheet.create({
@@ -43,6 +44,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginVertical: 10,
         marginHorizontal:10,
+        marginBottom:40,
         borderColor:'#DFDDDD',
         backgroundColor:'#ffffff',
         shadowColor: "#000",
@@ -82,24 +84,38 @@ const styles = StyleSheet.create({
                 },
                 bookings:{
                    
-                    backgroundColor:'#009987',
-                    borderRadius:5,
+                    // backgroundColor:'#009987',
+                    // borderRadius:5,
                     
                 
                 },
                 bookingstext:{
                             paddingHorizontal:14,
                             paddingVertical:8,
-                            color:'white',
+                          
                 },
                 orders:{
                         justifyContent:'center',
-                        paddingRight:20,
+                        marginRight:20,
+                        backgroundColor:'#009987',
+                        borderRadius:5,
+                        color:'white',
+                       
+    
                 },
                 tests:{
                         justifyContent:'center',
                         paddingRight:10,
+                       
+                },
+                orderstext:{
+                                color:'white',
+                                 paddingHorizontal:14,
+                            
+                               
                 },
 
+
+           
 
 })

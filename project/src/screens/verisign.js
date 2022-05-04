@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 // import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
-
+import Icon1 from 'react-native-vector-icons/AntDesign';
 // const Login = (props) => 
-const Veri = ({ navigation }) => {
+const Verisign = ({ navigation }) => {
     return (
         <View style={styles.container}>
 
-            <Text style={styles.startedbtn} onPress={() => navigation.navigate('Wel')}> Back</Text>
+<View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Order')} size={20} /></View>
 
 
             <View style={styles.fdiv}>
@@ -32,7 +32,7 @@ const Veri = ({ navigation }) => {
 
             </View>
           <TouchableOpacity>
-                    <Text style={styles.continuebtn} onPress={() => navigation.navigate('Wron')}>Continue</Text>
+                    <Text style={styles.continuebtn} onPress={() => navigation.navigate('Wronsign')}>Continue</Text>
                 </TouchableOpacity>
         </View>
     )
@@ -42,18 +42,11 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
+        backgroundColor:'white',
     },
-    startedbtn: {
-        borderWidth: 1,
-        borderRadius: 20,
-        paddingHorizontal: 20,
-        width: 80,
-        color: 'black',
-        marginLeft: 20,
-        marginTop: 10,
-    },
+  
     fdiv: {
-        paddingHorizontal: 20,
+        paddingHorizontal: 30,
         paddingVertical: 40,
     },
 
@@ -111,7 +104,24 @@ const styles = StyleSheet.create({
         marginTop: 30,
     },
     resend: {
-        color: 'blue',
+        color: '#1D6AFF',
     },
+    backicon:{
+        backgroundColor:'#EFF3FA',
+        borderRadius:30,
+       marginRight:16,
+        padding:10,
+        width:43,
+           },
+    startedbtn: {
+        
+            borderRadius: 20,
+           paddingTop:40,
+           paddingBottom:20,
+            width: 80,
+            color: 'black',
+            marginLeft: 20,
+            marginTop: 10,
+          },
 })
-export default Veri;
+export default Verisign;

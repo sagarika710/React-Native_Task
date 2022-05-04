@@ -1,13 +1,14 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 // import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
+import Icon1 from 'react-native-vector-icons/AntDesign';
 
 // const Login = (props) => 
-const Welsign = ({ navigation }) => {
+const Wel = ({ navigation }) => {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.startedbtn} onPress={() => navigation.navigate('Home')}> Back</Text>
+      <View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Order')} size={20} /></View>
 
 
       <View style={styles.fdiv}>
@@ -18,7 +19,7 @@ const Welsign = ({ navigation }) => {
         <TextInput style={styles.numberinput}>+91</TextInput>
       </View>
       <TouchableOpacity>
-        <Text style={styles.continuebtn} onPress={() => navigation.navigate('Verisign')}>Continue</Text>
+        <Text style={styles.continuebtn} onPress={() => navigation.navigate('Veri')}>Continue</Text>
       </TouchableOpacity>
     </View>
   )
@@ -28,18 +29,11 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
+    backgroundColor:'white',
   },
-  startedbtn: {
-    borderWidth: 1,
-    borderRadius: 20,
-    paddingHorizontal: 20,
-    width: 80,
-    color: 'black',
-    marginLeft: 20,
-    marginTop: 10,
-  },
+  
   fdiv: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
     paddingVertical: 40,
   },
 
@@ -82,5 +76,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#009987',
 
   },
+  backicon:{
+    backgroundColor:'#EFF3FA',
+    borderRadius:30,
+   marginRight:16,
+    padding:10,
+    width:43,
+       },
+startedbtn: {
+    
+        borderRadius: 20,
+       paddingTop:40,
+       paddingBottom:20,
+        width: 80,
+        color: 'black',
+        marginLeft: 20,
+        marginTop: 10,
+      },
 })
-export default Welsign;
+export default Wel;

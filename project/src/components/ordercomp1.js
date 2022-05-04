@@ -40,16 +40,15 @@ const styles = StyleSheet.create({
 
     mainview: {
         borderWidth: 1,
-        borderRadius: 10,
-        marginVertical: 5,
-        marginHorizontal:10,
+        borderRadius: 15,
+        marginVertical: 15,
+        marginHorizontal:20,
         borderColor:'#DFDDDD',
         backgroundColor:'#ffffff',
         shadowColor: "#000",
 shadowOffset: {
 	width: 0,
 	height: 2,
-   
 },
 shadowOpacity: 0.25,
 shadowRadius: 3.84,

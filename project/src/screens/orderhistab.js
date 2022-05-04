@@ -1,98 +1,122 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
-import Historycomp from '../components/orderhistabcomp';
-import Iconz from 'react-native-vector-icons/AntDesign';
-import Headingorder from '../components/heading';
-import Orderheadingcomp from '../components/ordersheading'
+import Ordercomp1 from '../components/ordercomp1'; 
+import Icon from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/AntDesign';
+import Orderheadingcomp from '../components/ordersheading';
+import Backicon from '../components/backordercomp';
 
 
 
-const Orderhistab = ({ navigation }) => {
-    var api= [
+const Orderheading = ({ navigation }) => {
+  
+    var zpi= [
         {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
+            
+
+            booking: 'Bookings',
+            order:'Orders',
+            test:'Test',
+
+
         },
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-          {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-     
        
-      
-     
+    ]
+  
+  
+  
+    var xpi= [
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+       
+    ]
+
+    var gpi= [
+        {
+            booking: 'Bookings',
+            order:'Orders',
+            test:'Test',
+
+        },  
     ]
     return (
         <ScrollView style={styles.contrainer}> 
-            <View  style={styles.headingdiv}>
-            <View >
-            <TouchableOpacity>
-                <Text onPress={() => navigation.navigate('Login')}> <Iconz name='leftcircleo' style={styles.backicon} size={30} /></Text>
-            </TouchableOpacity>
-           
-            </View>
-           <View>
-           <Text style={styles.textheading}>Orders History</Text>
-           </View>
-           </View>
-
-           <Orderheadingcomp />
-            
-  {
-     api.map((dinesh)=> {
+          {
+     gpi.map((dinesh1)=> {
          return(
-             <Historycomp data={dinesh}/>
+             <Backicon data={dinesh1}/>
          )
      }) 
-  }   
+  } 
+           {
+     zpi.map((dinesh1)=> {
+         return(
+             <Orderheadingcomp data={dinesh1}/>
+         )
+     }) 
+  } 
+            
+  {
+     xpi.map((dinesh2)=> {
+         return(
+             <Ordercomp1 data={dinesh2}/>
+            
+         )
+     }) 
+  }      
 
-   <TouchableOpacity>
-                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Let')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
+            <TouchableOpacity>
+                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Orderprice')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
             </TouchableOpacity>
 
     
         </ScrollView>
     );
 };
-export default Orderhistab
+export default Orderheading
 
 
 const styles = StyleSheet.create({
@@ -117,7 +141,6 @@ const styles = StyleSheet.create({
            paddingVertical:5,
             paddingHorizontal:10,
         },
-
 
    
 

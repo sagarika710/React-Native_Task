@@ -3,8 +3,10 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 // import Icon from 'react-native-vector-icons/AntDesign';
 // import Iconi from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
 
-const Medicine2 = (props) => {
+const Medicine3 = (props) => {
+    const navigation = useNavigation();
     return (
        
         <View style={styles.mainview}>
@@ -13,20 +15,14 @@ const Medicine2 = (props) => {
             <View style={styles.detailsview}>
               
                 <View style={{ flexDirection: 'row', justifyContent:'center'}}>
-                    <Image source={props.data.url} style={{ width: 60, height: 60 }} />
-                    <Text style={{fontSize:12,fontWeight:'bold',color: '#717171',marginHorizontal:5,}}>{props.data.name}</Text>
+                <Image source={props.data.url} style={{ width: 330,borderRadius:10, height: 130 }} />
+                    
                 </View>
-
-                
-
-              
 
             </View>
 
-           <View style={{justifyContent:"space-evenly"}}>
-               <Text style={{fontSize:14,color: '#222222', paddingHorizontal:5,}}>{props.data.bookingtype}</Text>
-               <Text style={{fontSize:14,color: '#222222', paddingHorizontal:5,}}>{props.data.bookingtype2}</Text>
-
+           <View style={{flexDirection:'row',justifyContent:"flex-start", paddingHorizontal:20,paddingVertical:10,}}>
+               <Text style={{fontSize:14,fontWeight:'bold',color: '#009987', fontSize:15, fontWeight:'bold',}}  onPress={() => navigation.navigate('Ordertwo')} >{props.data.bookingtype}</Text>
              
            </View>
        
@@ -35,7 +31,7 @@ const Medicine2 = (props) => {
 
     );
 };
-export default Medicine2
+export default Medicine3
 
 
 const styles = StyleSheet.create({
@@ -68,10 +64,11 @@ elevation: 5,
     detailsview: {
         flexDirection: 'row',
         justifyContent:'center',
-        paddingVertical:5,
+        paddingVertical:10,
         marginVertical:10,
-        borderBottomWidth:1,
+       
         borderColor:"#DFDDDD",
+        
 
     },
     

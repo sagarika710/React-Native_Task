@@ -1,115 +1,131 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
-import Ordercomp1 from '../components/ordercomp1';
-import Headingorder from '../components/heading';
-import Icon from 'react-native-vector-icons/AntDesign';
+
+import Iconz from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/AntDesign';
+import Testbuttoncomp from '../components/ordercomp3';
+import Ordercomp1 from '../components/ordercomp1';
+import Backicon from '../components/backordercomp';
 
 
-const Orderhistory = ({ navigation }) => {
-    var zpi= [
+
+const Testhistory = ({ navigation }) => {
+    var tpi= [
         {
-            
-
-            booking: 'Bookings',
-            order:'Orders',
-            test:'Test',
-
-
-
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
         },
-       
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+          {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            centername: 'Consultant',
+            name: 'Video Conference',
+            time: '06.30',
+            date: '22.02.2022',
+            bookingtype: 'Upcoming',
+            price: '₹240'
+        },
     ]
-  
-  
-  
-    var api= [
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
-        {
-            // url: require('../assets/img/Cricket_icon.png'),
-            centername: 'Consultant',
-            name: 'Video Conference',
-            time: '06.30',
-            date: '22.02.2022',
-            bookingtype: 'Upcoming',
-            price: '₹240'
-        },
+
+        var gpi= [
+            {
+                booking: 'Bookings',
+                order:'Orders',
+                test:'Test',
+    
+            },  
+        ]
+        var zpi= [
+            {
+                
+    
+                booking: 'Bookings',
+                order:'Orders',
+                test:'Test',
+    
+    
+    
+            },
+           
+        ]
+     
        
-    ]
+      
+     
+    
     return (
         <ScrollView style={styles.contrainer}> 
-            <View  style={styles.headingdiv}>
-            <View >
-            <TouchableOpacity>
-                <Text onPress={() => navigation.navigate('Login')}> <Icon name='leftcircleo' style={styles.backicon} size={30} /></Text>
-            </TouchableOpacity>
-           
-            </View>
-           <View>
-           <Text style={styles.textheading}>Orders History</Text>
-           </View>
-           </View>
-           {
-     zpi.map((dinesh)=> {
+       
+
+{
+     gpi.map((dinesh1)=> {
          return(
-             <Headingorder data={dinesh}/>
+             <Backicon data={dinesh1}/>
          )
      }) 
   } 
-            
-  {
-     api.map((dinesh)=> {
+  
+        {
+     zpi.map((dinesh1)=> {
          return(
-             <Ordercomp1 data={dinesh}/>
-            
+             <Testbuttoncomp data={dinesh1}/>
          )
      }) 
-  }      
+  } 
+       
+  
+            
+         
+            
+  {
+     tpi.map((dinesh6)=> {
+         return(
+             <Ordercomp1 data={dinesh6}/>
+         )
+     }) 
+  }   
 
-            <TouchableOpacity>
-                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Order')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
+<TouchableOpacity>
+                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Ordertwo')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
             </TouchableOpacity>
+
 
     
         </ScrollView>
     );
 };
-export default Orderhistory
+export default Testhistory
 
 
 const styles = StyleSheet.create({
@@ -134,6 +150,24 @@ const styles = StyleSheet.create({
            paddingVertical:5,
             paddingHorizontal:10,
         },
+        backicon:{
+            backgroundColor:'#EFF3FA',
+            borderRadius:30,
+           marginRight:16,
+            padding:10,
+            width:43,
+               },
+        startedbtn: {
+            
+                borderRadius: 20,
+               paddingTop:40,
+               paddingBottom:20,
+                width: 80,
+                color: 'black',
+                marginLeft: 20,
+                marginTop: 10,
+              },
+
 
    
 

@@ -4,22 +4,28 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './android/app/src/screens/home'
-import Med from './android/app/src/screens/medicine'
-import Orderhistory from './android/app/src/screens/orderhistory'
-import Order from './android/app/src/screens/orders'
-import Ordertwo from './android/app/src/screens/order2'
-import Orderhistab from './android/app/src/screens/orderhistab'
-import Wel from './android/app/src/screens/welcome';
-import Let from './android/app/src/screens/letsgo';
-import Veri from './android/app/src/screens/verfi';
-import Wron from './android/app/src/screens/wrong';
-import Letsign from './android/app/src/screens/letsignup';
-import Welsign from './android/app/src/screens/welsignup';
-import Homesign from './android/app/src/screens/homesignup';
-import Verisign from './android/app/src/screens/verisign';
-import Wronsign from './android/app/src/screens/wrongsign';
-import Regsign from './android/app/src/screens/registersign';
+import Home from './src/screens/home'
+import Med from './src/screens/medicine'
+import Orderhistory from './src/screens/orderhistory'
+import Order from './src/screens/orders'
+import Ordertwo from './src/screens/order2'
+import Orderheading from './src/screens/orderhistab'
+import Wel from './src/screens/welcome';
+import Let from './src/screens/letsgo';
+import Veri from './src/screens/verfi';
+import Wron from './src/screens/wrong';
+import Letsign from './src/screens/letsignup';
+import Welsign from './src/screens/welsignup';
+import Homesign from './src/screens/homesignup';
+import Verisign from './src/screens/verisign';
+import Wronsign from './src/screens/wrongsign';
+import Regsign from './src/screens/registersign';
+import Testhistory from './src/screens/orderhistorytwo';
+import prescription from './src/screens/prescription';
+import Orderprice from './src/screens/orderprice';
+import Mapp from './src/screens/map';
+import Orderid from './src/screens/orderid';
+import Mapp2 from './src/screens/map2';
 
 
 
@@ -43,8 +49,15 @@ function App() {
       <Stack.Screen name="Med" component={Med} />
       <Stack.Screen name="Orderhistory" component={Orderhistory} />
       <Stack.Screen name="Order" component={Order} />
+      <Stack.Screen name="prescription" component={prescription} />
+      <Stack.Screen name="Orderheading" component={Orderheading} />
+      <Stack.Screen name="Orderprice" component={Orderprice} />
+      <Stack.Screen name="Mapp" component={Mapp} />
+      <Stack.Screen name="Testhistory" component={Testhistory} />
       <Stack.Screen name="Ordertwo" component={Ordertwo} />
-      <Stack.Screen name="Orderhistab" component={Orderhistab} />
+      <Stack.Screen name="Mapp2" component={Mapp2} />
+      <Stack.Screen name="Orderid" component={Orderid} />
+      
 
       </Stack.Navigator>
     </NavigationContainer>

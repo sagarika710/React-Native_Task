@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
-
+import Icon1 from 'react-native-vector-icons/AntDesign';
 
 
 const Wronsign = ({ navigation }) => {
   return (
     <View style={styles.container}>
 
-      <Text style={styles.startedbtn} onPress={() => navigation.navigate('Signup')}> Back</Text>
+<View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Order')} size={20} /></View>
 
       
       <View style={styles.fdiv}>
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
+    backgroundColor:'white',
   },
   startedbtn: {
     borderWidth: 1,
@@ -112,6 +113,23 @@ const styles = StyleSheet.create({
   wrongcode: {
     color: 'red',
   },
+  backicon:{
+    backgroundColor:'#EFF3FA',
+    borderRadius:30,
+   marginRight:16,
+    padding:10,
+    width:43,
+       },
+startedbtn: {
+    
+        borderRadius: 20,
+       paddingTop:40,
+       paddingBottom:20,
+        width: 80,
+        color: 'black',
+        marginLeft: 20,
+        marginTop: 10,
+      },
 
 })
 export default Wronsign;

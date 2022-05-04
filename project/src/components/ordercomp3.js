@@ -1,25 +1,27 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
  
 
 
-const Orderheadingcomp = () => {
+const Testbuttoncomp = (props) => {
+    const navigation = useNavigation();
     return (
+     
        
         <View style={styles.mainview}>
            
            
             <View style={styles.twonodiv}>
            <View style={styles.bookings}>
-            <Text style={styles.bookingstext}>Bookings</Text>
+            <Text style={styles.bookingstext} onPress={() => navigation.navigate('Orderhistory')}>Bookings</Text>
            </View>
            <View style={styles.orders}>
-           <Text  style={styles.orderstext} >Orders</Text>     
+           <Text  style={styles.orderstext} onPress={() => navigation.navigate('Orderheading')} >Orders</Text>     
            </View>
            <View style={styles.tests}>
-           <Text>Test</Text>
+           <Text style={styles.tesbutton} onPress={() => navigation.navigate('Testhistory')} >Test</Text>  
            </View>
             </View>
             
@@ -30,7 +32,7 @@ const Orderheadingcomp = () => {
 
     );
 };
-export default Orderheadingcomp
+export default Testbuttoncomp
 
 
 const styles = StyleSheet.create({
@@ -38,8 +40,9 @@ const styles = StyleSheet.create({
     mainview: {
        
         borderRadius: 10,
-        marginVertical: 10,
+        marginVertical: 15,
         marginHorizontal:10,
+        marginBottom:40,
         borderColor:'#DFDDDD',
         backgroundColor:'#ffffff',
         shadowColor: "#000",
@@ -93,11 +96,7 @@ const styles = StyleSheet.create({
                 orderstext:{
 
 
-                    color:'white',
-
-
-
-
+                   
                 },
 
 
@@ -106,15 +105,21 @@ const styles = StyleSheet.create({
 
                 orders:{
                         justifyContent:'center',
-                       paddingHorizontal:20,
-                        backgroundColor:'#009987',
-                         borderRadius:5,
-                        
-                         marginRight:15,
+                    
+                       
                 },
                 tests:{
                         justifyContent:'center',
-                        paddingRight:10,
+                        
+                        backgroundColor:'#009987',
+                        borderRadius:5,
+                      
+                        marginRight:15,
+                        paddingHorizontal:23,
+                        paddingVertical:8,
+                },
+                tesbutton:{
+                    color:'white',
                 },
 
 

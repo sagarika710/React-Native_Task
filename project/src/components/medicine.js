@@ -3,8 +3,11 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 // import Icon from 'react-native-vector-icons/AntDesign';
 // import Iconi from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
+import Icon1 from 'react-native-vector-icons/EvilIcons';
 
 const Medicine = (props) => {
+    const navigation = useNavigation();
     return (
        
         <View style={styles.mainview}>
@@ -31,8 +34,9 @@ const Medicine = (props) => {
 
             </View>
 
-           <View style={{flexDirection:'row',justifyContent:"space-between"}}>
+           <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
                <Text style={{fontSize:14,fontWeight:'bold',color: '#009987',}}>{props.data.bookingtype}</Text>
+               <View><Icon1 name='play'   size={25} /></View>
                
            </View>
        
@@ -53,7 +57,7 @@ const styles = StyleSheet.create({
         marginHorizontal:10,
         borderColor:'#00E0C5',
         backgroundColor:'#ffffff',
-        shadowColor: "#000",
+        // shadowColor: "#000",
      
         
         

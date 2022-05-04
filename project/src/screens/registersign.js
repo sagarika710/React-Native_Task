@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 // import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
+import Icon1 from 'react-native-vector-icons/AntDesign';
+
 
 // const Login = (props) => 
 const Regsign = ({ navigation }) => {
@@ -9,7 +11,7 @@ const Regsign = ({ navigation }) => {
       <ScrollView  showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}>
 
-      <Text style={styles.startedbtn} onPress={() => navigation.navigate('Signup')}> Back</Text>
+<View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Order')} size={20} /></View>
       <View style={styles.fdiv}>
         <Text style={styles.heading}>Please Register</Text>
         <Text style={styles.inserttext}>Please fill all the details.</Text>
@@ -18,7 +20,7 @@ const Regsign = ({ navigation }) => {
 
 
       <View style={styles.reginputdiv}>
-        <TextInput style={styles.inputtext} placeholder='Full name'></TextInput>
+      <View ><TextInput style={styles.inputtext} placeholder='Full name'></TextInput></View>
         <TextInput style={styles.inputtext} placeholder='Email Id'></TextInput>
         <TextInput style={styles.inputtext} placeholder='Date Of Birth'></TextInput>
         <TextInput style={styles.inputtext} placeholder='Aadhar Number'></TextInput>
@@ -35,16 +37,9 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
+    backgroundColor:'white',
   },
-  startedbtn: {
-    borderWidth: 1,
-    borderRadius: 20,
-    paddingHorizontal: 20,
-    width: 80,
-    color: 'black',
-    marginLeft: 20,
-    marginTop: 10,
-  },
+  
   continuebtn: {
 
     paddingLeft: 130,
@@ -65,12 +60,12 @@ const styles = StyleSheet.create({
     height: 400,
   },
   fdiv: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
     paddingVertical: 40,
   },
   heading: {
     fontWeight: 'bold',
-    fontSize: 19,
+    fontSize: 21,
     color: 'black',
   },
   inserttext: {
@@ -78,12 +73,29 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   inputtext: {
-    borderColor: 'gray',
+    borderColor: '#DEE1E6',
     borderBottomWidth: 1,
     paddingVertical: 10,
-    marginHorizontal: 20,
+    marginHorizontal: 30,
 
   },
+  backicon:{
+    backgroundColor:'#EFF3FA',
+    borderRadius:30,
+   marginRight:16,
+    padding:10,
+    width:43,
+       },
+startedbtn: {
+    
+        borderRadius: 20,
+       paddingTop:40,
+       paddingBottom:20,
+        width: 80,
+        color: 'black',
+        marginLeft: 20,
+        marginTop: 10,
+      },
 
 
 })
