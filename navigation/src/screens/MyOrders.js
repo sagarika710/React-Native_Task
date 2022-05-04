@@ -50,6 +50,7 @@ export default function Screen3() {
             {
                 "bouns": "ShippingFee",
                 "price": "Free",
+
             },
 
         ]
@@ -85,16 +86,23 @@ export default function Screen3() {
                         {
                             MedicinOrderData.map((list, index) => {
                                 return (
-                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} key={index}>
+                                    <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} key={index}>
                                         <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 5, marginLeft: 4 }}>
-                                            <Text style={styles.textField}>{list.mediciname}</Text>
-                                            <Text style={styles.textField}>{list.medicinquantity}</Text>
+                                            <View style={{ width: "50%" }}>
+                                                <Text style={styles.textField}>{list.mediciname}</Text>
+                                            </View>
+                                            <View style={{ width: "10%" }}>
+                                                <Text style={styles.textField}>{list.medicinquantity}</Text>
+                                            </View>
 
+                                            <View style={{ width: "20%" }}>
+                                                <Text style={styles.textField}>{list.price}</Text>
+                                            </View>
                                         </View>
 
-                                        <View style={{ marginLeft: 60, marginRight: 10, justifyContent: "flex-start" }}>
+                                        {/* <View style={{ marginLeft: 60, marginRight: 10, justifyContent: "flex-start" }}>
                                             <Text style={styles.textField}>{list.price}</Text>
-                                        </View>
+                                        </View> */}
 
                                     </View>
 
@@ -145,14 +153,17 @@ export default function Screen3() {
                         {
                             MedicinPriceData.map((list, index) => {
                                 return (
-                                    <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} key={index}>
-                                        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 7, marginLeft: 4 }}>
-                                            <Text style={styles.textField}>{list.bouns}</Text>
+                                    <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} key={index}>
+                                        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 7, marginLeft: 4, width: "70%" }}>
+                                            <Text style={[styles.textField, {
+                                                width: "75%"
+                                            }]}>{list.bouns}</Text>
+                                            <View style={{ width: "25%", }}>
+                                                <Text style={[styles.textField, { color: list.price == "Free" ? "#00E0C5" : "black" }]}>{list.price}</Text>
+                                            </View>
+
                                         </View>
 
-                                        <View style={{ marginLeft: 40, marginRight: 10 }}>
-                                            <Text style={styles.textField}>{list.price}</Text>
-                                        </View>
 
                                     </View>
 
