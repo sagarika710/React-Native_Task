@@ -109,7 +109,7 @@ export default function Clinics() {
                                     }}>
                                         <Text style={styles.clinicName}>{item.clinicname}</Text>
                                         <View style={{ flexDirection: "row" }}>
-                                            <Ionicons name="location-outline" size={15} color="#979797" />
+                                            <Ionicons name="location-outline" size={10} color="#979797" />
                                             <Text style={{ fontSize: 8, marginLeft: 3, color: "#979797" }}>{item.address}</Text>
                                         </View>
                                     </TouchableOpacity>
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     },
     clinicImage: {
         flex: 1,
-        marginHorizontal: 3,
+        marginHorizontal: 12,
         height: 150,
         position: "relative",
         marginVertical: 7

@@ -27,7 +27,7 @@ export default function Profile() {
                                 borderRadius: 70
                             }}>
                                 <Image style={{
-                                    height: 92.74, width: 100,
+                                    height: 92.74, width: "100%",
                                     borderRadius: 70,
                                     backgroundColor: "#01e0c5",
 

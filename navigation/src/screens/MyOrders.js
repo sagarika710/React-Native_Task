@@ -101,8 +101,8 @@ export default function Screen3() {
                                         </View>
 
                                         {/* <View style={{ marginLeft: 60, marginRight: 10, justifyContent: "flex-start" }}>
-                                            <Text style={styles.textField}>{list.price}</Text>
-                                        </View> */}
+                            <Text style={styles.textField}>{list.price}</Text>
+                        </View> */}
 
                                     </View>
 
@@ -153,13 +153,13 @@ export default function Screen3() {
                         {
                             MedicinPriceData.map((list, index) => {
                                 return (
-                                    <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }} key={index}>
-                                        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 7, marginLeft: 4, width: "70%" }}>
+                                    <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", }} key={index}>
+                                        <View style={{ flex: 1, flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 7, marginLeft: 4, marginHorizontal: -20, width: "70%" }}>
                                             <Text style={[styles.textField, {
                                                 width: "75%"
                                             }]}>{list.bouns}</Text>
                                             <View style={{ width: "25%", }}>
-                                                <Text style={[styles.textField, { color: list.price == "Free" ? "#00E0C5" : "black" }]}>{list.price}</Text>
+                                                <Text style={[styles.textField, { color: list.price == "Free" ? "#00E0C5" : "gray" }]}>{list.price}</Text>
                                             </View>
 
                                         </View>
