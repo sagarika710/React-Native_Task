@@ -12,7 +12,9 @@ const Stack = createNativeStackNavigator();
 import Profile from './src/screens/Profile';
 import CoupnsField from './src/screens/CoupnsField';
 import Patholabs from './src/screens/Patholabs';
-import Doctors from './src/screens/Doctors'
+import Doctors from './src/screens/Doctors';
+import Appointment from './src/screens/Appointment';
+import Payment from './src/screens/Payment';
 function App() {
   return (
 
@@ -44,6 +46,17 @@ function App() {
           component={CoupnsField}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Appointment"
+          component={Appointment}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Payment"
+          component={Payment}
+          options={{ headerShown: false }}
+        />
+
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import {
     createDrawerNavigator, DrawerContentScrollView,
     DrawerItemList,
@@ -77,7 +77,8 @@ const CustomDrawer = (props) => {
     return (
         <View style={{ flex: 1, backgroundColor: "#01e0c5", }}>
             <View style={{ flex: 1, justifyContent: "space-around" }}>
-                <View style={{ height: 80, alignItems: "flex-end", justifyContent: "center" }}>
+                <View style={{ justifyContent: "space-around", alignItems: "center", flexDirection: "row", marginTop: 10 }}>
+                    <Image source={require("../assests/3.png")} style={{ borderRadius: 50, height: 70, width: 70 }} />
                     <Text style={{ color: "white" }}>Deepti Padhy</Text>
                 </View>
 

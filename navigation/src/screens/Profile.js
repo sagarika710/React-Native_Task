@@ -130,9 +130,14 @@ export default function Profile() {
                         </TouchableOpacity>
                     </View>
                     <View style={{ marginVertical: 20 }}>
-                        <TouchableOpacity style={{ backgroundColor: "#00E0C5", padding: 15, justifyContent: "center", alignItems: "center", borderRadius: 40 }}>
-                            <Text style={{ color: "#ffff" }}>Take A Appointment</Text>
+                        <TouchableOpacity onPress={() => {
+                            navigation.navigate("Appointment", {
+
+                            })
+                        }} style={styles.appointmentBtn}>
+                            <Text style={{ color: "white" }}>Take a Appointment</Text>
                         </TouchableOpacity>
+
                     </View>
 
                 </View>
@@ -196,6 +201,10 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 20,
         borderBottomLeftRadius: 20,
         paddingVertical: 5
+    },
+    appointmentBtn:
+    {
+        backgroundColor: "#00E0C5", padding: 15, justifyContent: "center", alignItems: "center", borderRadius: 40
     },
     servicesIconContainer: { width: 50, height: 50, alignItems: "center", justifyContent: "center", borderRadius: 10, marginRight: 5 }
 })

@@ -1,4 +1,7 @@
-import { View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity, TextInput } from 'react-native'
+import {
+    View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity,
+    TextInput
+} from 'react-native'
 import React from 'react'
 import FontAwesome5Icons from 'react-native-vector-icons/FontAwesome5'
 import { useNavigation } from "@react-navigation/native"

@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Unorderedlist from 'react-native-unordered-list';
 const { height, width } = Dimensions.get("screen");
-export default function Screen3() {
+export default function CoupnsField() {
 
     const navigation = useNavigation();
     return (
