@@ -1,12 +1,18 @@
 import { View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity, TextInput } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import FontAwesome5Icons from 'react-native-vector-icons/FontAwesome5'
 import { useNavigation } from "@react-navigation/native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
+//import RNPickerSelect from 'react-native-picker-select';
 import ViewNativeComponent from 'react-native/Libraries/Components/View/ViewNativeComponent'
 
 const { height, width } = Dimensions.get("screen");
 export default function Appointment() {
+
+    const [selectedDate, setSelectedDate] = useState({
+        date: "",
+        day: ""
+    });
 
     const navigation = useNavigation();
     const dateday = [
@@ -84,6 +90,12 @@ export default function Appointment() {
         },
     ]
 
+    const isDateIsActive = (list) => {
+        return (
+            selectedDate.date == list.date && selectedDate.day == list.day
+        )
+    }
+
     return (
         // start MainView
         <View style={styles.appointmentContainer}>
@@ -103,6 +115,14 @@ export default function Appointment() {
                 <View style={styles.monthDetails}>
                     <Text style={{ fontSize: 18, fontFamily: "Mulish", letterSpacing: 0.3 }}>July,2020</Text>
                     <Ionicons name="caret-down-outline" size={25} style={{ marginLeft: 10 }} />
+                    {/* <RNPickerSelect
+                        onValueChange={(value) => console.log(value)}
+                        items={[
+                            { label: 'Football', value: 'football' },
+                            { label: 'Baseball', value: 'baseball' },
+                            { label: 'Hockey', value: 'hockey' },
+                        ]}
+                    /> */}
                 </View>
                 {/* monthdetailsEnd */}
                 {/* dateday start */}
@@ -112,15 +132,29 @@ export default function Appointment() {
                         {
                             dateday.map((list, index) => {
                                 return (
-                                    <View style={[styles.datedayContainer, { backgroundColor: list.day == "Tue" ? "#00E0C5" : "white", }]} key={index}>
+                                    <TouchableOpacity
+
+                                        onPress={() => {
+                                            setSelectedDate({
+                                                date: list.date,
+                                                day: list.day
+                                            })
+                                        }}
+
+                                        style={[styles.datedayContainer, {
+                                            backgroundColor: isDateIsActive(list) ? "#00E0C5" : "white",
+                                        }]} key={index}>
                                         <View style={{ marginBottom: 10 }}>
-                                            <Text style={{ fontSize: 24, fontFamily: "Mulish" }}>{list.date}</Text>
+                                            <Text style={{ fontSize: 24, fontFamily: "Mulish", color: isDateIsActive(list) ? "white" : "grey" }}>{list.date}</Text>
 
                                         </View>
                                         <View>
-                                            <Text style={{ fontSize: 12, fontFamily: "Mulish", letterSpacing: 0.2 }}>{list.day}</Text>
+                                            <Text style={{
+                                                fontSize: 12, fontFamily: "Mulish", letterSpacing: 0.2,
+                                                color: isDateIsActive(list) ? "white" : "grey"
+                                            }}>{list.day}</Text>
                                         </View>
-                                    </View>
+                                    </TouchableOpacity>
                                 )
                             })
                         }
@@ -221,7 +255,7 @@ const styles = StyleSheet.create({
     {
         flex: 1,
         alignItems: "center",
-        marginHorizontal: 7,
+        marginHorizontal: 12,
         marginVertical: 10,
         paddingHorizontal: 30,
         paddingVertical: 20,
