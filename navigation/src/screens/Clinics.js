@@ -15,49 +15,49 @@ export default function Clinics() {
             {
                 "image": require("../assests/clinic1.png"),
                 "clinicname": "Homeopathic Clinic",
-                "address": "NandanBihar Patia",
+                "address": "Nandan Vihar, Patia",
 
             },
             {
                 "image": require("../assests/clinic2.png"),
-                "clinicname": "sai Clinic",
-                "address": "NandanBihar Patia",
+                "clinicname": "Sai Clinic",
+                "address": "Nandan Vihar, Patia",
 
             },
             {
                 "image": require("../assests/clinic2.png"),
-                "clinicname": "sai Clinic",
+                "clinicname": "Sai Clinic",
+                "address": "Nandan Vihar, Patia",
+
+            },
+            {
+                "image": require("../assests/clinic1.png"),
+                "clinicname": "Homeopathic Clinic",
+                "address": "Nandan Vihar, Patia",
+
+            },
+            {
+                "image": require("../assests/clinic2.png"),
+                "clinicname": "Sai Clinic",
                 "address": "NandanBihar Patia",
 
             },
             {
                 "image": require("../assests/clinic1.png"),
                 "clinicname": "Homeopathic Clinic",
-                "address": "NandanBihar Patia",
+                "address": "Nandan Vihar, Patia",
 
             },
             {
                 "image": require("../assests/clinic2.png"),
-                "clinicname": "sai Clinic",
-                "address": "NandanBihar Patia",
+                "clinicname": "Sai Clinic",
+                "address": "Nandan Vihar, Patia",
 
             },
             {
                 "image": require("../assests/clinic1.png"),
                 "clinicname": "Homeopathic Clinic",
-                "address": "NandanBihar Patia",
-
-            },
-            {
-                "image": require("../assests/clinic2.png"),
-                "clinicname": "sai Clinic",
-                "address": "NandanBihar Patia",
-
-            },
-            {
-                "image": require("../assests/clinic1.png"),
-                "clinicname": "Homeopathic Clinic",
-                "address": "NandanBihar Patia",
+                "address": "Nandan Vihar, Patia",
 
             },
 
@@ -66,15 +66,15 @@ export default function Clinics() {
     return (
         // start here
         <View style={styles.clinicContainer}>
-            <View style={{ marginVertical: 5, flexDirection: "row", alignItems: "center", marginHorizontal: 10 }}>
-                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "white", }} onPress={() => {
+            <View style={{ marginVertical: 10, flexDirection: "row", alignItems: "center", marginHorizontal: 12 }}>
+                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "#EFF3FA" }} onPress={() => {
                     navigation.goBack()
                 }} >
                     <Ionicons name="chevron-back-outline" color={"gray"} size={20} />
                 </TouchableOpacity>
                 <Text style={{ fontWeight: "bold", marginLeft: 8, fontFamily: "Mulish", letterSpacing: 0.3, fontSize: 18 }}>Clinics</Text>
             </View>
-            <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginHorizontal: 10 }}>
+            <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginHorizontal: 15 }}>
 
                 <FontAwesome5Icons name="map-pin" size={15} color="#009987" />
                 <Text style={{
@@ -87,7 +87,7 @@ export default function Clinics() {
             <View style={styles.searchBoxContainer}>
                 {/* look here first one is icon then input box and then again icon */}
                 <TextInput style={{ marginRight: "auto", marginLeft: 5, fontFamily: "Mulish" }} placeholder='Search Clinics'></TextInput>
-                <FontAwesome5Icons color={"#626262"} size={20} name="search" />
+                <Ionicons color={"#626262"} size={20} style={{ fontWeight: 400 }} name="search-outline" />
             </View>
             {/* search bar view end */}
             {/*  */}
@@ -108,7 +108,7 @@ export default function Clinics() {
                                         })
                                     }}>
                                         <Text style={styles.clinicName}>{item.clinicname}</Text>
-                                        <View style={{ flexDirection: "row" }}>
+                                        <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }}>
                                             <Ionicons name="location-outline" size={10} color="#979797" />
                                             <Text style={{ fontSize: 8, marginLeft: 3, color: "#979797" }}>{item.address}</Text>
                                         </View>
@@ -131,12 +131,13 @@ export default function Clinics() {
 const styles = StyleSheet.create({
     clinicContainer:
     {
-        flex: 1
+        flex: 1,
+        backgroundColor: "#fff"
     },
     searchBoxContainer: {
         flexDirection: "row",
         alignItems: "center",
-        marginHorizontal: 10,
+        marginHorizontal: 7,
         marginVertical: 10,
         paddingHorizontal: 10,
         borderWidth: 0.2,
@@ -148,10 +149,10 @@ const styles = StyleSheet.create({
     },
     clinicImage: {
         flex: 1,
-        marginHorizontal: 12,
+        marginHorizontal: 7,
         height: 150,
         position: "relative",
-        marginVertical: 7
+        marginVertical: 10
     },
     imageView:
     {
@@ -173,13 +174,22 @@ const styles = StyleSheet.create({
         borderTopEndRadius: 10,
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,
-
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.20,
+        shadowRadius: 1.41,
+        elevation: 2,
 
     },
     clinicName:
     {
         fontSize: 10,
-        color: "#009987"
+        color: "#009987",
+        marginLeft: 2,
+
     },
     cardInnerContainer:
     {

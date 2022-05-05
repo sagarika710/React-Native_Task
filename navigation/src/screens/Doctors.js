@@ -64,17 +64,20 @@ export default function Screen3() {
     return (
         <View style={styles.doctorContainer}>
             <View style={{ marginVertical: 5, flexDirection: "row", alignItems: "center", marginHorizontal: 10 }}>
-                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "white", }} onPress={() => {
+                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "#EFF3FA", }} onPress={() => {
                     navigation.goBack()
                 }} >
                     <Ionicons name="chevron-back-outline" color={"gray"} size={20} />
                 </TouchableOpacity>
                 <Text style={{ fontWeight: "bold", marginLeft: 8 }}>Doctors</Text>
             </View>
-            <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginHorizontal: 10 }}>
+            <View style={{ flexDirection: "row", justifyContent: "flex-start", alignItems: "center", marginHorizontal: 15, marginVertical: 7 }}>
 
                 <FontAwesome5Icons name="map-pin" size={15} color="#009987" />
-                <Text style={{ color: "#009987", marginLeft: 3 }}>Patia ,Bhubaneswar</Text>
+                <Text style={{
+                    color: "#009987"
+                    , marginLeft: 7, fontSize: 14, fontFamily: "Mulish"
+                }}>Patia, Bhubaneswar</Text>
 
             </View>
             {/* start try map */}
@@ -117,11 +120,14 @@ export default function Screen3() {
 const styles = StyleSheet.create({
     doctorContainer:
     {
-        flex: 1
+        flex: 1,
+        backgroundColor: "#fff"
     },
     cardImageContainer: {
         position: "relative",
-        marginTop: 10
+        marginVertical: 7,
+        marginHorizontal: 10
+
     },
     cardOnlineLabel:
     {

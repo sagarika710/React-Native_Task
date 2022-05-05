@@ -10,10 +10,10 @@ const Patholabs = () => {
     const navigation = useNavigation();
 
     return (
-        <ScrollView style={{ flex: 1 }}>
+        <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
 
-            <View style={{ marginVertical: 5, flexDirection: "row", alignItems: "center", marginHorizontal: 10 }}>
-                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "white", }} onPress={() => {
+            <View style={{ marginVertical: 5, flexDirection: "row", alignItems: "center", marginHorizontal: 8 }}>
+                <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "#EFF3FA", }} onPress={() => {
                     navigation.goBack()
                 }} >
                     <Ionicons name="chevron-back-outline" color={"gray"} size={20} />
@@ -22,7 +22,7 @@ const Patholabs = () => {
             </View>
             <View style={{ marginTop: 10 }}>
                 <Image style={{
-                    width: 350, height: 170, marginTop: 10, marginLeft: 5, marginRight: 10,
+                    width: 350, height: 170, marginHorizontal: 6, marginVertical: 10,
                     borderRadius: 10,
                 }}
                     source={require("../assests/clinic2.png")}
