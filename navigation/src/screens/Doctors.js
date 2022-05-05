@@ -141,9 +141,9 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         paddingHorizontal: 5,
         borderRadius: 10,
-        marginHorizontal: 10,
+        marginHorizontal: 11,
         paddingVertical: 10,
-        marginVertical: 5,
+        marginVertical: 11,
 
         //width: width / 2.3,
         alignItems: "center",
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.20,
         shadowRadius: 1.41,
-        elevation: 2,
+        elevation: 7,
     }
 
 })
