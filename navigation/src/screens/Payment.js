@@ -16,7 +16,11 @@ const Payment = () => {
                 </TouchableOpacity>
                 <Text style={{ fontWeight: "bold", marginLeft: 8 }}></Text>
             </View >
-            <TouchableOpacity style={{ flex: 1, justifyContent: "center", alignItems: "center", }}>
+            <TouchableOpacity onPress={() => {
+                navigation.navigate("Doctorappoitmentdetails", {
+
+                })
+            }} style={{ flex: 1, justifyContent: "center", alignItems: "center", }}>
 
                 <Text style={{ fontSize: 52, fontFamily: "Mulish", fontWeight: "bold", lineHeight: 65.26, letterSpacing: 0.5 }}>Payment</Text>
 

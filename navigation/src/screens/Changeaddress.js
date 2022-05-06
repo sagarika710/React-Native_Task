@@ -22,12 +22,18 @@ export default function Changeaddress() {
                 <Text style={{ marginLeft: 8, fontFamily: "Mulish", letterSpacing: 0.3, fontSize: 20 }}>Select Address</Text>
             </View>
             {/* search bar view start */}
-            <View style={styles.searchBoxContainer}>
-                {/* look here first one is icon then input box and then again icon */}
-                <TextInput>
-                    <Text style={{ color: "#009987" }}>Add New Address</Text>
-                </TextInput>
+            <View >
+                <TouchableOpacity onPress={() => {
+                    navigation.navigate("Addressofdoctor", {
 
+                    })
+                }}
+                    style={styles.searchBoxContainer}>
+                    {/* look here first one is icon then input box and then again icon */}
+                    <TextInput>
+                        <Text style={{ color: "#009987" }}>Add New Address</Text>
+                    </TextInput>
+                </TouchableOpacity>
             </View>
             <View style={styles.addressContainer}>
                 {/* look here first one is icon then input box and then again icon */}

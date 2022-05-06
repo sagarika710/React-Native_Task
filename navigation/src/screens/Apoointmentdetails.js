@@ -167,7 +167,11 @@ export default function Apoointmentdetails() {
                     </View>
                 </View>
                 <View style={{ marginVertical: 20 }}>
-                    <TouchableOpacity style={{ backgroundColor: "#00E0C5", padding: 15, margin: 10, justifyContent: "center", alignItems: "center", borderRadius: 40 }}>
+                    <TouchableOpacity onPress={() => {
+                        navigation.navigate("Payment", {
+
+                        })
+                    }} style={{ backgroundColor: "#00E0C5", padding: 15, margin: 10, justifyContent: "center", alignItems: "center", borderRadius: 40 }}>
                         <Text style={{ color: "#ffff" }}>Proceed To Pay</Text>
                     </TouchableOpacity>
                 </View>
