@@ -16,7 +16,7 @@ import Doctors from './src/screens/Doctors';
 import Appointment from './src/screens/Appointment';
 import Payment from './src/screens/Payment';
 import Apoointmentdetails from './src/screens/Apoointmentdetails'
-
+import Changeaddress from './src/screens/Changeaddress';
 function App() {
   return (
 
@@ -56,6 +56,11 @@ function App() {
         <Stack.Screen
           name="Apoointmentdetails"
           component={Apoointmentdetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Changeaddress"
+          component={Changeaddress}
           options={{ headerShown: false }}
         />
 

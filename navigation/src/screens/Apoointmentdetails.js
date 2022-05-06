@@ -75,7 +75,11 @@ export default function Apoointmentdetails() {
                             Time :  26 Feb 2022 | 10.00 - 11.00 PM
                         </Text>
 
-                        <TouchableOpacity style={{ justifyContent: "flex-end", paddingHorizontal: 10, paddingVertical: 7, marginVertical: 10, marginHorizontal: 150, width: "50%", alignItems: "center", borderRadius: 20, borderWidth: 0.5, borderColor: "#009987" }}>
+                        <TouchableOpacity onPress={() => {
+                            navigation.navigate("Changeaddress", {
+
+                            })
+                        }} style={{ justifyContent: "flex-end", paddingHorizontal: 10, paddingVertical: 7, marginVertical: 10, marginHorizontal: 150, width: "50%", alignItems: "center", borderRadius: 20, borderWidth: 0.5, borderColor: "#009987" }}>
                             <Text style={{ color: "#009987" }}>Change Address</Text>
                         </TouchableOpacity>
 
