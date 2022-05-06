@@ -31,6 +31,7 @@ function App() {
   return (
     <NavigationContainer >
       <Stack.Navigator initialRouteName={AddressAndPayment4} screenOptions={{ headerShown: false}}>
+          <Stack.Screen name="Medicine4ByCategory" component={Medicine4ByCategory}   />
           <Stack.Screen name= "AddressAndPayment4" component={AddressAndPayment4} />
           <Stack.Screen name="Refer" component={Refer}   />                                  
           <Stack.Screen name="Membership1" component={Membership1} />  
@@ -38,7 +39,7 @@ function App() {
           <Stack.Screen name="Membership3" component={Membership3}  />
           <Stack.Screen name="Medicine2ByCategory" component={Medicine2ByCategory}   /> 
           <Stack.Screen name="Medicine3ByCategory" component={Medicine3ByCategory}   />
-          <Stack.Screen name="Medicine4ByCategory" component={Medicine4ByCategory}   />
+          
           <Stack.Screen name= "AddressAndPayment1" component={AddressAndPayment1} />
           <Stack.Screen name= "AddressAndPayment2" component={AddressAndPayment2} />
           <Stack.Screen name= "AddressAndPayment3" component={AddressAndPayment3} />

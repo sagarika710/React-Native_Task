@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground, Dimensions } from 'react-native';
+import { useState} from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground, Dimensions, Modal } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
@@ -11,6 +12,9 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
 
 export default function Medicine3ByCategory({ navigation }) {
+
+    const [modalVisible, setModalVisible] = useState(false);
+
     return (
         <View style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -134,10 +138,10 @@ export default function Medicine3ByCategory({ navigation }) {
                         <View style={styles.paymentMethodTopDiv}>
                             <View style={styles.paymentMethodLeftDiv}>
                                 <View>
-                                    <AntDesign name="creditcard" size={15} color="#3E64FF" onPress={() => navigation.navigate('Medicine3ByCategory')}  />
+                                    <AntDesign name="creditcard" size={15} color="#3E64FF" onPress={() => navigation.navigate('Medicine3ByCategory')} />
                                 </View>
                                 <View>
-                                    <Text style={styles.onlineTxt}  onPress={() => navigation.navigate('Medicine3ByCategory')} >Online</Text>
+                                    <Text style={styles.onlineTxt} onPress={() => navigation.navigate('Medicine3ByCategory')} >Online</Text>
                                 </View>
                             </View>
                         </View>
@@ -162,10 +166,45 @@ export default function Medicine3ByCategory({ navigation }) {
                 {/* button */}
                 <View style={{ alignItems: 'center' }}>
                     <LinearGradient colors={['#00E0C5', '#009987']} style={styles.proceedToPayBtnDiv}  >
-                        <TouchableOpacity style={styles.proceedToPayBtn} onPress={() => navigation.navigate('AddressAndPayment1')} >
+                        <TouchableOpacity style={styles.proceedToPayBtn} onPress={() => setModalVisible(true)} >
                             <Text style={styles.proceedToPayBtnTxt} >Check Out</Text>
                         </TouchableOpacity>
                     </LinearGradient>
+                </View>
+                <View>
+                    <Modal transparent={true}
+                        visible={modalVisible}
+                        onPress={() => { setModalVisible(!modalVisible) }}>
+                        <View style={[styles.centeredView, { backgroundColor: '#000000aa', height: Dimensions.get('window').height }]}>
+                            <View style={styles.modalView}>
+                               <View>
+                                   <View style={styles.row1}>
+                                      <AntDesign name="closecircle" size={25} color="black" onPress={() => setModalVisible(!modalVisible)} />
+                                   </View>
+                                   <View style={styles.row2}>
+                                       <View style={styles.profileImgDiv}>
+                                           <Image source={require('../assets/profileImg.png')} />
+                                       </View>
+                                   </View>
+                                   <View style={styles.row3}>
+                                       <Text style={styles.profileNameTxt}>Sagarika Mohanty</Text>
+                                   </View>
+                                   <View style={styles.row4}>
+                                       <View style={styles.progressbarDiv}>
+                                           <View style={styles.progressbar}><Text style={styles.percentageTxt}>85%</Text></View>
+                                       </View>
+                                   </View>
+                                   <View style={styles.row5}>
+                                       <Text style={styles.profileCompleteTxt}>OOPS! You profile is not completed yet,</Text>
+                                       <Text style={styles.profileCompleteTxt}>Please Complete your profile.</Text>
+                                   </View>
+                                   <View style={styles.row6}>
+                                       <Text style={styles.gotoProfileTxt} onPress={() => navigation.navigate('AddressAndPayment1')}>Go to Profile</Text>
+                                   </View>
+                               </View>
+                            </View>
+                        </View>
+                    </Modal>
                 </View>
 
             </ScrollView>
@@ -173,12 +212,104 @@ export default function Medicine3ByCategory({ navigation }) {
     )
 }
 
+
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
         paddingHorizontal: 20,
         paddingTop: Constants.statusBarHeight,
+    },
+    // modal view (pop up)
+    centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    modalView: {
+        width: Dimensions.get('window').width * 0.8,
+        height: Dimensions.get('window').height * 0.45,
+        backgroundColor: "white",
+        borderRadius: 20,
+        padding: 10,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5
+    },
+    row1: {
+        width: Dimensions.get('window').width * 0.7,
+        alignItems: 'flex-end',
+    },
+    row2: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 10,
+    },
+    profileImgDiv: {
+        width: 80,
+        height: 80,
+        borderRadius: 50,
+    },
+    row3: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20,
+    },
+    profileNameTxt: {
+        color: '#000',
+        fontSize: 14,
+        fontWeight: '600',
+    },
+    row4: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 40,
+    },
+    progressbarDiv: {
+        width: 185,
+        height: 12,
+        borderWidth: 1, 
+        borderColor: '#00E0C5',
+        borderRadius: 10,
+    },
+    progressbar: {
+        width: 134,
+        backgroundColor: '#00E0C5',
+        borderRadius: 10,
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+    },
+    percentageTxt: {
+        color: '#000',
+        fontSize: 8,
+        fontWeight: '600',
+    },
+    row5: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 25,
+    },
+    profileCompleteTxt: {
+        textAlign: 'center',
+        color: '#000',
+        fontSize: 12,
+        fontWeight: '500',
+    },
+    row6: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    gotoProfileTxt: {
+        color: '#009987',
+        fontSize: 10,
+        fontWeight: '700',
     },
     AddedToCartDiv: {
         width: Dimensions.get('window').width * 0.85,
@@ -419,8 +550,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         color: '#fff',
         // textShadowOffset: 5,
-    }
+    },
 
+    
 
 })
 
