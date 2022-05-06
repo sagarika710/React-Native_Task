@@ -132,6 +132,7 @@ export default function Appointment() {
                         {
                             dateday.map((list, index) => {
                                 return (
+
                                     <TouchableOpacity
 
                                         onPress={() => {
@@ -144,8 +145,9 @@ export default function Appointment() {
                                         style={[styles.datedayContainer, {
                                             backgroundColor: isDateIsActive(list) ? "#00E0C5" : "white",
                                         }]} key={index}>
-                                        <View style={{ marginBottom: 10 }}>
-                                            <Text style={{ fontSize: 24, fontFamily: "Mulish", color: isDateIsActive(list) ? "white" : "grey" }}>{list.date}</Text>
+                                        <View>
+                                            <Text
+                                                style={{ fontSize: 24, fontFamily: "Mulish", color: isDateIsActive(list) ? "white" : "grey" }}>{list.date}</Text>
 
                                         </View>
                                         <View>
@@ -155,6 +157,7 @@ export default function Appointment() {
                                             }}>{list.day}</Text>
                                         </View>
                                     </TouchableOpacity>
+
                                 )
                             })
                         }
@@ -226,7 +229,7 @@ export default function Appointment() {
                 </View>
                 <View style={{ marginVertical: 30, marginHorizontal: 10 }}>
                     <TouchableOpacity onPress={() => {
-                        navigation.navigate("Payment", {
+                        navigation.navigate("Apoointmentdetails", {
 
                         })
                     }} style={styles.appointmentBtn}>

@@ -15,6 +15,8 @@ import Patholabs from './src/screens/Patholabs';
 import Doctors from './src/screens/Doctors';
 import Appointment from './src/screens/Appointment';
 import Payment from './src/screens/Payment';
+import Apoointmentdetails from './src/screens/Apoointmentdetails'
+
 function App() {
   return (
 
@@ -51,6 +53,12 @@ function App() {
           component={Appointment}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Apoointmentdetails"
+          component={Apoointmentdetails}
+          options={{ headerShown: false }}
+        />
+
         <Stack.Screen
           name="Payment"
           component={Payment}
