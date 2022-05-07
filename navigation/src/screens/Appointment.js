@@ -13,6 +13,10 @@ export default function Appointment() {
         date: "",
         day: ""
     });
+    const [selectedTime, setSelectedTime] = useState({
+        time: ""
+
+    });
 
     const navigation = useNavigation();
     const dateday = [
@@ -96,6 +100,12 @@ export default function Appointment() {
         )
     }
 
+    const isTimeIsActive = (list) => {
+        return (
+            selectedTime.time == list.time
+        )
+    }
+
     return (
         // start MainView
         <View style={styles.appointmentContainer}>
@@ -176,10 +186,24 @@ export default function Appointment() {
                         {
                             time.map((list, index) => {
                                 return (
-                                    <View style={styles.timeField} key=
-                                        {index}>
-                                        <Text>{list.time}</Text>
-                                    </View>
+                                    <TouchableOpacity
+                                        onPress={() => {
+                                            setSelectedTime({
+                                                time: list.time,
+
+                                            })
+                                        }}
+
+                                        style={[styles.timeField, {
+                                            backgroundColor: isTimeIsActive(list) ? "#00E0C5" : "white",
+                                        }]} key={index}>
+                                        <View>
+                                            <Text style={{ color: isTimeIsActive(list) ? "white" : "grey" }}>{list.time}</Text>
+                                        </View>
+
+
+                                    </TouchableOpacity>
+
                                 )
                             })
                         }
@@ -191,10 +215,24 @@ export default function Appointment() {
                         {
                             time1.map((list, index) => {
                                 return (
-                                    <View style={styles.timeField} key=
-                                        {index}>
-                                        <Text>{list.time}</Text>
-                                    </View>
+                                    <TouchableOpacity
+                                        onPress={() => {
+                                            setSelectedTime({
+                                                time: list.time,
+
+                                            })
+                                        }}
+
+                                        style={[styles.timeField, {
+                                            backgroundColor: isTimeIsActive(list) ? "#00E0C5" : "white",
+                                        }]} key={index}>
+                                        <View>
+                                            <Text style={{ color: isTimeIsActive(list) ? "white" : "grey" }}>{list.time}</Text>
+                                        </View>
+
+
+                                    </TouchableOpacity>
+
                                 )
                             })
                         }
@@ -206,17 +244,30 @@ export default function Appointment() {
                         {
                             time2.map((list, index) => {
                                 return (
-                                    <View style={styles.timeField} key=
-                                        {index}>
-                                        <Text>{list.time}</Text>
-                                    </View>
+                                    <TouchableOpacity
+                                        onPress={() => {
+                                            setSelectedTime({
+                                                time: list.time,
+
+                                            })
+                                        }}
+
+                                        style={[styles.timeField, {
+                                            backgroundColor: isTimeIsActive(list) ? "#00E0C5" : "white",
+                                        }]} key={index}>
+                                        <View>
+                                            <Text style={{ color: isTimeIsActive(list) ? "white" : "grey" }}>{list.time}</Text>
+                                        </View>
+
+
+                                    </TouchableOpacity>
+
                                 )
                             })
                         }
 
                     </ScrollView>
                 </View>
-
                 <View style={{ marginHorizontal: 12, marginVertical: 20 }}>
                     <Text style={{ fontSize: 14, fontFamily: "Mulish", letterSpacing: 0.23, lineHeight: 17.57 }}>Write your problem</Text>
                 </View>
