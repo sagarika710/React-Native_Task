@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
    btn1: {
    color: 'white',
    fontSize: 11,
+   marginTop: 5,
    },
    Heading: {
       marginTop: 20,
