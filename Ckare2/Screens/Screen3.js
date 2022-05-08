@@ -1,6 +1,6 @@
 import React from "react";
-import {View,TextInput,Image,Text,TouchableOpacity,StyleSheet} from 'react-native'
-
+import {View,TextInput,Image,Text,Dimensions,TouchableOpacity,StyleSheet} from 'react-native'
+import LinearGradient from 'react-native-linear-gradient';
 
 const Screen2  = ({navigation}) => {
     return(
@@ -34,124 +34,103 @@ const Screen2  = ({navigation}) => {
           <Text style={styles.last1}>Total MRP</Text>
           <Text style={styles.last2}>₹1240.00</Text>
         </View>
-        <View style={styles.Row1}>
-          <Text style={styles.last3}>Total Discount</Text>
-          <Text style={styles.last4}>₹240.00</Text>
+        <View style={styles.Row2}>
+          <Text style={styles.last1}>Total Discount</Text>
+          <Text style={styles.last2}>₹240.00</Text>
         </View>
-        <View style={styles.Row1}>
-          <Text style={styles.last5}>GST</Text>
-          <Text style={styles.last6}>₹40.00</Text>
+        <View style={styles.Row2}>
+          <Text style={styles.last1}>GST</Text>
+          <Text style={styles.last2}>₹40.00</Text>
         </View>
-        <View style={styles.Row1}>
-          <Text style={styles.last7}>Shipping Fee</Text>
-          <Text style={styles.last8}>Free</Text>
-        </View>
-        </View>
-        <View style={styles.line}></View>
-        <View style={styles.Row1}>
-          <Text style={styles.last9}>Grand Total</Text>
-          <Text style={styles.last10}>₹1040.00</Text>
+        <View style={styles.Row2}>
+          <Text style={styles.last1}>Shipping Fee</Text>
+          <Text style={styles.free}>Free</Text>
         </View>
         </View>
-        <TouchableOpacity style={styles.btn}>
-             <Text style={styles.btn1} onPress= {() => navigation.navigate('Screen3')}>Checkout</Text>
+        <View style={{alignItems: 'center'}}>
+        <Text style={styles.line}></Text>
+      </View>
+        <View style={styles.Row2}>
+          <Text style={styles.last1}>Grand Total</Text>
+          <Text style={styles.last2}>₹1040.00</Text>
+        </View>
+        </View>
+        <View style={{alignItems: 'center', }}>
+        <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+          <TouchableOpacity>
+            <View style={styles.btn1}>
+              <Text
+                style={styles.btn2}
+                onPress={() => navigation.navigate('Screen3')}>
+                Add to Cart
+              </Text>
+            </View>
           </TouchableOpacity>
+        </LinearGradient>
+      </View>
         </View>
     )
 };
 
 const styles = StyleSheet.create ({
-    btn1: {
-        color: 'white',
-       },
-    btn: {
-        marginLeft: 10,
-        marginTop: 140,
-        borderWidth: 1,
-        paddingHorizontal: 150,
-        paddingVertical: 10,
-        marginLeft: 20,
-        width: 370,
-      borderRadius: 20,
-      backgroundColor: '#37a987',
-      borderColor: '#37a987',
-    },
+  free: {
+    color: '#009987',
+    marginRight: 10,
+  },
+  last2: {
+    marginRight: 10,
+  },
+  btn1: {
+    color: 'white',
+    alignItems: 'center',
+  },
+  btn2: {
+    color: 'white',
+    marginTop: 5,
+  },
+  btn: {
+    marginTop: 60,
+    borderWidth: 1,
+    width: Dimensions.get('window').width * 0.9,
+    height: Dimensions.get('window').height * 0.045,
+    borderRadius: 20,
+    borderColor: '#37a987',
+  },
     square: {
     borderWidth: 2,
-    width: 370,
+    width: Dimensions.get('window').width * 0.9,
     marginTop: 15,
     marginLeft: 20,
     borderRadius: 10,
-    height: 215,
+    height: Dimensions.get('window').height * 0.27,
     borderColor: '#E1E1E1',
 
     },
     Row1: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 15,
+    marginLeft: 15,
         },
-    last1: {
-        marginLeft: 16,
-        marginTop: 16,
-        fontSize: 12,
-      },
-      last3: {
-        marginLeft: 16,
-        marginTop: 5,
-        fontSize: 12,
-      },
+        Row2: {
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginLeft: 15,
+          },
       line: {
+        marginBottom: 7,
+        alignItems: 'center',
+        justifyContent: 'center',
         borderBottomWidth: 1.5,
         borderBottomColor: '#E1E1E1',
-        width: 340,
-        marginLeft: 12,
-        marginTop: 15,
+        width: Dimensions.get('window').width * 0.81,
     },
-      last5: {
-        marginLeft: 16,
-        marginTop: 5,
-        fontSize: 12,
-      },
-      last7: {
-        marginLeft: 16,
-        marginTop: 5,
-        fontSize: 12,
-      },
-      last2: {
-        marginLeft: 210,
-        marginTop: 13,
-        fontSize: 12,
-      },
-      last4: {
-        marginLeft: 187,
-        marginTop: 0,
-        fontSize: 12,
-      },
+     
       payment: {
         marginLeft: 17,
         marginTop: 12,
     color: 'black',
     },
-      last6: {
-        marginLeft: 248,
-        marginTop: 0,
-        fontSize: 12,
-      },
-      last8: {
-        marginLeft: 197,
-        color: '#009987',
-        marginTop: 0,
-        fontSize: 14,
-      },
-      last9: {
-        marginLeft: 18,
-        marginTop: 12,
-        fontSize: 12,
-      },
-      last10: {
-        marginLeft: 197,
-        marginTop: 12,
-        fontSize: 12,
-      },
 
     container: {
         backgroundColor: 'white',
@@ -163,8 +142,8 @@ const styles = StyleSheet.create ({
         height: 110,
         marginTop: 25,
         marginLeft: 20,
+    width: Dimensions.get('window').width * 0.9,
     borderRadius: 10,
-    width: 370,
     borderColor:  '#E1E1E1',
     borderRadius: 10,
     },
@@ -172,7 +151,7 @@ const styles = StyleSheet.create ({
         borderWidth: 2,
     borderColor:  '#E1E1E1',
     borderRadius: 10,
-    width: 370,
+    width: Dimensions.get('window').width * 0.9,
     height: 148,
     marginTop: 15,
         marginLeft: 20,

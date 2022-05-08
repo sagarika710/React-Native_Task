@@ -1,6 +1,6 @@
 import React from "react";
-import {View,TextInput,Image,Text,TouchableOpacity,StyleSheet} from 'react-native'
-// import LinearGradient from 'react-native-linear-gradient';
+import {View,TextInput,Image,Text,Dimensions,TouchableOpacity,StyleSheet} from 'react-native'
+import LinearGradient from 'react-native-linear-gradient';
 
 
 const Screen1  = ({navigation}) => {
@@ -15,83 +15,130 @@ const Screen1  = ({navigation}) => {
           </View>
           <View style={styles.row1}>
              <View style={styles.box1}>
-          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+             <View style={{alignItems: 'center',}}><Image style={styles.img2} source={require('../assets/Paracetamol.png')}/></View>
           <View style={styles.txt1}>
-          <Text style={styles.med}>Paracetamol 500mg</Text>
+             <Text style={styles.med}>Paracetamol 500mg</Text>
           <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
-          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
-
-          <TouchableOpacity style={styles.btn}>
+          <Text style={{fontSize: 10, marginLeft: 15,}}>⭐️⭐️⭐️⭐️⭐️</Text>
+          <View style={{alignItems: 'center', }}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+          <TouchableOpacity >
+          <View style={{alignItems: 'center',}}>
              <Text style={styles.btn1}>Buy Now</Text>
+          </View>
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
    
           </View>
              </View>
              <View style={styles.box2}>
-          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+            <View style={{alignItems: 'center',}}><Image style={styles.img3} source={require('../assets/cough.png')}/></View>
           <View style={styles.txt1}>
-          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.med1}>Paracetamol 500mg</Text>
           <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
-          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
-          <TouchableOpacity style={styles.btn}>
+         <Text  style={{fontSize: 10, marginLeft: 15,}}>⭐️⭐️⭐️⭐️⭐️</Text>
+          <View style={{alignItems: 'center', }}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+             <TouchableOpacity >
+          <View style={{alignItems: 'center', justifyContent: 'center',}}>
              <Text style={styles.btn1}>Buy Now</Text>
+          </View>
+
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
           </View>
              </View>
+         
           </View> 
           <View style={styles.row1}>
              <View style={styles.box1}>
-          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+             <View style={{alignItems: 'center',}}><Image style={styles.img2} source={require('../assets/Paracetamol.png')}/></View>
           <View style={styles.txt1}>
-          <Text style={styles.med}>Paracetamol 500mg</Text>
+             <Text style={styles.med}>Paracetamol 500mg</Text>
           <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
-          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
-          <TouchableOpacity style={styles.btn}>
+          <Text style={{fontSize: 10, marginLeft: 15,}}>⭐️⭐️⭐️⭐️⭐️</Text>
+          <View style={{alignItems: 'center', }}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+          <TouchableOpacity >
+          <View style={{alignItems: 'center',}}>
              <Text style={styles.btn1}>Buy Now</Text>
+          </View>
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
+   
           </View>
              </View>
              <View style={styles.box2}>
-          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+            <View style={{alignItems: 'center',}}><Image style={styles.img3} source={require('../assets/cough.png')}/></View>
           <View style={styles.txt1}>
-          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.med1}>Paracetamol 500mg</Text>
           <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
-          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
-          <TouchableOpacity style={styles.btn}>
+         <Text  style={{fontSize: 10, marginLeft: 15,}}>⭐️⭐️⭐️⭐️⭐️</Text>
+          <View style={{alignItems: 'center', }}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+             <TouchableOpacity >
+          <View style={{alignItems: 'center', justifyContent: 'center',}}>
              <Text style={styles.btn1}>Buy Now</Text>
+          </View>
+
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
           </View>
              </View>
+         
           </View> 
           <View style={styles.row1}>
              <View style={styles.box1}>
-          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+             <View style={{alignItems: 'center',}}><Image style={styles.img2} source={require('../assets/Paracetamol.png')}/></View>
           <View style={styles.txt1}>
-          <Text style={styles.med}>Paracetamol 500mg</Text>
-          <Text style={styles.des}>₹ 80.00 100 <Text style={styles.clr}> 10% off</Text></Text>
-          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
-          <TouchableOpacity style={styles.btn}>
+             <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
+          <Text style={{fontSize: 10, marginLeft: 15,}}>⭐️⭐️⭐️⭐️⭐️</Text>
+          <View style={{alignItems: 'center', }}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+          <TouchableOpacity >
+          <View style={{alignItems: 'center',}}>
              <Text style={styles.btn1}>Buy Now</Text>
+          </View>
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
+   
           </View>
              </View>
              <View style={styles.box2}>
-          <Image style={styles.img2} source={require('../assets/Paracetamol.png')}/>
+            <View style={{alignItems: 'center',}}><Image style={styles.img3} source={require('../assets/cough.png')}/></View>
           <View style={styles.txt1}>
-          <Text style={styles.med}>Paracetamol 500mg</Text>
+          <Text style={styles.med1}>Paracetamol 500mg</Text>
           <Text style={styles.des}>₹ 80.00 100<Text style={styles.clr}> 10% off</Text></Text>
-          <Text>⭐️⭐️⭐️⭐️⭐️</Text>
-          <TouchableOpacity style={styles.btn}>
-             <Text style={styles.btn1} onPress= {() => navigation.navigate('Screen2')}>Buy Now</Text>
+         <Text  style={{fontSize: 10, marginLeft: 15,}}>⭐️⭐️⭐️⭐️⭐️</Text>
+          <View style={{alignItems: 'center',}}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+             <TouchableOpacity >
+          <View style={{alignItems: 'center', justifyContent: 'center',}}>
+             <Text style={styles.btn1} onPress={() => navigation.navigate('Screen2')}>Buy Now</Text>
+          </View>
+
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
           </View>
              </View>
+         
           </View> 
       </View>
     )
 };
 
 const styles = StyleSheet.create({
+   btn1: {
+   color: 'white',
+   fontSize: 11,
+   },
    Heading: {
       marginTop: 20,
       color: 'black',
@@ -102,76 +149,70 @@ const styles = StyleSheet.create({
    },
    container: {
       backgroundColor: 'white',
-      height: 1100,
+      flex: 1,
    },
    med: {
       color: 'black',
-      fontSize: 13,
+      fontSize: 11,
+      marginHorizontal: 15,
+      marginTop: 9,
+   },
+   med1: {
+      color: 'black',
+      fontSize: 11,
+      marginHorizontal: 15,
+      marginTop: 5,
    },
    des: {
       color: 'black',
-      fontSize: 10,
-   },
-   img2: {
-        marginLeft: 35,
-        marginTop: 18,
+      fontSize: 9,
+      marginHorizontal: 15,
    },
     btn: {
-        paddingHorizontal: 16,
-        paddingVertical: 3,
         borderRadius: 20,
-        backgroundColor: '#009987',
-        marginRight: 15,
-        marginTop: 10,
-    },
-    btn1: {
-     fontSize: 11,
-     marginLeft: 29,
-     color: 'white',
+          width: Dimensions.get('window').width*0.38,
+          height: Dimensions.get('window').width*0.07,
+         marginTop: 10,
     },
     box1: {
         borderWidth: 1,
     borderColor: '#E1E1E1',
     borderRadius: 15,
-    width: 170,
-    height: 186,
-    marginLeft: 27,
+  paddingTop: 15,
+    width: Dimensions.get('window').width*0.42,
+  height: Dimensions.get('window').height*0.25,
     },
     box2: {
       borderWidth: 1,
   borderColor: '#E1E1E1',
+  paddingTop: 5,
   borderRadius: 15,
-  width: 170,
-  height: 186,
-  marginLeft: 12,
+  width: Dimensions.get('window').width*0.42,
+  height: Dimensions.get('window').height*0.25,
   },
     row1: {
-        marginTop: 20,
+        marginTop: 5,
         flexDirection: 'row',
-    },
-    row2: {
-      marginTop: 20,
-      flexDirection: 'row',
-  },
-    txt1: {
-        marginTop: 7,
+        justifyContent: 'space-evenly',
+        width: Dimensions.get('window').width*0.9,
         marginLeft: 15,
     },
+
     search: {
         flexDirection: 'row',
         borderWidth: 1,
         borderColor: '#EFF3FA',
         borderRadius: 15,
-        width: 365,
-        marginLeft: 22,
-        marginTop: 20,
         backgroundColor: '#EFF3FA',
+        paddingRight: 10,
         paddingLeft: 10,
+        margin: 15,
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        width: Dimensions.get('window').width*0.9
     },
     img1: {
         height: 22,
-        marginTop: 14,
-        marginLeft: 85,
     },
 });
 
