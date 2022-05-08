@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { View, Text,Image,TouchableOpacity,StyleSheet } from 'react-native';
+import { View, Text,Image,Dimensions,TouchableOpacity,StyleSheet } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient'
 
-const Screen = ({navigation} ) => {
+const Screen = ({navigation}) => {
     return(
         <View style={styles.container}>
             <View style={styles.div}>
@@ -17,65 +18,125 @@ const Screen = ({navigation} ) => {
           <View style={styles.div1}>
           <Text style={styles.txt4}>Order with prescription or MRN Number</Text>    
           <Text style={styles.txt5}>Upload your prescription or enter your MRN</Text>    
-          <Text style={styles.txt6}>Number to book for test.</Text>    
-          <Text style={styles.txt7}>Book Now</Text>    
+          <Text style={styles.txt6}>Number to book for test.</Text>  
+          <View style={styles.line11}>
+          <Text style={styles.txt7}>Book Now</Text>  
+          <Image style={styles.pause} source={require('../assets/pause.png')}/>   
+            </View>  
           </View>
-          <Text style={styles.txt8}>Test Available Here</Text>   
-          <View style={styles.div2}>
+          <Text style={styles.txt8}>Test Available Here</Text>  
+          <TouchableOpacity style={styles.div2}>
+          <View style={styles.thyroid}>
           <View style={styles.Row1}>
           <Text style={styles.txt9}>Complete Blood Count (CBC)</Text>   
-          <Text style={styles.txt10}>Price : ₹ 350.00<Text style={styles.clr}> 10% off</Text></Text>   
+          <Text style={styles.txt10}>Price : ₹ 350.00<Text style={styles.clr}> 10% off</Text></Text>  
               </View> 
               <View style={styles.Row2}>
-              <Image style={styles.img2} source={require('../assets/Vector.png')}/> 
+              {/* <Image style={styles.img2} source={require('../assets/Vector.png')}/>  */}
               </View>
               </View> 
-              <View style={styles.div3}>
+              </TouchableOpacity> 
+              <TouchableOpacity style={styles.div3}>
+              <View style={styles.thyroid}>
           <View style={styles.Row1}>
           <Text style={styles.txt9}>Thyroid Stimulating Hormone (TSH)</Text>   
           <Text style={styles.txt10}>Price : ₹ 350.00<Text style={styles.clr}> 10% off</Text></Text>   
               </View> 
               <View style={styles.Row2}>
-              <Image style={styles.img3} source={require('../assets/Vector.png')}/> 
+              {/* <Image style={styles.img3} source={require('../assets/Vector.png')}/>  */}
               </View>
-              </View> 
-              <View style={styles.div3}>
+              </View>
+              </TouchableOpacity> 
+              <TouchableOpacity style={styles.div3}>
+              <View style={styles.thyroid}>
           <View style={styles.Row1}>
           <Text style={styles.txt9}>Liver Function Test</Text>   
           <Text style={styles.txt10}>Price : ₹ 350.00<Text style={styles.clr}> 10% off</Text></Text>   
               </View> 
               <View style={styles.Row2}>
-              <Image style={styles.img4} source={require('../assets/Vector.png')}/> 
+              {/* <Image style={styles.img4} source={require('../assets/Vector.png')}/>  */}
               </View>
               </View> 
-              <View style={styles.div3}>
+              </TouchableOpacity> 
+              <TouchableOpacity style={styles.div3}>
+              <View style={styles.thyroid}>
           <View style={styles.Row1}>
           <Text style={styles.txt9}>Thyphoid Test</Text>   
           <Text style={styles.txt10}>Price : ₹ 350.00<Text style={styles.clr}> 10% off</Text></Text>   
               </View> 
               <View style={styles.Row2}>
-              <Image style={styles.img5} source={require('../assets/Vector.png')}/> 
+              {/* <Image style={styles.img5} source={require('../assets/Vector.png')}/>  */}
               </View>
               </View> 
-              <View style={styles.div3}>
+              </TouchableOpacity> 
+              <TouchableOpacity style={styles.div3}>
+              <View style={styles.thyroid}>
           <View style={styles.Row1}>
           <Text style={styles.txt9}>Thyroid Stimulating Hormone (TSH)</Text>   
           <Text style={styles.txt10}>Price : ₹ 350.00<Text style={styles.clr}> 10% off</Text></Text>   
               </View> 
               <View style={styles.Row2}>
-              <Image style={styles.img6} source={require('../assets/Vector.png')}/> 
+              {/* <Image style={styles.img6} source={require('../assets/Vector.png')}/>  */}
               </View>
               </View> 
-              <TouchableOpacity style={styles.btn}>
-             <Text style={styles.btn1} onPress= {() => navigation.navigate('Screen1')}>Next</Text>
+              </TouchableOpacity> 
+              <View style={{alignItems: 'center',}}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+             <TouchableOpacity >
+          <View style={{alignItems: 'center', justifyContent: 'center',}}>
+             <Text style={styles.btn1} onPress={() => navigation.navigate('Screen1')}>Next</Text>
+          </View>
+
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
+  Row2: {
+    justifyContent: 'center'
+  },
+  btn1: {
+    color: 'white',
+    fontSize: 16,
+    marginTop: 5,
+    },
+    btn: {
+      borderRadius: 20,
+        width: Dimensions.get('window').width*0.9,
+        height: Dimensions.get('window').width*0.09,
+       marginTop: 40,
+  },
+//   img2: {
+//      marginLeft: 170,
+//   },
+//   img3: {
+//     marginLeft: 135,
+//  },
+//  img4: {
+//   marginLeft: 225,
+// },
+// img5: {
+//   marginLeft: 224,
+// },
+// img6: {
+//   marginLeft: 13,
+// },
+
+  pause: {
+   marginTop: 5,
+  },
+  line11:{
+   flexDirection: 'row',
+  },
+  thyroid: {
+       justifyContent: 'space-between',
+       flexDirection: 'row',
+  },
     txt1: {
-          color: 'black',
+          color: '#222222',
     },
     txt2: {
         color: '#FFC000',
@@ -83,12 +144,12 @@ const styles = StyleSheet.create({
         marginTop: 3,
   },
   txt3: {
-    color: 'black',
+    color: '#222222',
     fontSize: 10,
     marginTop: 5,
 },
     row2: {
-        marginLeft: 20,
+        marginHorizontal: 20,
         marginTop: 12,    
     },
     img1: {
@@ -96,87 +157,78 @@ const styles = StyleSheet.create({
         borderColor:  '#E1E1E1',
         borderRadius: 10,
     },
-    btn1: {
-        color: 'white',
-       },
-    btn: {
-        marginLeft: 10,
-        marginTop: 50,
-        borderWidth: 1,
-        paddingHorizontal: 168,
-        paddingVertical: 10,
-        marginLeft: 20,
-        width: 370,
-      borderRadius: 20,
-      backgroundColor: '#00E0C5',
-      borderColor: '#15dcd3',
-    },
+
     clr: {
         color: '#009987',
     },
     container: {
     backgroundColor: 'white',
-    height: 1000,
+    flex: 1,
     },
     div: {
+      marginTop: 10,
         flexDirection: 'row',
-        marginTop: 70,
-        marginLeft: 22,
+        justifyContent: 'space-between',
+        width: Dimensions.get('window').width*0.7,
+        marginLeft: 15,
     },
     div2: {
+      justifyContent: 'space-between',
         flexDirection: 'row',
         borderWidth: 1,
         borderColor: '#15dcd3',
-        width: 370,
-        marginLeft: 20,
+        width: Dimensions.get('window').width*0.92,
+        marginHorizontal: 15,
         borderRadius: 10,
         height: 50,
-        marginTop: 20,
+        marginTop: 5,
+        marginVertical:2,
     },
     div3: {
         flexDirection: 'row',
         borderWidth: 1,
         borderColor:  '#E1E1E1',
-        width: 370,
-        marginLeft: 20,
+        width: Dimensions.get('window').width*0.92,
+        marginHorizontal: 15,
+        // paddingHorizontal: 5,
         borderRadius: 10,
         height: 50,
-        marginTop: 15,
+        marginVertical:2,
     },
     div1: {
+      paddingTop: 8,
+      paddingLeft: 8,
         borderWidth: 1,
         borderColor: '#15dcd3',
-        height: 130,
-        width: 370,
-        marginLeft: 20,
+        height: Dimensions.get('window').height*0.15,
         marginTop: 20,
+        marginLeft: 15,
         borderRadius: 10,
-        paddingLeft: 15,
-        paddingTop: 18,
+        width: Dimensions.get('window').width*0.92,
     },
     txt4: {
-      color: 'black',
+      color: '#222222',
     },
     txt5: {
-        fontSize: 11,
-        marginTop: 18,
+        fontSize: 10,
+        marginTop: 8,
       },
       txt6: {
-        fontSize: 11,
+        fontSize: 10,
       },
       txt7: {
         fontSize: 13,
         fontWeight: 'bold',
-        marginTop: 8,
+        marginVertical: 5,
         color: '#37a987',
       },
       txt8: {
-       color: 'black',
+       color: '#222222',
        marginLeft: 20,
-       marginTop: 16,
+       marginVertical: 10,
       },
       txt9: {
-        color: 'black',
+        color: '#222222',
         marginLeft: 15,
         marginTop: 7,
         fontSize: 11,
@@ -186,26 +238,7 @@ const styles = StyleSheet.create({
         marginTop: 5,
         fontSize: 9,
        },
-       img2:{
-        marginLeft: 165,
-        marginTop: 20,
-      },
-      img3:{
-        marginLeft: 128,
-        marginTop: 20,
-      },
-      img4:{
-        marginLeft: 218,
-        marginTop: 20,
-      },
-      img5:{
-        marginLeft: 218,
-        marginTop: 20,
-      },
-      img6:{
-        marginLeft: 128,
-        marginTop: 20,
-      },
+
 
 })
 export default Screen;
