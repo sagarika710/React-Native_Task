@@ -97,7 +97,7 @@ export default function Screen3() {
                                         <Image source={list.image} style={{ borderRadius: 50, height: 100, width: 100 }} resizeMode={"contain"} />
                                     </View>
 
-                                    <Text style={{ fontSize: 16, fontFamily: "Mulish" }}>{list.title}</Text>
+                                    <Text style={{ fontSize: 16, fontFamily: "Mulish", letterSpacing: .2 }}>{list.title}</Text>
                                     <Text style={{ fontSize: 12 }}>{list.specialist}</Text>
                                     <View style={{ flexDirection: "row" }}>
                                         <Text style={{ fontSize: 10 }}>
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginHorizontal: 5,
         paddingVertical: 10,
-        paddingHorizontal: 23,
+        paddingHorizontal: 22,
         marginVertical: 10,
         //width: width / 2.3,
         alignItems: "center",
