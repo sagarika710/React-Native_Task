@@ -111,20 +111,20 @@ export default function Profile() {
                                 <FontAwesome5Icons name="calendar" color="#C7E8004F" size={30} />
                             </View>
                             <View>
-                                <Text style={{ fontSize: 16, fontFamily: "Mulish" }}>Call a doctor at home</Text>
-                                <Text style={{ fontSize: 10 }}>Get diagnosed in the comfort of your Home</Text>
+                                <Text style={{ fontSize: 16, fontFamily: "Mulish" }}>Book appointment </Text>
+                                <Text style={{ fontSize: 10 }}>Meet doctor at there clinic. </Text>
                             </View>
 
                         </TouchableOpacity>
                     </View>
                     <View style={{ padding: 3, borderColor: "#FBBC05", borderRadius: 5 }}>
                         <TouchableOpacity style={{ flexDirection: "row" }}>
-                            <View style={[styles.servicesIconContainer, { backgroundColor: "#FBBC05", borderColor: "#7ACEFA", }]}>
-                                <Ionicons name="videocam-outline" size={30} />
+                            <View style={[styles.servicesIconContainer, { backgroundColor: "#FBBC05", opacity: 0.2 }]}>
+                                <Ionicons name="videocam-outline" size={30} color="#FBBC05" />
                             </View>
                             <View>
-                                <Text style={{ fontSize: 16, fontFamily: "Mulish" }}>Call a doctor at home</Text>
-                                <Text style={{ fontSize: 10 }}>Get diagnosed in the comfort of your Home</Text>
+                                <Text style={{ fontSize: 16, fontFamily: "Mulish" }}>Video Conference</Text>
+                                <Text style={{ fontSize: 10 }}>See your doctor live.</Text>
                             </View>
 
                         </TouchableOpacity>
