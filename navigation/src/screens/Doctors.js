@@ -17,7 +17,7 @@ export default function Screen3() {
                 "specialist": "Viralogist",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/1.png")
+                "image": require("../assests/6.png")
             },
             {
                 "title": "Dr Mensah T",
@@ -57,13 +57,13 @@ export default function Screen3() {
                 "specialist": "Radiologists",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/6.png")
+                "image": require("../assests/1.png")
             }
 
         ]
     return (
         <View style={styles.doctorContainer}>
-            <View style={{ marginVertical: 5, flexDirection: "row", alignItems: "center", marginHorizontal: 10 }}>
+            <View style={{ marginVertical: 6, flexDirection: "row", alignItems: "center", marginHorizontal: 10 }}>
                 <TouchableOpacity style={{ height: 40, width: 40, borderRadius: 50, alignItems: "center", justifyContent: "center", backgroundColor: "#EFF3FA", }} onPress={() => {
                     navigation.goBack()
                 }} >
@@ -97,14 +97,14 @@ export default function Screen3() {
                                         <Image source={list.image} style={{ borderRadius: 50, height: 100, width: 100 }} resizeMode={"contain"} />
                                     </View>
 
-                                    <Text>{list.title}</Text>
-                                    <Text>{list.specialist}</Text>
+                                    <Text style={{ fontSize: 16, fontFamily: "Mulish" }}>{list.title}</Text>
+                                    <Text style={{ fontSize: 12 }}>{list.specialist}</Text>
                                     <View style={{ flexDirection: "row" }}>
-                                        <Text>
+                                        <Text style={{ fontSize: 10 }}>
                                             <FontAwesome5Icons name='star' color={"gold"} />
                                             {list.rating}
                                         </Text>
-                                        <Text>{list.reviews}</Text>
+                                        <Text style={{ fontSize: 10 }}>{list.reviews}</Text>
 
                                     </View>
                                 </TouchableOpacity>
@@ -125,8 +125,8 @@ const styles = StyleSheet.create({
     },
     cardImageContainer: {
         position: "relative",
-        marginVertical: 7,
-        marginHorizontal: 10
+        marginVertical: 10,
+        marginHorizontal: 12,
 
     },
     cardOnlineLabel:
@@ -139,12 +139,11 @@ const styles = StyleSheet.create({
     cardInnerContainer:
     {
         backgroundColor: "white",
-        paddingHorizontal: 5,
         borderRadius: 10,
-        marginHorizontal: 11,
+        marginHorizontal: 20,
         paddingVertical: 10,
-        marginVertical: 11,
-
+        paddingHorizontal: 8,
+        marginVertical: 10,
         //width: width / 2.3,
         alignItems: "center",
         justifyContent: "center",
@@ -156,7 +155,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.20,
         shadowRadius: 1.41,
-        elevation: 7,
+        elevation: 2,
     }
 
 })
