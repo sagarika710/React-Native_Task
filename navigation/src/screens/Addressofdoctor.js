@@ -52,9 +52,9 @@ export default function Changeaddress() {
                     {/* look here first one is icon then input box and then again icon */}
                     <TextInput style={{ fontFamily: "Mulish" }}></TextInput>
                 </View>
-                <View style={{ flexDirection: "row" }}>
-                    <View style={{ marginHorizontal: 12, marginVertical: 2, width: "45%" }}>
-                        <Text>State</Text>
+                <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+                    <View style={{ marginVertical: 2, width: "45%" }}>
+                        <Text style={{ marginLeft: 5 }}>State</Text>
                         <View style={styles.inputBoxContainer1}>
                             {/* look here first one is icon then input box and then again icon */}
                             <TextInput style={{ fontFamily: "Mulish" }}></TextInput>
@@ -62,8 +62,8 @@ export default function Changeaddress() {
 
                     </View>
 
-                    <View style={{ marginHorizontal: 12, marginVertical: 2, width: "45%" }}>
-                        <Text>Pincode</Text>
+                    <View style={{ marginVertical: 2, width: "45%" }}>
+                        <Text style={{ marginLeft: 5 }}>Pincode</Text>
                         <View style={styles.inputBoxContainer1}>
                             {/* look here first one is icon then input box and then again icon */}
                             <TextInput style={{ fontFamily: "Mulish" }}></TextInput>
@@ -103,19 +103,16 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         paddingHorizontal: 10,
         paddingVertical: 1,
-        borderWidth: 0.1,
+        borderWidth: 0.5,
         backgroundColor: "#fff",
         borderRadius: 2,
-
-
-
     },
     inputBoxContainer1: {
-        marginHorizontal: 10,
+        marginHorizontal: 5,
         marginVertical: 10,
         paddingHorizontal: 10,
         paddingVertical: 1,
-        borderWidth: 0.1,
+        borderWidth: 0.5,
         backgroundColor: "#fff",
         borderRadius: 2,
 

@@ -1,8 +1,9 @@
-import { View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity, TextInput, FlatList } from 'react-native'
 import React, { useState } from 'react'
 import FontAwesome5Icons from 'react-native-vector-icons/FontAwesome5'
 import { useNavigation } from "@react-navigation/native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import moment from 'moment'
 //import RNPickerSelect from 'react-native-picker-select';
 import ViewNativeComponent from 'react-native/Libraries/Components/View/ViewNativeComponent'
 
@@ -42,57 +43,35 @@ export default function Appointment() {
         },
 
     ]
-    const time = [
-        {
-            time: "09:00 AM"
-        },
-        {
-            time: "09:30 AM"
-        },
-        {
-            time: "10:00 AM"
-        },
-        {
-            time: "10:30 AM"
-        },
-        {
-            time: "11:00 AM"
-        },
-    ]
-    const time1 = [
-        {
-            time: "12:00 PM"
-        },
-        {
-            time: "12:30 PM"
-        },
-        {
-            time: "01:00 PM"
-        },
-        {
-            time: "01:30 PM"
-        },
-        {
-            time: "02:00 PM"
-        },
-    ]
-    const time2 = [
-        {
-            time: "03:00 PM"
-        },
-        {
-            time: "03:30 PM"
-        },
-        {
-            time: "04:00 PM"
-        },
-        {
-            time: "04:30 PM"
-        },
-        {
-            time: "05:00 PM"
-        },
-    ]
+
+    // 
+    // var getDaysArray = function (year, month) {
+    //     var monthIndex = month - 1; // 0..11 instead of 1..12
+    //     var names = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    //     var date = new Date(year, monthIndex, 1);
+    //     var result = [];
+    //     while (date.getMonth() == monthIndex) {
+    //         result.push({ date: date.getDate(), day: names[date.getDay()] });
+    //         date.setDate(date.getDate() + 1);
+    //     }
+    //     return result;
+    // }
+
+    // console.log(getDaysArray(2022, 5));
+    // 
+
+    const hours = [];
+    Array.from({
+        length: 48
+    }, (_, hour) => {
+        if (hour >= 18 && hour <= 29) {
+            hours.push(moment({
+                hour: Math.floor(hour / 2),
+                minutes: (hour % 2 === 0 ? 0 : 30)
+            }).format('hh:mm A'))
+        }
+    }
+    );
 
     const isDateIsActive = (list) => {
         return (
@@ -102,7 +81,7 @@ export default function Appointment() {
 
     const isTimeIsActive = (list) => {
         return (
-            selectedTime.time == list.time
+            selectedTime.time == list
         )
     }
 
@@ -182,91 +161,27 @@ export default function Appointment() {
                 {/* timefield end */}
 
                 <View>
-                    <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
-                        {
-                            time.map((list, index) => {
-                                return (
-                                    <TouchableOpacity
-                                        onPress={() => {
-                                            setSelectedTime({
-                                                time: list.time,
 
-                                            })
-                                        }}
+                    <FlatList
+                        numColumns={3}
+                        data={hours} renderItem={({ item }) => {
+                            return (
+                                <TouchableOpacity
+                                    onPress={() => {
+                                        setSelectedTime({
+                                            time: item,
+                                        })
+                                    }}
+                                    style={[styles.timeField, {
+                                        backgroundColor: isTimeIsActive(item) ? "#00E0C5" : "white",
+                                    }]}>
+                                    <View>
+                                        <Text style={{ color: isTimeIsActive(item) ? "white" : "grey", fontSize: 12 }}>{item}</Text>
+                                    </View>
+                                </TouchableOpacity>
+                            )
+                        }} />
 
-                                        style={[styles.timeField, {
-                                            backgroundColor: isTimeIsActive(list) ? "#00E0C5" : "white",
-                                        }]} key={index}>
-                                        <View>
-                                            <Text style={{ color: isTimeIsActive(list) ? "white" : "grey" }}>{list.time}</Text>
-                                        </View>
-
-
-                                    </TouchableOpacity>
-
-                                )
-                            })
-                        }
-
-                    </ScrollView>
-                </View>
-                <View>
-                    <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
-                        {
-                            time1.map((list, index) => {
-                                return (
-                                    <TouchableOpacity
-                                        onPress={() => {
-                                            setSelectedTime({
-                                                time: list.time,
-
-                                            })
-                                        }}
-
-                                        style={[styles.timeField, {
-                                            backgroundColor: isTimeIsActive(list) ? "#00E0C5" : "white",
-                                        }]} key={index}>
-                                        <View>
-                                            <Text style={{ color: isTimeIsActive(list) ? "white" : "grey" }}>{list.time}</Text>
-                                        </View>
-
-
-                                    </TouchableOpacity>
-
-                                )
-                            })
-                        }
-
-                    </ScrollView>
-                </View>
-                <View>
-                    <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
-                        {
-                            time2.map((list, index) => {
-                                return (
-                                    <TouchableOpacity
-                                        onPress={() => {
-                                            setSelectedTime({
-                                                time: list.time,
-
-                                            })
-                                        }}
-
-                                        style={[styles.timeField, {
-                                            backgroundColor: isTimeIsActive(list) ? "#00E0C5" : "white",
-                                        }]} key={index}>
-                                        <View>
-                                            <Text style={{ color: isTimeIsActive(list) ? "white" : "grey" }}>{list.time}</Text>
-                                        </View>
-
-
-                                    </TouchableOpacity>
-
-                                )
-                            })
-                        }
-
-                    </ScrollView>
                 </View>
                 <View style={{ marginHorizontal: 12, marginVertical: 20 }}>
                     <Text style={{ fontSize: 14, fontFamily: "Mulish", letterSpacing: 0.23, lineHeight: 17.57 }}>Write your problem</Text>
