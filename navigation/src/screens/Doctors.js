@@ -139,11 +139,11 @@ const styles = StyleSheet.create({
     cardInnerContainer:
     {
         backgroundColor: "white",
-        borderRadius: 10,
+        borderRadius: 15,
         marginHorizontal: 5,
         paddingVertical: 10,
         paddingHorizontal: 22,
-        marginVertical: 10,
+        marginVertical: 9,
         //width: width / 2.3,
         alignItems: "center",
         justifyContent: "center",
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.20,
         shadowRadius: 1.41,
-        elevation: 2,
+        elevation: 4,
     }
 
 })
