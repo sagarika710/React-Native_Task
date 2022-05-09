@@ -50,24 +50,24 @@ export default function Profile() {
                         <View style={styles.detailsCardContainer}>
                             <Ionicons name="people-outline" color="#7ACEFA" size={30} />
                         </View>
-                        <Text>1000+</Text>
-                        <Text>Patients</Text>
+                        <Text style={{ fontSize: 17 }}>1000+</Text>
+                        <Text style={{ fontSize: 12 }}>Patients</Text>
                     </View>
                     {/*  */}
                     <View style={styles.innerCardContainer}>
                         <View style={styles.detailsCardContainer2}>
                             <Ionicons name="ribbon-outline" color="#C7E80040" size={30} />
                         </View>
-                        <Text>10Yrs</Text>
-                        <Text>Experience</Text>
+                        <Text style={{ fontSize: 17 }}>10Yrs</Text>
+                        <Text style={{ fontSize: 12 }}>Experience</Text>
                     </View>
                     {/*  */}
                     <View style={styles.innerCardContainer}>
                         <View style={styles.detailsCardContainer1}>
                             <Ionicons name="star-outline" color="#F9BC0B63" size={30} />
                         </View>
-                        <Text>4.5</Text>
-                        <Text>Ratings</Text>
+                        <Text style={{ fontSize: 17 }}>4.5</Text>
+                        <Text style={{ fontSize: 12 }}>Ratings</Text>
                     </View>
                 </View>
 
@@ -161,7 +161,8 @@ const styles = StyleSheet.create({
         // backgroundColor: "lightblue",
         justifyContent: "center",
         alignItems: "center",
-        marginHorizontal: 10
+        marginHorizontal: 4,
+        marginVertical: 5
 
     },
     innerCardContainer: {

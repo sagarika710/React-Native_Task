@@ -140,9 +140,9 @@ const styles = StyleSheet.create({
     {
         backgroundColor: "white",
         borderRadius: 10,
-        marginHorizontal: 20,
+        marginHorizontal: 5,
         paddingVertical: 10,
-        paddingHorizontal: 8,
+        paddingHorizontal: 23,
         marginVertical: 10,
         //width: width / 2.3,
         alignItems: "center",
