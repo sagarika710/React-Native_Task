@@ -3,9 +3,15 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Iconi from 'react-native-vector-icons/Ionicons';
-
+import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
 
 const Precomp = (props) => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.mainview}>
             <View style={styles.consultantdiv}>
@@ -14,8 +20,9 @@ const Precomp = (props) => {
                 <View><Text>Doctor : Dr. Sagarika</Text></View>
                 <View><Text>Sag Clinc,</Text><Text>Video Conference call Done.</Text></View>
                 <View><Text>Call hour: 5min 30sec</Text></View>
-                <View style={styles.downloadprescriptiondiv}><Text style={styles.downloadprescriptiontext}>Download Prescription</Text></View>
-
+                <TouchableOpacity onPress={() => navigation.navigate('Orderheading')}>
+                <View  style={styles.downloadprescriptiondiv}><Text style={styles.downloadprescriptiontext}>Download Prescription</Text></View>
+                </TouchableOpacity>
             </View>
 
 
@@ -71,7 +78,7 @@ const styles = StyleSheet.create({
     },
     consultantdiv:{
             justifyContent:'space-evenly',
-            height:200,
+            height: Dimensions.get('window').height * 0.30,
             borderBottomWidth:1,
             borderColor:'#DFDDDD',
     },
@@ -131,7 +138,8 @@ const styles = StyleSheet.create({
 
     },
     downloadprescriptiondiv:{
-        paddingRight:110,
+        paddingRight:80,
+        alignItems:'center',
        
         
        

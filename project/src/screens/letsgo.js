@@ -1,8 +1,25 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
-
+import Button1 from '../components/button';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
 
 const Let = ({ navigation }) => {
+    var tpi= [
+        {
+            // url: require('../assets/img/Cricket_icon.png'),
+            // centername: 'Consultant',
+            // name: 'Video Conference',
+            // time: '06.30',
+            // date: '22.02.2022',
+            // bookingtype: 'Upcoming',
+            // price: '₹240',
+            button:'Get Started',
+        },
+       
+    ]
     return (
         <View style={styles.container}>
 
@@ -10,12 +27,21 @@ const Let = ({ navigation }) => {
                 <Image style={styles.fimg} source={require('../Assests/goimg.png')} />
 
                 <View style={styles.fdiv}>
-                    <Text style={styles.heading}>Please Verification!</Text>
-                    <Text style={styles.inserttext}>Insert your OTP code to continue</Text>
+                    <Text style={styles.heading}>Let's get Started</Text>
+                    <Text style={styles.inserttext}>Let’s consult wit doctor now</Text>
                 </View>
-                <TouchableOpacity>
+                {/* <TouchableOpacity>
                     <Text style={styles.continuebtn} onPress={() => navigation.navigate('Home')}>Get Started</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
+
+                {
+     tpi.map((dinesh1)=> {
+         return(
+             <Button1 data={dinesh1}/>
+         )
+     }) 
+  } 
+  
 
             </View>
 
@@ -30,21 +56,24 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     firstdiv: {
-        justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
+        // borderWidth:1,
 
     },
     fdiv: {
 
         alignItems: 'center',
-        marginTop: 30,
+        marginTop: 15,
         paddingVertical: 10,
+        // marginVertical:40,
+
     },
     fimg: {
-        marginTop: 60,
+        marginTop: 40,
     },
     heading: {
-        fontWeight: 'bold',
-        fontSize: 19,
+        fontWeight: '500',
+        fontSize: 25,
         color: 'black',
 
     },

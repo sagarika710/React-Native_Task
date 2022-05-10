@@ -24,7 +24,7 @@ const Backicon = (props) => {
            </View>
             </View> */}
             <View style={styles.holediv}>
-                <View style={styles.icondiv}><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Order')} size={20} /></View> 
+                <View style={styles.icondiv}><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Med')} size={20} /></View> 
                 <View style={styles.orderdiv}><Text style={styles.ordertext}>Order History</Text></View>
             </View>
             

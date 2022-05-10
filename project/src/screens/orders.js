@@ -13,12 +13,14 @@ const Order = ({ navigation }) => {
         
     ]
     return (
-        <ScrollView style={styles.contrainer}>
+        <View style={styles.contrainer}>
 
-        <View style={{marginTop:30,marginLeft:30,}}>
+        <View>
             <TouchableOpacity>
-                <Text onPress={() => navigation.navigate('Ordertwo')}> <Icon name='leftcircleo'  style={styles.backicon} size={30} /></Text>
+                {/* <Text onPress={() => navigation.navigate('Ordertwo')}> <Icon name='leftcircleo'  style={styles.backicon} size={30} /></Text> */}
+                <View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Orderhistory')} size={20} /></View>
             </TouchableOpacity>
+           
             </View>
   
   
@@ -31,11 +33,11 @@ const Order = ({ navigation }) => {
      }) 
   }
 
-<TouchableOpacity>
+{/* <TouchableOpacity>
                 <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('prescription')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             
-        </ScrollView>
+        </View>
     );
 };
 export default Order
@@ -46,6 +48,22 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'white',
     },
-   
+    backicon:{
+        backgroundColor:'#EFF3FA',
+        borderRadius:30,
+       marginRight:16,
+        padding:10,
+        width:43,
+           },
+    startedbtn: {
+        
+            borderRadius: 20,
+           paddingTop:40,
+           paddingBottom:20,
+            width: 80,
+            color: 'black',
+            marginLeft: 20,
+            marginTop: 10,
+          },
 
 })

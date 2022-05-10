@@ -3,13 +3,16 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Iconi from 'react-native-vector-icons/Ionicons';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Ordercomp = (props) => {
+    const navigation = useNavigation();
     return (
         <View style={styles.mainview}>
             <View style={styles.consultantdiv}>
               
-                <View><Text style={{fontWeight:'bold',color:'black',}}>{props.data.name}</Text></View>
+                <View><Text style={{fontWeight:'bold',color:'black',fontSize:18}}>{props.data.name}</Text></View>
                 <View><Text>Slot Booked: 22nd Feb 2022, Monday, 09.30AM-11.30AM</Text></View>
                 <View><Text>Sag Clinc,</Text><Text>Video Conference</Text></View>
                 <View><Text>Doctor : Dr. Sagarika</Text></View>
@@ -25,7 +28,7 @@ const Ordercomp = (props) => {
 
 
 
-                <View><Text>Payment Summary</Text></View>
+                <View><Text style={{color:'black',fontWeight:'bold'}}>Payment Summary</Text></View>
                 <View  style={{flexDirection:'row',justifyContent:'space-between'}}><View><Text>Total MRP</Text></View><View><Text>₹ 1240.00 </Text></View></View>
                 <View  style={{flexDirection:'row',justifyContent:'space-between'}}><Text>Total Discount</Text><Text>₹ 240.00 </Text></View>
                 <View  style={{flexDirection:'row',justifyContent:'space-between'}}><Text>GST</Text><Text>₹ 240.00 </Text></View>
@@ -36,14 +39,14 @@ const Ordercomp = (props) => {
             </View>
 
             <View  style={styles.paymentmethoddiv}>
-            <View  style={{flexDirection:'row',justifyContent:'space-between'}}><Text>Payment Method</Text><Text>Online </Text></View>
+            <View  style={{flexDirection:'row',justifyContent:'space-between'}}><Text style={{color:'black'}}>Payment Method</Text><Text>Online </Text></View>
             </View>
             
             
             <View  style={styles.appointmentdiv}>
             <View><Text style={{fontWeight:'bold',color:'black',}}>Are you Want to Cancel this appointment?</Text></View>
             
-            <View style={{flexDirection:'row',marginVertical:10,}}><View style={{paddingRight:40,}}><Text style={styles.yesbutton}>Yes</Text></View><View><Text style={styles.nobutton}>NO</Text></View></View>
+            <View style={{flexDirection:'row',marginVertical:10,}}><View style={{paddingRight:40,}}><Text  onPress={() => navigation.navigate('prescription')} style={styles.yesbutton}>Yes</Text></View><View><Text style={styles.nobutton}>NO</Text></View></View>
             </View>
 
         </View>
@@ -70,20 +73,20 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         paddingVertical: 10,
-        paddingHorizontal: 15,
+        paddingHorizontal: 20,
         
 
         elevation: 5,
     },
     consultantdiv:{
             justifyContent:'space-evenly',
-            height:250,
+            height:200,
             borderBottomWidth:1,
             borderColor:'#DFDDDD',
     },
     paymentsummarydiv:{
         justifyContent:'space-evenly',
-        height:200,
+        height:140,
         borderBottomWidth:1,
         borderColor:'#DFDDDD',
 

@@ -4,6 +4,7 @@ import Ordercomptwo from '../components/ordercomp2'
 import Icon1 from 'react-native-vector-icons/AntDesign';
 
 const Ordertwo = ({ navigation }) => {
+    
     var opi= [
         {
             
@@ -14,7 +15,7 @@ const Ordertwo = ({ navigation }) => {
     return (
         <ScrollView style={styles.contrainer}>
 
-<View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Order')} size={20} /></View>
+<View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Testhistory')} size={20} /></View>
 
      
   
@@ -26,9 +27,9 @@ const Ordertwo = ({ navigation }) => {
          )
      }) 
   }
-<TouchableOpacity>
+{/* <TouchableOpacity>
                 <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Mapp2')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             
         </ScrollView>
     );

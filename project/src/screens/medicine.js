@@ -5,6 +5,9 @@ import Medicine2 from '../components/medicine2'
 import Medicine3 from '../components/medicine3';
 import Icon1 from 'react-native-vector-icons/EvilIcons';
 import Icon2 from 'react-native-vector-icons/AntDesign';
+import Icon3 from 'react-native-vector-icons/AntDesign';
+import Icon4 from 'react-native-vector-icons/Feather';
+
 
 
 const Med = ({ navigation }) => {
@@ -70,9 +73,19 @@ const Med = ({ navigation }) => {
     
     return (
         <ScrollView style={styles.contrainer}>
+
+            <View style={styles.upperdiv}>
+                <View style={styles.startedbtn} ><Icon3 name='left' style={styles.backicon1} onPress={() => navigation.navigate('Regsign')} size={20} /></View>
+                <View><Text style={{marginRight:120,fontSize:20,color:'black'}}>Medicines</Text></View>
+                <View><Icon4 name='shopping-cart' style={{marginRight:10,color:'#009987',}} size={28} /></View>
+
+
+            </View>
+
+
                 <View style={styles.search}>
                     <TextInput placeholder='Search Medicines & Health Products'></TextInput>
-                    <View><Icon1 name='search' style={styles.backicon} size={35} /></View>
+                    <View><Icon1 name='search' style={styles.backicon} size={30} /></View>
                 </View>
 
 
@@ -128,9 +141,9 @@ const Med = ({ navigation }) => {
                 </View>
             </ScrollView>
 
-            <TouchableOpacity>
+            {/* <TouchableOpacity>
                 <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Orderhistory')}> <Icon2 name='right' style={styles.backicon} size={35} /></Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
 
         </ScrollView>
@@ -161,7 +174,7 @@ const styles = StyleSheet.create({
     },
     search:{
             
-            marginHorizontal:15,
+            marginHorizontal:17,
             marginVertical:10,
             borderRadius:13,
             backgroundColor:'#EFF3FA',
@@ -171,6 +184,34 @@ const styles = StyleSheet.create({
             alignItems:'center',
 
     },
-
+    startedbtn: {
+    
+        borderRadius: 20,
+       paddingTop:5,
+       paddingBottom:5,
+        width: 80,
+        color: 'black',
+        marginLeft: 5,
+        marginRight:-60,
+       
+      },
+     
+    
+      backicon1:{
+        backgroundColor:'#EFF3FA',
+        borderRadius:30,
+       marginRight:16,
+        padding:10,
+        width:43,
+    
+           },
+           upperdiv:{
+                       
+                        justifyContent:'space-between',
+                       alignItems:'center',
+                        flexDirection:'row',
+                        marginTop:20,
+                        marginHorizontal:15,
+           },
 
 })

@@ -49,9 +49,9 @@ const prescription = ({ navigation }) => {
                 })
             }
 
-<TouchableOpacity>
+{/* <TouchableOpacity>
                 <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Orderheading')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
 
 

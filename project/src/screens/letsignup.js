@@ -1,5 +1,9 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
 
 
 const Letsign = ({ navigation }) => {
@@ -13,9 +17,22 @@ const Letsign = ({ navigation }) => {
                     <Text style={styles.heading}>Please Verification!</Text>
                     <Text style={styles.inserttext}>Insert your OTP code to continue</Text>
                 </View>
-                <TouchableOpacity>
+                {/* <TouchableOpacity>
                     <Text style={styles.continuebtn} onPress={() => navigation.navigate('Homesign')}>Get Started</Text>
+                </TouchableOpacity> */}
+
+                <View style={styles.mainview}>
+            <View style={styles.detailsview}>
+                <TouchableOpacity onPress={() => navigation.navigate('Homesign')}>
+
+                    <LinearGradient colors={['#00E0C5', '#009987',]} style={styles.linearGradient} >
+                        <Text style={styles.buttonText}>
+                          Get Started
+                        </Text>
+                    </LinearGradient>
                 </TouchableOpacity>
+            </View>
+        </View>
 
             </View>
 
@@ -40,7 +57,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
     },
     fimg: {
-        marginTop: 60,
+        marginTop: 40,
     },
     heading: {
         fontWeight: 'bold',
@@ -64,6 +81,29 @@ const styles = StyleSheet.create({
         color: 'white',
         backgroundColor: '#009987',
 
+    },
+    mainview: {
+        // borderWidth: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    linearGradient: {
+        // flex: 1,
+        paddingLeft: 15,
+        paddingRight: 15,
+        borderRadius: 30,
+        width: Dimensions.get('window').width * 0.80,
+    },
+    buttonText: {
+        fontSize: 18,
+        // fontFamily: 'Gill Sans',
+        textAlign: 'center',
+        // margin: 10,
+        color: 'white',
+        marginVertical: 10,
+        backgroundColor: 'transparent',
+
+        paddingVertical: 2,
     },
 })
 

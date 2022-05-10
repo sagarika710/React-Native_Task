@@ -2,23 +2,28 @@ import React from 'react'
 import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 // import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon1 from 'react-native-vector-icons/AntDesign';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
+
 
 // const Login = (props) => 
 const Veri = ({ navigation }) => {
     return (
         <View style={styles.container}>
 
- <View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Order')} size={20} /></View>
+ <View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Wel')} size={20} /></View>
 
 
             <View style={styles.fdiv}>
                 <Text style={styles.heading}>Please Verification!</Text>
                 <Text style={styles.inserttext}>Insert your OTP code to continue</Text>
                 <View style={styles.otpdiv}>
-                    <TextInput style={styles.otpinput}></TextInput>
-                    <TextInput style={styles.otpinput}></TextInput>
-                    <TextInput style={styles.otpinput}></TextInput>
-                    <TextInput style={styles.otpinput}></TextInput>
+                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
+                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
+                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
+                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
 
                 </View>
 
@@ -32,9 +37,21 @@ const Veri = ({ navigation }) => {
 
 
             </View>
-          <TouchableOpacity>
-                    <Text style={styles.continuebtn} onPress={() => navigation.navigate('Wron')}>Continue</Text>
+        
+
+
+                <View style={styles.mainview}>
+            <View style={styles.detailsview}>
+                <TouchableOpacity onPress={() => navigation.navigate('Wron')}>
+
+                    <LinearGradient colors={['#00E0C5', '#009987',]} style={styles.linearGradient} >
+                        <Text style={styles.buttonText} >
+                            Continue
+                        </Text>
+                    </LinearGradient>
                 </TouchableOpacity>
+            </View>
+        </View>
         </View>
     )
 }
@@ -126,5 +143,28 @@ const styles = StyleSheet.create({
             marginLeft: 25,
             marginTop: 10,
           },
+          mainview: {
+            // borderWidth: 1,
+            justifyContent: 'center',
+            alignItems: 'center'
+        },
+        linearGradient: {
+            // flex: 1,
+            paddingLeft: 15,
+            paddingRight: 15,
+            borderRadius: 30,
+            width: Dimensions.get('window').width * 0.80,
+        },
+        buttonText: {
+            fontSize: 18,
+            // fontFamily: 'Gill Sans',
+            textAlign: 'center',
+            // margin: 10,
+            color: 'white',
+            marginVertical: 10,
+            backgroundColor: 'transparent',
+    
+            paddingVertical: 2,
+        },
 })
 export default Veri;

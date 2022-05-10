@@ -11,7 +11,7 @@ const Medicine = (props) => {
     return (
        
         <View style={styles.mainview}>
-            <Text style={styles.heading}>{props.data.centername}</Text>
+            <Text style={styles.heading} onPress={() => navigation.navigate('Orderhistory')}>{props.data.centername}</Text>
            
             <View style={styles.detailsview}>
                 <View style={{ justifyContent:'flex-start'}}>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         marginVertical: 10,
-        marginHorizontal:10,
+        marginHorizontal:5,
         borderColor:'#00E0C5',
         backgroundColor:'#ffffff',
         // shadowColor: "#000",
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
 // shadowOpacity: 0.25,
 // shadowRadius: 3.84,
 paddingVertical:20,
-paddingHorizontal:40,
+paddingHorizontal:45,
 
 // elevation: 5,
     },

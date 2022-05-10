@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     mainview: {
         borderWidth: 1,
         borderRadius: 15,
-        marginVertical: 15,
+        marginVertical: 10,
         marginHorizontal:20,
         borderColor:'#DFDDDD',
         backgroundColor:'#ffffff',

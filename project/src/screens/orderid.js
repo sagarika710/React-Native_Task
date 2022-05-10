@@ -8,6 +8,7 @@ const Orderid = ({ navigation }) => {
         {
 
             name: 'Order details',
+            
         },
 
     ]

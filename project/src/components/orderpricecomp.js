@@ -3,8 +3,11 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/AntDesign';
+import { useNavigation } from '@react-navigation/native';
 
 const Mapcomp = (props) => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.mainview}>
             <View style={styles.consultantdiv}>
@@ -55,7 +58,7 @@ const Mapcomp = (props) => {
            
         <View  style={styles.confirmation}>
         <View  style={{flexDirection:'row',justifyContent:'space-between'}}><Text style={{fontWeight:'bold',color:'black',fontSize:16}}>Are you Want to cancel the Order?</Text></View>
-        <View  style={{flexDirection:'row',justifyContent:'flex-start',paddingLeft:7,}}><Text style={styles.yesbutton}>YES</Text><Text style={styles.nobutton}>NO</Text></View>
+        <View  style={{flexDirection:'row',justifyContent:'flex-start',paddingLeft:7,}}><TouchableOpacity><Text onPress={() => navigation.navigate('Mapp')} style={styles.yesbutton}>YES</Text></TouchableOpacity><Text style={styles.nobutton}>NO</Text></View>
         </View>
 
             
@@ -98,9 +101,10 @@ const styles = StyleSheet.create({
     },
     paymentsummarydiv:{
         justifyContent:'space-evenly',
-        height:200,
+        height:150,
         borderBottomWidth:1,
         borderColor:'#DFDDDD',
+        paddingLeft:5,
 
     },
     gstdiv:{
@@ -108,11 +112,12 @@ const styles = StyleSheet.create({
         height:50,
         borderBottomWidth:1,
         borderColor:'#DFDDDD',
+        paddingHorizontal:5,
     },
     paymentmethoddiv:{
         justifyContent:'space-evenly',
         height:50,
-        
+       
         borderColor:'#DFDDDD',    
     },
  

@@ -3,6 +3,10 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, ImageBackg
 import Mapcomp from '../components/orderpricecomp'
 import map from '../Assests/maps.png'
 import Icon1 from 'react-native-vector-icons/AntDesign';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
 
 
 
@@ -16,7 +20,7 @@ const Mapp2 = ({ navigation }) => {
     // ]
 
     return (
-        <ScrollView style={styles.contrainer}>
+        <View style={styles.contrainer}>
 
             {/* {
                 opi.map((dinesh4) => {
@@ -61,20 +65,35 @@ const Mapp2 = ({ navigation }) => {
  
 </View>
 
+{/* 
+<View style={styles.button} ><Text style={{color:'white'}}>Order Details</Text></View> */}
 
-<View style={styles.button} ><Text style={{color:'white'}}>Order Details</Text></View>
+
+<View style={styles.mainview}>
+            <View style={styles.detailsview}>
+                <TouchableOpacity onPress={() => navigation.navigate('Orderid')}>
+
+                    <LinearGradient colors={['#00E0C5', '#009987',]} style={styles.linearGradient} >
+                        <Text style={styles.buttonText} >
+                            Order Details
+                        </Text>
+                    </LinearGradient>
+                </TouchableOpacity>
+            </View>
+        </View>
 
 </View>
-
+{/* 
 <TouchableOpacity>
-                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Orderid')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
-            </TouchableOpacity>
+                <Text style={{marginLeft:180,marginTop:50}} onPress={() => navigation.navigate('Testhistory')}> <Icon1 name='right' style={styles.backicon} size={35} /></Text>
+            </TouchableOpacity> */}
+
 
 
            
 
 
-        </ScrollView>
+        </View>
 
 
     );
@@ -107,22 +126,20 @@ const styles = StyleSheet.create({
     },
     bottomdiv:{
         backgroundColor:'white',
-      
-       
         borderTopLeftRadius:50,
         borderTopRightRadius:50,
-       paddingVertical:50,
+       paddingVertical:40,
         marginTop:-70,
     },
     secondrowdiv:{
         justifyContent:'space-between',
-        height:130,
+        height:110,
         borderWidth:1,
         borderColor:'#DFDDDD',
         paddingHorizontal:10,
-        paddingVertical:30,
+        paddingVertical:20,
         marginHorizontal:10,
-        marginVertical:10,
+        marginVertical:5,
         borderRadius: 10,
         marginBottom:20,
         
@@ -143,6 +160,30 @@ const styles = StyleSheet.create({
                 backgroundColor:'#009987',
                 
     },
+    mainview: {
+        // borderWidth: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    linearGradient: {
+        // flex: 1,
+        paddingLeft: 15,
+        paddingRight: 15,
+        borderRadius: 30,
+        width: Dimensions.get('window').width * 0.80,
+    },
+    buttonText: {
+        fontSize: 18,
+        // fontFamily: 'Gill Sans',
+        textAlign: 'center',
+        // margin: 10,
+        color: 'white',
+        marginVertical: 10,
+        backgroundColor: 'transparent',
+
+        paddingVertical: 2,
+    },
+
 
 }
 )

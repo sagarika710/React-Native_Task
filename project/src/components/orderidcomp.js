@@ -12,10 +12,7 @@ const Orderidcomp = (props) => {
               
                 <View style={styles.details}><Text style={{fontWeight:'bold',color:'black',fontSize:16}}>{props.data.name}</Text></View>
                 <View style={styles.medicinesdiv}>
-                <View  style={styles.medicinestext}><Text>Montec LC 500MG      x 2</Text><Text>₹ 40.00 </Text></View>
-                <View style={styles.medicinestext}><Text>Paracetomal                   x 10 </Text><Text>₹ 100.00 </Text></View>
-                <View style={styles.medicinestext}><Text>Dolo-650                         x 5</Text><Text>₹ 540.00 </Text></View>
-                <View style={styles.medicinestext}><Text>Glucose-D                      x 4 </Text><Text>₹ 450.00 </Text></View>
+               
                 </View>
                
 
@@ -101,7 +98,7 @@ const styles = StyleSheet.create({
     },
     paymentsummarydiv:{
         justifyContent:'space-evenly',
-        height:200,
+        height:160,
         borderBottomWidth:1,
         borderColor:'#DFDDDD',
 
