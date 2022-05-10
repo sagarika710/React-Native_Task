@@ -16,51 +16,51 @@ export default function Screen2() {
         [
             {
                 "title": "Dr.Bellamy N",
+                "isonline": true,
                 "specialist": "Viralogist",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/doctorimage1.jpg"),
-                "isonline": true
+                "image": require("../assests/6.png")
             },
             {
                 "title": "Dr Mensah T",
+                "isonline": false,
                 "specialist": "Oncologists",
                 "rating": "4.3",
                 "reviews": "(130 reviews)",
-                "image": require("../assests/doctorimage2.jpg"),
-                "isonline": false
+                "image": require("../assests/2.png")
             },
             {
                 "title": "Dr Klimisch j",
+                "isonline": false,
                 "specialist": "Surgon",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/doctorimage3.jpg"),
-                "isonline": false
+                "image": require("../assests/3.png")
             },
             {
                 "title": "Dr Martinez K",
+                "isonline": true,
                 "specialist": "Pediatrician",
                 "rating": "4.3",
                 "reviews": "(130 reviews)",
-                "image": require("../assests/doctorimage4.jpg"),
-                "isonline": true
+                "image": require("../assests/4.png")
             },
             {
                 "title": "Dr.Marc M",
+                "isonline": true,
                 "specialist": "Rheumatologists",
                 "rating": "4.3",
                 "reviews": "(130 reviews)",
-                "image": require("../assests/doctorimage5.jpg"),
-                "isonline": true
+                "image": require("../assests/5.png")
             },
             {
                 "title": "Dr.O'Boyle J",
+                "isonline": false,
                 "specialist": "Radiologists",
                 "rating": "4.5",
                 "reviews": "(135 reviews)",
-                "image": require("../assests/doctorimage6.jpg"),
-                "isonline": false
+                "image": require("../assests/1.png")
             }
 
         ]

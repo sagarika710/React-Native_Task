@@ -40,9 +40,9 @@ export default function Changeaddress() {
                 <View style={{ marginHorizontal: 12, marginVertical: 2 }}>
                     <Text>Address</Text>
                 </View>
-                <View style={[styles.inputBoxContainer, { height: 100 }]}>
+                <View style={styles.inputBoxContainer} >
                     {/* look here first one is icon then input box and then again icon */}
-                    <TextInput style={{ fontFamily: "Mulish" }}></TextInput>
+                    <TextInput style={{ fontFamily: "Mulish" }} numberOfLines={4} multiline={true}></TextInput>
                 </View>
                 <View style={{ marginHorizontal: 12, marginVertical: 2 }}>
                     <Text>District</Text>
@@ -77,7 +77,7 @@ export default function Changeaddress() {
 
                 <View style={styles.inputBoxContainer}>
                     {/* look here first one is icon then input box and then again icon */}
-                    <TextInput style={{ fontFamily: "Mulish" }}></TextInput>
+                    <TextInput style={{ fontFamily: "Mulish" }} maxLength={10} keyboardType='numeric'></TextInput>
                 </View>
                 <View style={{ marginVertical: 10 }}>
                     <TouchableOpacity style={styles.appointmentBtn}>

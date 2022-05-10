@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const { height, width } = Dimensions.get("screen");
-export default function Screen3() {
+export default function Doctors() {
 
     const navigation = useNavigation();
 
@@ -81,7 +81,7 @@ export default function Screen3() {
 
             </View>
             {/* start try map */}
-            <ScrollView >
+            <ScrollView>
                 <View style={{ flexWrap: "wrap", flexDirection: "row" }}>
                     {
                         infoDoctorData.map((list, index) => {
@@ -121,19 +121,21 @@ const styles = StyleSheet.create({
     doctorContainer:
     {
         flex: 1,
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+
     },
     cardImageContainer: {
         position: "relative",
         marginVertical: 10,
-        marginHorizontal: 12,
+        marginLeft: 6,
+        paddingHorizontal: 10
 
     },
     cardOnlineLabel:
     {
         height: 15, width: 15, backgroundColor: "#009987", borderRadius: 50,
         position: "absolute",
-        top: 8, right: 5,
+        top: 15, right: 10,
         zIndex: 1
     },
     cardInnerContainer:

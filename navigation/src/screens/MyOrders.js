@@ -205,7 +205,7 @@ export default function Screen3() {
                     <View style={{ borderColor: "#00E0C5", paddingVertical: 5, paddingHorizontal: 10, marginTop: 10, borderWidth: 1.5, borderRadius: 5 }}>
                         <TouchableOpacity style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 10, marginTop: 10 }}>
                             <View >
-                                <Ionicons name="calendar" size={20} />
+                                <FontAwesome5Icons name="credit-card" size={20} color={"green"} />
                             </View>
                             <View>
                                 <Text style={{ fontSize: 12, fontFamily: "Mulish" }}>Online</Text>
