@@ -4,10 +4,12 @@ import {
   TextInput,
   Text,
   TouchableOpacity,
+  Dimensions,
   StyleSheet,
 } from 'react-native';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import Icon2 from 'react-native-vector-icons/Entypo';
+import LinearGradient from 'react-native-linear-gradient'
 
 
 const Screen = ({navigation}) => {
@@ -17,24 +19,53 @@ const Screen = ({navigation}) => {
           <Text style={styles.Heading}>
               Please enter your MRN Number
           </Text>
+          <View style={styles.INput}>
+          <View style={styles.Input}>
           <TextInput style={styles.input} placeholder={'Enter MRN Number'}></TextInput>
-          <Text style={styles.Or}>OR</Text>
+          </View>
+          </View>
+          <View style={{alignItems: 'center',}}><Text style={styles.Or}>OR</Text></View>
+          <View style={{alignItems: 'center',}}>
           <View style={styles.div}>
           <Text style={styles.txt}>Please upload images of your prescription</Text>
           <View style={styles.div1}>
           <Text style={styles.txt1}><Icon1 name='addfile' style={styles.backicon} size={18}/>Upload Prescription</Text>
           </View>
           </View>
-          <TouchableOpacity style={styles.btn}>
-             <Text style={styles.btn1} onPress= {() => navigation.navigate('Screen1')}>Get your Medicines</Text>
+          </View>
+          <View style={{alignItems: 'center',}}>
+          <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+             <TouchableOpacity >
+          <View style={{alignItems: 'center', justifyContent: 'center',}}>
+             <Text style={styles.btn1} onPress={() => navigation.navigate('Screen1')}>Get Your Medicine</Text>
+          </View>
+
           </TouchableOpacity>
+          </LinearGradient>
+          </View>
       </View>
     );
   };
   
   const styles = StyleSheet.create({
+    container: {
+      backgroundColor: '#FFFEFF',
+    },
+    txt1: {
+     color: '#37a987',
+    },
+    div1: {
+      alignItems: 'center',
+        borderRadius: 10,
+      width: Dimensions.get('window').width*0.8,
+          height: Dimensions.get('window').width*0.09,
+           borderWidth: 1,
+          borderColor: '#37a987',
+          paddingTop: 5,
+    color: '#37a987',
+    },
     backicon: {
-    paddingRight: 40,
+    // paddingRight: 40,
     color: '#37a987',
     },
     icon: {
@@ -42,21 +73,17 @@ const Screen = ({navigation}) => {
          marginTop: 35,
         Color: '#E1E1E1',
     },
-    btn: {
-        marginLeft: 10,
-        marginTop: 350,
-        borderWidth: 1,
-        paddingHorizontal: 115,
-        paddingVertical: 10,
-        marginLeft: 20,
-        width: 370,
-      borderRadius: 20,
-      backgroundColor: '#37a987',
-      borderColor: '#37a987',
-    },
     btn1: {
-        color: 'white',
-       },
+      color: 'white',
+      fontSize: 16,
+      marginTop: 5,
+      },
+      btn: {
+        borderRadius: 20,
+          width: Dimensions.get('window').width*0.9,
+          height: Dimensions.get('window').width*0.1,
+         marginTop: 250,
+    },
     Heading: {
         marginLeft: 20,
         marginTop: 25,
@@ -64,26 +91,31 @@ const Screen = ({navigation}) => {
       fontSize: 13,
     },
     Or: {
-       marginVertical: 30,
-       marginLeft: 200,
        color: 'black',
+       paddingVertical: 15,
     },
     input: {
+      fontSize: 12,
+        color: '#000000',
+    },
+    Input: {
         borderWidth: 1,
         borderRadius: 10,
-        width: 375,
-        marginLeft: 20,
+        width: Dimensions.get('window').width*0.9,
         marginTop: 20,
+        justifyContent: 'center',
         paddingLeft: 8,
-        height: 40,
-        fontSize: 12,
+        height: Dimensions.get('window').height*0.055,
         borderColor: '#E1E1E1',
+    },
+    INput: {
+      alignItems: 'center',
     },
   div: {
       borderWidth: 1,
-      width: 375,
-      marginLeft: 20,
-      height: 130,
+      width: Dimensions.get('window').width*0.9,
+          height: Dimensions.get('window').width*0.35,
+    alignItems: 'center',
       borderColor: '#E1E1E1',
       borderRadius: 10,
   },
@@ -91,18 +123,7 @@ const Screen = ({navigation}) => {
       marginVertical: 22,
       color: 'black',
       fontSize: 13,
-      marginLeft: 20,
   },
-  txt1:{
-     borderWidth: 1,
-     borderColor: '#37a987',
-     width: 340,
-     marginLeft: 20,
-     paddingVertical: 6,
-     borderRadius: 10,
-     paddingHorizontal: 90,
-     color: '#37a987',
-  }
   })
 
   export default Screen;

@@ -1,183 +1,225 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity,StyleSheet } from 'react-native'
+import { Text, View,Dimensions,Image, TouchableOpacity,StyleSheet } from 'react-native'
+import LinearGradient from 'react-native-linear-gradient';
 
-const Screen3 = () => {
+const Screen2 = ({navigation}) => {
     return (
       <View style={styles.container}>
         <Text style={styles.head}>Medicine list</Text>
-      <View style={styles.div}>
-      <Text style={styles.order}>Order detailes</Text>
-      <Text style={styles.line}></Text>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Montec LC 500MG</Text>
-      <Text style={styles.num1}>x 2</Text>
-      <Text style={styles.price1}>₹ 40.00</Text>
+        <View style={{alignItems: 'center'}}>
+        <View style={styles.Box}>
+          <Text style={styles.Order}>Order detailes</Text>
+          <View style={{alignItems: 'center'}}>
+            <View style={styles.line}></View>
+          </View>
+          <View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Montec LV 500MG</Text>
+                </View>
+                <View><Text style={styles.medi}>x 2</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 40.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+
+            </View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Paracetamol</Text>
+                </View>
+                <View><Text style={styles.medi}>x 10</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 100.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+            </View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Dolo-650</Text>
+                </View>
+                <View><Text style={styles.medi}>x 5</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 540.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+            </View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Glucose-D</Text>
+                </View>
+                <View><Text style={styles.medi}>x 4</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 450.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+            </View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Montec LV 500MG</Text>
+                </View>
+                <View><Text style={styles.medi}>x 7</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 40.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+            </View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Paracetamol</Text>
+                </View>
+                <View><Text style={styles.medi}>x 5</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 100.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+            </View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Dolo-650</Text>
+                </View>
+                <View><Text style={styles.medi}>x 8</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 540.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+            </View>
+            <View style={styles.Row1}>
+            <View style={styles.row1}>
+                </View>
+            <View><Text style={styles.Medi}>Glucose-D</Text>
+                </View>
+                <View><Text style={styles.medi}>x 6</Text>
+              </View>
+              <View style={styles.row2}>
+              <View>
+                <Text style={styles.Medi}>₹ 450.00</Text>
+                </View>
+              <View><Image style={styles.img2} source={require('../assets/icon.png')}/></View>
+              </View>
+            </View>
+          </View>
+        </View>
       </View>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Paracetamol</Text>
-      <Text style={styles.num2}>x 10</Text>
-      <Text style={styles.price2}>₹ 100.00</Text>
-      </View>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Dolo-650</Text>
-      <Text style={styles.num3}>x 5</Text>
-      <Text style={styles.price3}>₹ 540.00</Text>
-      </View>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Glucose-D</Text>
-      <Text style={styles.num4}>x 4</Text>
-      <Text style={styles.price4}>₹ 450.00</Text>
-      </View>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Montec LC 500MG</Text>
-      <Text style={styles.num5}>x 2</Text>
-      <Text style={styles.price5}>₹ 40.00</Text>
-      </View>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Paracetamol</Text>
-      <Text style={styles.num6}>x 10</Text>
-      <Text style={styles.price6}>₹ 100.00</Text>
-      </View>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Dolo-650</Text>
-      <Text style={styles.num7}>x 8</Text>
-      <Text style={styles.price7}>₹ 540.00</Text>
-      </View>
-      <View style={styles.row1}>
-      <Text style={styles.med1}>Glucose-D</Text>
-      <Text style={styles.num8}>x 6</Text>
-      <Text style={styles.price8}>₹ 450.00</Text>
-      </View>
-      </View>
-      <TouchableOpacity style={styles.btn}>
-             <Text style={styles.btn1}>Confirm</Text>
+      <View style={{alignItems: 'center'}}>
+        <LinearGradient style={styles.btn} colors={['#00E0C5', '#009987']}>
+          <TouchableOpacity>
+            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Text
+                style={styles.btn1}
+                onPress={() => navigation.navigate('Screen3')}>
+                Proceed to Pay
+              </Text>
+            </View>
           </TouchableOpacity>
+        </LinearGradient>
+      </View>
 
       </View>
     )
   };
 
   const styles = StyleSheet.create({
-    btn1: {
-      color: 'white',
-     },
-    btn: {
-      marginLeft: 10,
-      marginTop: 260,
-      borderWidth: 1,
-      paddingHorizontal: 150,
-      paddingVertical: 10,
-      marginLeft: 20,
-      width: 370,
-    borderRadius: 20,
-    backgroundColor: '#37a987',
-    borderColor: '#37a987',
-  },
+    Medi: {
+      color: '#717171',
+      fontSize: 10,
+      marginTop: 15,
+      justifyContent: 'flex-start',
+    },
+    medi: {
+      color: '#717171',
+      fontSize: 10,
+      marginTop: 15,
+    },
+    img2: {
+      marginTop: 10,
+    },
+    row1: {
+      flexDirection: 'row',
+     justifyContent: 'space-between',
+    },
+    row2: {
+      flexDirection: 'row',
+      width: Dimensions.get('window').width * 0.3,
+     justifyContent: 'space-between',
+    },
     line: {
       borderBottomWidth: 1,
+      borderColor: '#E1E1E1',
+      width: Dimensions.get('window').width * 0.82,
+      marginTop: 15,
       marginBottom: 10,
-      width: 345,
+    },
+    Order: {
+      marginTop: 10,
+      marginLeft: 15,
+      color: '#222222',
+      fontSize: 11,
+    },
+  Box: {
+    borderWidth: 1,
+    width: Dimensions.get('window').width * 0.9,
+    height: Dimensions.get('window').width * 0.9,
+    marginTop: 15,
+    borderRadius: 10,
     borderColor: '#E1E1E1',
+  },
+  Row1: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: Dimensions.get('window').width * 0.85,
+  },
+    btn1: {
+      color: 'white',
+      fontSize: 16,
+      marginTop: 5,
     },
-    order: {
-      marginTop: 20,
-      color: 'black',
-      fontSize: 12,
-    },
-    med1: {
-      fontSize: 11,
-    },
-    num1: {
-      fontSize: 11,
-      marginLeft: 40,
-    },
-    num2: {
-      fontSize: 11,
-      marginLeft: 73,
-    },
-    num3: {
-      fontSize: 11,
-      marginLeft: 95,
-    },
-    num4: {
-      fontSize: 11,
-      marginLeft: 89,
-    },
-    num5: {
-      fontSize: 11,
-      marginLeft: 45,
-    },
-    num6: {
-      fontSize: 11,
-      marginLeft: 78,
-    },
-    num7: {
-      fontSize: 11,
-      marginLeft: 98,
-    },
-    num8: {
-      fontSize: 11,
-      marginLeft: 92,
-    },
-
-    price1: {
-      fontSize: 11,
-      marginLeft: 45,
-    },
-    price2: {
-      fontSize: 11,
-      marginLeft: 38,
-    },
-    price3: {
-      fontSize: 11,
-      marginLeft: 43,
-    },
-    price4: {
-      fontSize: 11,
-      marginLeft: 42,
-    },
-    price5: {
-      fontSize: 11,
-      marginLeft: 42,
-    },
-    price6: {
-      fontSize: 11,
-      marginLeft: 35,
-    },
-    price7: {
-      fontSize: 11,
-      marginLeft: 42,
-    },
-    price8: {
-      fontSize: 11,
-      marginLeft: 41,
+    btn: {
+      borderRadius: 20,
+      width: Dimensions.get('window').width * 0.9,
+      height: Dimensions.get('window').width * 0.1,
+      marginTop: 180,
     },
     container: {
       backgroundColor: 'white',
-      height: 1000,
+      flex: 1,
     },
     head: {
       marginTop: 30,
       marginLeft: 80,
       color: 'black',
     },
-    div: {
-      height: 360,
-      width: 370,
-      borderRadius: 10,
-      marginLeft: 20,
-      paddingLeft: 10,
-        borderWidth: 1,
-        marginTop: 40,
-    borderColor: '#E1E1E1',
-    },
-    row1: {
-      flexDirection: 'row',
-      marginVertical: 9,
-    }
   });
 
-export default Screen3;
+export default Screen2;
 
 
 
