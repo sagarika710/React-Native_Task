@@ -29,10 +29,9 @@ export default function Changeaddress() {
                     })
                 }}
                     style={styles.searchBoxContainer}>
-                    {/* look here first one is icon then input box and then again icon */}
-                    <TextInput>
-                        <Text style={{ color: "#009987" }}>Add New Address</Text>
-                    </TextInput>
+
+                    <Text style={{ color: "#009987" }}>Add New Address</Text>
+
                 </TouchableOpacity>
             </View>
             <View style={styles.addressContainer}>
@@ -75,7 +74,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 15,
         marginVertical: 10,
         paddingHorizontal: 12,
-        paddingVertical: 3,
+        paddingVertical: 10,
         borderWidth: 0.9,
         borderColor: "#009987",
         backgroundColor: "#fff",

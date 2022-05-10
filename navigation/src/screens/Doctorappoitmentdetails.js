@@ -178,7 +178,8 @@ export default function Doctorappoitmentdetails() {
 const styles = StyleSheet.create({
     orderContainer:
     {
-        flex: 1
+        flex: 1,
+        backgroundColor: "#fff"
     },
     cardOrderInnerContainer:
     {

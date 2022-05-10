@@ -36,7 +36,7 @@ export default function Doctors() {
                 "image": require("../assests/3.png")
             },
             {
-                "title": "Dr Martinez K",
+                "title": "Dr Martinez",
                 "isonline": true,
                 "specialist": "Pediatrician",
                 "rating": "4.3",
@@ -82,7 +82,7 @@ export default function Doctors() {
             </View>
             {/* start try map */}
             <ScrollView>
-                <View style={{ flexWrap: "wrap", flexDirection: "row" }}>
+                <View style={{ flexWrap: "wrap", flexDirection: "row", justifyContent: "center" }}>
                     {
                         infoDoctorData.map((list, index) => {
                             return (
@@ -127,9 +127,8 @@ const styles = StyleSheet.create({
     cardImageContainer: {
         position: "relative",
         marginVertical: 10,
-        marginLeft: 6,
+        // marginLeft: 6,
         paddingHorizontal: 10
-
     },
     cardOnlineLabel:
     {
@@ -146,7 +145,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 22,
         marginVertical: 9,
-        //width: width / 2.3,
+        width: width / 2.2,
         alignItems: "center",
         justifyContent: "center",
         // 

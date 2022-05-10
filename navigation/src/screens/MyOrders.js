@@ -253,7 +253,8 @@ export default function Screen3() {
 const styles = StyleSheet.create({
     orderContainer:
     {
-        flex: 1
+        flex: 1,
+        backgroundColor: "#fff"
     },
     cardOrderInnerContainer:
     {

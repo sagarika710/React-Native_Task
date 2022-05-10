@@ -1,10 +1,14 @@
 import { View, Text, Image, StyleSheet, FlatList, Dimensions, ScrollView, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import FontAwesome5Icons from 'react-native-vector-icons/FontAwesome5'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useNavigation } from "@react-navigation/native"
 
 export default function Profile() {
+    const [selectedBox, setSelectedBox] = React.useState({
+
+    });
+    const [activeService, setActiveService] = useState("call")
 
     const navigation = useNavigation();
 
@@ -90,8 +94,9 @@ export default function Profile() {
                 </View>
                 <View style={{ marginTop: 10, paddingHorizontal: 10 }}>
                     <Text style={{ fontSize: 18, fontFamily: "Mulish" }}>Services</Text>
-                    <View style={{ marginBottom: 10, borderWidth: 1, padding: 3, borderColor: "#00E0C5", borderRadius: 5 }}>
-                        <TouchableOpacity style={{ flexDirection: "row" }}>
+                    <View style={[{ marginBottom: 10, padding: 3, }, activeService == "call" ? styles.activeService : null]}>
+                        <TouchableOpacity style={{ flexDirection: "row" }}
+                            onPress={() => setActiveService("call")}>
                             <View style={[styles.servicesIconContainer, { backgroundColor: "#7ACEFA26", borderColor: "#7ACEFA", }]}>
                                 <Ionicons name="call" color="#7ACEFA" size={30} />
                             </View>
@@ -102,11 +107,8 @@ export default function Profile() {
 
                         </TouchableOpacity>
                     </View>
-                    <View style={{ marginBottom: 10, padding: 3, borderColor: "#7ACEFA", borderRadius: 5 }}>
-                        <TouchableOpacity style={{ flexDirection: "row" }}
-
-
-                        >
+                    <View style={[{ marginBottom: 10, padding: 3, borderRadius: 5 }, activeService == "bookAppointment" ? styles.activeService : null]}>
+                        <TouchableOpacity style={{ flexDirection: "row" }} onPress={() => setActiveService("bookAppointment")}>
                             <View style={[styles.servicesIconContainer, { backgroundColor: "#C7E8004F", borderColor: "#C7E8004F", }]}>
                                 <FontAwesome5Icons name="calendar" color="#C7E8004F" size={30} />
                             </View>
@@ -117,8 +119,8 @@ export default function Profile() {
 
                         </TouchableOpacity>
                     </View>
-                    <View style={{ padding: 3, borderColor: "#FBBC05", borderRadius: 5 }}>
-                        <TouchableOpacity style={{ flexDirection: "row" }}>
+                    <View style={[{ padding: 3, borderRadius: 5 }, activeService == "videoConference" ? styles.activeService : null]}>
+                        <TouchableOpacity style={{ flexDirection: "row" }} onPress={() => setActiveService("videoConference")} >
                             <View style={[styles.servicesIconContainer, { backgroundColor: "#FBBC05", opacity: 0.2 }]}>
                                 <Ionicons name="videocam-outline" size={30} color="#FBBC05" />
                             </View>
@@ -207,5 +209,8 @@ const styles = StyleSheet.create({
     {
         backgroundColor: "#00E0C5", padding: 15, justifyContent: "center", alignItems: "center", borderRadius: 40
     },
-    servicesIconContainer: { width: 50, height: 50, alignItems: "center", justifyContent: "center", borderRadius: 10, marginRight: 5 }
+    servicesIconContainer: { width: 50, height: 50, alignItems: "center", justifyContent: "center", borderRadius: 10, marginRight: 5 },
+    activeService: {
+        borderColor: "#00E0C5", borderRadius: 5, borderWidth: 1,
+    }
 })

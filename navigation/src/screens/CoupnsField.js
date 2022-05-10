@@ -101,7 +101,8 @@ export default function CoupnsField() {
 const styles = StyleSheet.create({
     orderContainer:
     {
-        flex: 1
+        flex: 1,
+        backgroundColor: "#fff"
     },
     searchBoxContainer: {
         flexDirection: "row",

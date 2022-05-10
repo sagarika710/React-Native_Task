@@ -28,7 +28,7 @@ export default function Apoointmentdetails() {
             },
             {
                 "bouns": "ShippingFee",
-                "price": "Free",
+                "price": "FREE",
 
             },
 
@@ -110,7 +110,7 @@ export default function Apoointmentdetails() {
                                                 width: "75%"
                                             }]}>{list.bouns}</Text>
                                             <View style={{ width: "25%", }}>
-                                                <Text style={[styles.textField, { color: list.price == "Free" ? "#00E0C5" : "#717171" }]}>{list.price}</Text>
+                                                <Text style={[styles.textField, { color: list.price == "FREE" ? "#00E0C5" : "#717171" }]}>{list.price}</Text>
                                             </View>
 
                                         </View>
@@ -185,7 +185,8 @@ export default function Apoointmentdetails() {
 const styles = StyleSheet.create({
     orderContainer:
     {
-        flex: 1
+        flex: 1,
+        backgroundColor: "#fff"
     },
     cardOrderInnerContainer:
     {
@@ -247,7 +248,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         marginTop: -10,
-        marginHorizontal: 10,
+        marginHorizontal: 5,
         paddingVertical: 20
     },
 
