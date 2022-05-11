@@ -4,6 +4,10 @@ import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/
 // import Icon from 'react-native-vector-icons/AntDesign';
 // import Iconi from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
 
 const Medicine3 = (props) => {
     const navigation = useNavigation();
@@ -15,7 +19,7 @@ const Medicine3 = (props) => {
             <View style={styles.detailsview}>
               
                 <View style={{ flexDirection: 'row', justifyContent:'center'}}>
-                <Image source={props.data.url} style={{ width: 330,borderRadius:10, height: 130 }} />
+                <Image source={props.data.url} style={{  width: Dimensions.get('window').width * 0.87,borderRadius:10, height: Dimensions.get('window').height * 0.20 }} />
                     
                 </View>
 
@@ -64,8 +68,9 @@ elevation: 5,
     detailsview: {
         flexDirection: 'row',
         justifyContent:'center',
-        paddingVertical:10,
-        marginVertical:10,
+        // paddingVertical:10,
+        marginTop:5,
+        marginBottom:7,
        
         borderColor:"#DFDDDD",
         

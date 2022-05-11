@@ -72,7 +72,7 @@ paddingHorizontal:5,
         justifyContent:'center',
         paddingVertical:5,
         marginVertical:10,
-        borderBottomWidth:1,
+        // borderBottomWidth:1,
         borderColor:"#DFDDDD",
        
 

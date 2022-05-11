@@ -4,6 +4,10 @@ import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/
 import Icon from 'react-native-vector-icons/AntDesign';
 import Iconi from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
 
 
 const Ordercomp = (props) => {
@@ -46,7 +50,7 @@ const Ordercomp = (props) => {
             <View  style={styles.appointmentdiv}>
             <View><Text style={{fontWeight:'bold',color:'black',}}>Are you Want to Cancel this appointment?</Text></View>
             
-            <View style={{flexDirection:'row',marginVertical:10,}}><View style={{paddingRight:40,}}><Text  onPress={() => navigation.navigate('prescription')} style={styles.yesbutton}>Yes</Text></View><View><Text style={styles.nobutton}>NO</Text></View></View>
+         <View style={{flexDirection:'row',marginVertical:10,}}><View style={{paddingRight:10,}}><Text  onPress={() => navigation.navigate('prescription')} style={styles.yesbutton}>Yes</Text></View><View><Text style={styles.nobutton}>NO</Text></View></View>
             </View>
 
         </View>
@@ -105,7 +109,8 @@ const styles = StyleSheet.create({
     },
     appointmentdiv:{
         justifyContent:'space-evenly',
-        height:80,
+        height: Dimensions.get('window').height * 0.12,
+        paddingTop:10,
 
        
     },
@@ -113,7 +118,7 @@ const styles = StyleSheet.create({
                 borderWidth:1,
                 paddingHorizontal:20,
                 paddingVertical:3,
-                borderRadius:10,
+                borderRadius:7,
                 borderColor:'#009987',
                 color:'#009987'
     },
@@ -121,7 +126,7 @@ const styles = StyleSheet.create({
         borderWidth:1,
         paddingHorizontal:20,
         paddingVertical:3,
-        borderRadius:10,
+        borderRadius:7,
         borderColor:'#EB4335',
         color:'#EB4335',
     },

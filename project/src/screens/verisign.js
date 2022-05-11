@@ -1,5 +1,6 @@
-import React from 'react'
-import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+
+import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity, } from 'react-native';
+import React, { useRef } from 'react'
 // import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
@@ -8,23 +9,43 @@ const window = Dimensions.get("window");
 const screen = Dimensions.get("screen");
 
 
-
 // const Login = (props) => 
 const Verisign = ({ navigation }) => {
+    const ref_input2 = useRef();
+  const ref_input3 = useRef();
+  const ref_input4 = useRef();
     return (
         <View style={styles.container}>
 
-<View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Welsign')} size={20} /></View>
+ <View style={styles.startedbtn} ><Icon1 name='left' style={styles.backicon} onPress={() => navigation.navigate('Welsign')} size={20} /></View>
 
 
             <View style={styles.fdiv}>
                 <Text style={styles.heading}>Please Verification!</Text>
                 <Text style={styles.inserttext}>Insert your OTP code to continue</Text>
                 <View style={styles.otpdiv}>
-                    <TextInput style={styles.otpinput}></TextInput>
-                    <TextInput style={styles.otpinput}></TextInput>
-                    <TextInput style={styles.otpinput}></TextInput>
-                    <TextInput style={styles.otpinput}></TextInput>
+                   
+                    <TextInput maxLength={1}
+                     autoFocus={true} 
+                     returnKeyType="next" onSubmitEditing={() => ref_input2.current.focus()}
+                      keyboardType='numeric' style={styles.otpinput}>
+                      </TextInput>
+
+                    <TextInput maxLength={1} 
+                    returnKeyType="next"
+                     onSubmitEditing={() => ref_input3.current.focus()}
+                    ref={ref_input2} keyboardType='numeric' style={styles.otpinput}>
+                    </TextInput>
+
+                    <TextInput maxLength={1} 
+                     returnKeyType="next" 
+                      onSubmitEditing={() => ref_input4.current.focus()}
+                       ref={ref_input3}
+                        keyboardType='numeric'
+                         style={styles.otpinput}>
+                       </TextInput>
+
+                    <TextInput maxLength={1} ref={ref_input4} keyboardType='numeric' style={styles.otpinput}></TextInput>
 
                 </View>
 
@@ -38,22 +59,21 @@ const Verisign = ({ navigation }) => {
 
 
             </View>
-          {/* <TouchableOpacity>
-                    <Text style={styles.continuebtn} onPress={() => navigation.navigate('Wronsign')}>Continue</Text>
-                </TouchableOpacity> */}
+        
+
+
                 <View style={styles.mainview}>
             <View style={styles.detailsview}>
                 <TouchableOpacity onPress={() => navigation.navigate('Wronsign')}>
 
                     <LinearGradient colors={['#00E0C5', '#009987',]} style={styles.linearGradient} >
                         <Text style={styles.buttonText} >
-                           Continue
+                            Continue
                         </Text>
                     </LinearGradient>
                 </TouchableOpacity>
             </View>
         </View>
-
         </View>
     )
 }
@@ -66,7 +86,7 @@ const styles = StyleSheet.create({
     },
   
     fdiv: {
-        paddingHorizontal: 30,
+        paddingHorizontal: 25,
         paddingVertical: 40,
     },
 
@@ -112,11 +132,16 @@ const styles = StyleSheet.create({
     otpdiv: {
         justifyContent: 'space-evenly',
         flexDirection: 'row',
-        marginTop: 20,
+        marginTop: 25,
     },
     otpinput: {
         borderBottomWidth: 1,
-        borderColor: 'gray',
+        borderColor: '#DEE1E6',
+        width: Dimensions.get('window').width * 0.15,
+        textAlign:'center',
+        fontSize:35,
+        fontWeight:'500',
+
     },
     notreceivediv: {
         justifyContent: 'space-between',
@@ -132,15 +157,17 @@ const styles = StyleSheet.create({
        marginRight:16,
         padding:10,
         width:43,
-           },
-    startedbtn: {
         
+    
+           },
+           startedbtn: {
+    
             borderRadius: 20,
            paddingTop:40,
            paddingBottom:20,
             width: 80,
             color: 'black',
-            marginLeft: 20,
+            marginLeft: 25,
             marginTop: 10,
           },
           mainview: {

@@ -4,6 +4,10 @@ import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/
 import Icon from 'react-native-vector-icons/AntDesign';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
+import { Dimensions } from 'react-native';
+const window = Dimensions.get("window");
+const screen = Dimensions.get("screen");
 
 const Mapcomp = (props) => {
     const navigation = useNavigation();
@@ -13,6 +17,7 @@ const Mapcomp = (props) => {
             <View style={styles.consultantdiv}>
               
                 <View style={styles.details}><Text style={{fontWeight:'bold',color:'black',fontSize:16}}>{props.data.name}</Text></View>
+               
                 <View style={styles.medicinesdiv}>
                 <View  style={styles.medicinestext}><Text>Montec LC 500MG</Text><Text>₹ 40.00 </Text></View>
                 <View style={styles.medicinestext}><Text>Paracetomal </Text><Text>₹ 40.00 </Text></View>
@@ -75,7 +80,7 @@ const styles = StyleSheet.create({
     mainview: {
         borderWidth: 1,
         borderRadius: 10,
-        marginVertical: 30,
+        marginVertical: 15,
         marginHorizontal: 20,
         borderColor: '#DFDDDD',
         backgroundColor: '#ffffff',
@@ -89,15 +94,16 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
        
         paddingHorizontal: 15,
-        
+       
 
         elevation: 5,
     },
     consultantdiv:{
             justifyContent:'space-evenly',
-            height:150,
+            height: Dimensions.get('window').height * 0.25,
             borderBottomWidth:1,
             borderColor:'#DFDDDD',
+            marginTop:15,
     },
     paymentsummarydiv:{
         justifyContent:'space-evenly',
@@ -161,11 +167,13 @@ const styles = StyleSheet.create({
     },
     medicinesdiv:{
                     justifyContent:'space-evenly',
+                    height: Dimensions.get('window').height * 0.15,
+                    
     },
     details:{
                 borderBottomWidth:1,
                 borderColor:'#DFDDDD',
-                paddingVertical:20,
+                paddingBottom:15,
     },
 
     trackdiv:{

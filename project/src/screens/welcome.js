@@ -72,8 +72,8 @@ const styles = StyleSheet.create({
   numberinput: {
     fontSize: 25,
     borderBottomWidth: 1,
+    width: Dimensions.get('window').width * 0.70,
     borderColor: 'gray',
-    width: 280,
     marginLeft: 50,
     marginTop: -34,
     marginBottom: 30,

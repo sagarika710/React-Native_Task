@@ -57,7 +57,10 @@ const styles = StyleSheet.create({
     },
     firstdiv: {
         justifyContent: 'space-evenly',
-        // borderWidth:1,
+        // backgroundColor:'black',
+        // borderWidth:10,
+        height: Dimensions.get('window').height * 1,
+
 
     },
     fdiv: {

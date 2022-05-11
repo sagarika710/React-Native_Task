@@ -1,5 +1,6 @@
-import React from 'react'
-import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+
+import { View, Text, Button, StyleSheet, Image, TextInput, TouchableOpacity, } from 'react-native';
+import React, { useRef } from 'react'
 // import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon1 from 'react-native-vector-icons/AntDesign';
 import LinearGradient from 'react-native-linear-gradient';
@@ -10,6 +11,9 @@ const screen = Dimensions.get("screen");
 
 // const Login = (props) => 
 const Veri = ({ navigation }) => {
+    const ref_input2 = useRef();
+  const ref_input3 = useRef();
+  const ref_input4 = useRef();
     return (
         <View style={styles.container}>
 
@@ -20,10 +24,20 @@ const Veri = ({ navigation }) => {
                 <Text style={styles.heading}>Please Verification!</Text>
                 <Text style={styles.inserttext}>Insert your OTP code to continue</Text>
                 <View style={styles.otpdiv}>
-                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
-                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
-                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
-                    <TextInput maxLength={1}  keyboardType='numeric' style={styles.otpinput}></TextInput>
+                    <TextInput maxLength={1}
+                     autoFocus={true} 
+                     returnKeyType="next" onSubmitEditing={() => ref_input2.current.focus()}
+                      keyboardType='numeric' style={styles.otpinput}>
+                      </TextInput>
+
+                    <TextInput maxLength={1} 
+                    returnKeyType="next"
+                     onSubmitEditing={() => ref_input3.current.focus()}
+                    ref={ref_input2} keyboardType='numeric' style={styles.otpinput}>
+                    </TextInput>
+
+                    <TextInput maxLength={1}  returnKeyType="next"  onSubmitEditing={() => ref_input4.current.focus()} ref={ref_input3} keyboardType='numeric' style={styles.otpinput}></TextInput>
+                    <TextInput maxLength={1} ref={ref_input4} keyboardType='numeric' style={styles.otpinput}></TextInput>
 
                 </View>
 
@@ -110,11 +124,16 @@ const styles = StyleSheet.create({
     otpdiv: {
         justifyContent: 'space-evenly',
         flexDirection: 'row',
-        marginTop: 20,
+        marginTop: 25,
     },
     otpinput: {
         borderBottomWidth: 1,
-        borderColor: 'gray',
+        borderColor: '#DEE1E6',
+        width: Dimensions.get('window').width * 0.15,
+        textAlign:'center',
+        fontSize:30,
+        fontWeight:'500',
+
     },
     notreceivediv: {
         justifyContent: 'space-between',
