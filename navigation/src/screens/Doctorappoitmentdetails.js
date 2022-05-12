@@ -46,14 +46,6 @@ export default function Doctorappoitmentdetails() {
                 </TouchableOpacity>
                 <Text style={{ fontWeight: "bold", marginLeft: 8 }}></Text>
             </View>
-            <View style={styles.secondrow}>
-                <View style={styles.secondrowDiv}>
-                    < View >
-                        <Text style={styles.orderDetailsTxt}> Order Details </Text>
-                    </View>
-
-                </View>
-            </View>
             {/* start order details*/}
             <ScrollView >
                 <View style={[styles.cardOrderInnerContainer, { alignItems: "center" }]}>
@@ -171,7 +163,11 @@ export default function Doctorappoitmentdetails() {
                     </View>
                 </View>
                 <View style={{ marginVertical: 20 }}>
-                    <TouchableOpacity
+                    <TouchableOpacity onPress={() => {
+                        navigation.navigate("MyOrders", {
+
+                        })
+                    }}
                         style={{ backgroundColor: "#00E0C5", padding: 15, margin: 10, justifyContent: "center", alignItems: "center", borderRadius: 40 }}>
                         <Text style={{ color: "#ffff" }}>Thank You</Text>
                     </TouchableOpacity>

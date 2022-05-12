@@ -91,7 +91,7 @@ export default function Clinics() {
             </View>
             {/* search bar view end */}
             {/*  */}
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, justifyContent: "center" }}>
                 {/* start flat list*/}
                 <FlatList
                     numColumns={2}

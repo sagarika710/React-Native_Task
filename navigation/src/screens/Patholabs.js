@@ -20,9 +20,9 @@ const Patholabs = () => {
                 </TouchableOpacity>
                 <Text style={{ fontWeight: "bold", marginLeft: 8 }}></Text>
             </View>
-            <View style={{ marginTop: 10 }}>
+            <View style={{ marginTop: 10, justifyContent: "center", alignItems: "center" }}>
                 <Image style={{
-                    width: 350, height: 170, marginHorizontal: 6, marginVertical: 10,
+                    width: 350, height: 170,
                     borderRadius: 10,
                 }}
                     source={require("../assests/clinic2.png")}
