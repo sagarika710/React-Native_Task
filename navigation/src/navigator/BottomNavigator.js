@@ -76,10 +76,14 @@ const CustomDrawer = (props) => {
 
     return (
         <View style={{ flex: 1, backgroundColor: "#01e0c5", }}>
-            <View style={{ flex: 1, justifyContent: "space-around" }}>
-                <View style={{ justifyContent: "space-around", alignItems: "center", flexDirection: "row", marginTop: 10 }}>
-                    <Image source={require("../assests/Image.png")} style={{ borderRadius: 50, height: 70, width: 70 }} />
-                    <Text style={{ color: "white", marginLeft: -40 }}>DeeptiRani Padhy</Text>
+            <View style={{ flex: 1 }}>
+                <View style={{ justifyContent: "space-between", alignItems: "center", flexDirection: "row", marginTop: 20 }}>
+                    <View style={{ marginHorizontal: 10 }}>
+                        <Image source={require("../assests/Image.png")} style={{ borderRadius: 50, height: 70, width: 70 }} />
+                    </View>
+                    <View style={{ flex: 1, marginHorizontal: 10 }}>
+                        <Text style={{ color: "white", letterSpacing: 0.3 }}>DeeptiRani Padhy</Text>
+                    </View>
                 </View>
 
                 <DrawerContentScrollView >
