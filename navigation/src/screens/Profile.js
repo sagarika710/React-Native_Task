@@ -5,9 +5,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import { useNavigation } from "@react-navigation/native"
 
 export default function Profile() {
-    const [selectedBox, setSelectedBox] = React.useState({
-
-    });
     const [activeService, setActiveService] = useState("call")
 
     const navigation = useNavigation();

@@ -36,7 +36,7 @@ export default function Doctors() {
                 "image": require("../assests/3.png")
             },
             {
-                "title": "Dr Martinez",
+                "title": "Dr Martinez ",
                 "isonline": true,
                 "specialist": "Pediatrician",
                 "rating": "4.3",

@@ -46,6 +46,14 @@ export default function Doctorappoitmentdetails() {
                 </TouchableOpacity>
                 <Text style={{ fontWeight: "bold", marginLeft: 8 }}></Text>
             </View>
+            <View style={styles.secondrow}>
+                <View style={styles.secondrowDiv}>
+                    < View >
+                        <Text style={styles.orderDetailsTxt}> Order Details </Text>
+                    </View>
+
+                </View>
+            </View>
             {/* start order details*/}
             <ScrollView >
                 <View style={[styles.cardOrderInnerContainer, { alignItems: "center" }]}>

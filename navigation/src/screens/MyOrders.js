@@ -8,7 +8,8 @@ import { useNavigation } from "@react-navigation/native"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const { height, width } = Dimensions.get("screen");
-export default function Screen3() {
+export default function MyOrders() {
+    const [activeService, setActiveService] = React.useState("call")
 
     const navigation = useNavigation();
     //data for map
@@ -126,11 +127,9 @@ export default function Screen3() {
 
                             })
                         }}>
-
-                            <View style={{ marginLeft: -5 }}>
+                            <View >
                                 <Text style={styles.couponText}>Use coupons
                                 </Text>
-
                             </View>
                         </TouchableOpacity>
 
@@ -202,8 +201,9 @@ export default function Screen3() {
                             fontSize: 12, fontFamily: "Mulish", lineHeight: 15.06, letterSpacing: 0.2, textTransform: "capitalize", color: "#222222", marginLeft: 8
                         }}>Payment Methods</Text>
                     </View>
-                    <View style={{ borderColor: "#00E0C5", paddingVertical: 5, paddingHorizontal: 10, marginTop: 10, borderWidth: 1.5, borderRadius: 5 }}>
-                        <TouchableOpacity style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 10, marginTop: 10 }}>
+                    <View style={[{ marginBottom: 10, padding: 3, }, activeService == "call" ? styles.activeService : null]}>
+                        <TouchableOpacity style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 10, marginTop: 10 }}
+                            onPress={() => setActiveService("call")}>
                             <View >
                                 <FontAwesome5Icons name="credit-card" size={20} color={"green"} />
                             </View>
@@ -219,8 +219,9 @@ export default function Screen3() {
 
                         </TouchableOpacity>
                     </View>
-                    <View style={{ paddingVertical: 5, paddingHorizontal: 10, marginTop: 10, borderWidth: 0.5, borderRadius: 5 }}>
-                        <TouchableOpacity style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 10, marginTop: 10 }}>
+                    <View style={[{ marginBottom: 10, padding: 3, borderWidth: .2 }, activeService == "cash" ? styles.activeService : null]}>
+                        <TouchableOpacity style={{ flexDirection: "row", justifyContent: "space-between", marginLeft: 10, marginTop: 10 }}
+                            onPress={() => setActiveService("cash")}>
                             <View >
                                 <Ionicons name="cash" color={"green"} size={20} />
                             </View>
@@ -309,7 +310,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         paddingVertical: 20
     },
-
+    activeService: {
+        borderColor: "#00E0C5", borderRadius: 5, borderWidth: 1,
+    },
 
     textInputField:
     {
@@ -348,5 +351,6 @@ const styles = StyleSheet.create({
         fontSize: 12, fontFamily: "Mulish", lineHeight: 15.06, letterSpacing: 0.2, color: "#222222", marginLeft: 8
 
     }
+
 
 })
