@@ -91,7 +91,7 @@ export default function Clinics() {
             </View>
             {/* search bar view end */}
             {/*  */}
-            <View style={{ flex: 1, justifyContent: "center" }}>
+            <View style={{ flex: 1, justifyContent: "center", marginHorizontal: 5 }}>
                 {/* start flat list*/}
                 <FlatList
                     numColumns={2}
@@ -137,7 +137,8 @@ const styles = StyleSheet.create({
     searchBoxContainer: {
         flexDirection: "row",
         alignItems: "center",
-        marginHorizontal: 7,
+        //justifyContent: "center",
+        marginHorizontal: 10,
         marginVertical: 10,
         paddingHorizontal: 10,
         borderWidth: 0.2,
@@ -149,10 +150,12 @@ const styles = StyleSheet.create({
     },
     clinicImage: {
         flex: 1,
-        marginHorizontal: 7,
+        //marginHorizontal: 7,
         height: 150,
         position: "relative",
-        marginVertical: 10
+        marginVertical: 7,
+        marginHorizontal: 5
+
     },
     imageView:
     {
