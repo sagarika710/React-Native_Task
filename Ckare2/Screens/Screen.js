@@ -5,6 +5,9 @@ const Screen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ScrollView>
+      <View style={styles.icon}>
+        <Image source={require('../assets/backicon2.png')}/>
+        </View>
       <View style={{justifyContent: 'center', alignItems: 'center',width: Dimensions.get('window').width*1}}>
         <Image style={styles.img} source={require('../assets/mediimg.png')} />
       </View>
@@ -193,6 +196,10 @@ const Screen = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  icon: {
+    marginLeft: 20,
+    marginTop: 25,
+  },
   container: {
     backgroundColor: 'white',
     flex: 1,
@@ -310,7 +317,7 @@ const styles = StyleSheet.create({
   },
   img: {
     // marginLeft: 20,
-    // marginTop: 15,
+    marginTop: 15,
     flexDirection: 'row',
     borderRadius: 5,
     // width: 385,

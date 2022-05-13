@@ -7,7 +7,8 @@ const Screen1  = ({navigation}) => {
     return (
       <View style={styles.container}>
                <View style={styles.div1}>
-        <Text style={styles.Heading}>Medicines</Text>
+ <View><Image source={require('../assets/backicon2.png')}/></View>
+        <View><Text style={styles.Heading}>Medicines</Text></View>
       </View>
           <View style={styles.search}>
                <TextInput placeholder="Search Medicine & Health Product"></TextInput>
@@ -135,6 +136,10 @@ const Screen1  = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+   div1: {
+      flexDirection: 'row',
+      marginLeft: 15,
+   },
    btn1: {
    color: 'white',
    fontSize: 11,
@@ -143,7 +148,7 @@ const styles = StyleSheet.create({
    Heading: {
       marginTop: 20,
       color: 'black',
-      marginLeft: 80,
+      // marginLeft: 80,
      },
    clr: {
       color:  '#009987',
@@ -207,7 +212,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#EFF3FA',
         paddingRight: 10,
         paddingLeft: 10,
-        margin: 15,
+        marginLeft: 15,
         justifyContent: 'space-between', 
         alignItems: 'center',
         width: Dimensions.get('window').width*0.9

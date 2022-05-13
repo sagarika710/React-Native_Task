@@ -5,7 +5,10 @@ import LinearGradient from 'react-native-linear-gradient';
 const Screen2  = ({navigation}) => {
     return(
         <View style={styles.container}>
-                <Text style={styles.heading}>Cart</Text>
+                <View style={styles.div}>
+ <View><Image source={require('../assets/backicon2.png')}/></View>
+        <View><Text style={styles.Heading}>Medicines</Text></View>
+      </View>
             <View style={styles.div1}>
                 <View style={styles.col1}>
           <Image style={styles.img} source={require('../assets/Paracetamol2.png')}/>
@@ -73,6 +76,16 @@ const Screen2  = ({navigation}) => {
 };
 
 const styles = StyleSheet.create ({
+  Heading: {
+    marginTop: 20,
+    color: 'black',
+    // marginLeft: 80,
+   },
+  div: {
+    marginTop: 20,
+    flexDirection: 'row',
+    marginLeft: 20,
+  },
   free: {
     color: '#009987',
     marginRight: 10,
@@ -89,7 +102,7 @@ const styles = StyleSheet.create ({
     marginTop: 5,
   },
   btn: {
-    marginTop: 60,
+    marginTop: 40,
     borderWidth: 1,
     width: Dimensions.get('window').width * 0.9,
     height: Dimensions.get('window').height * 0.045,

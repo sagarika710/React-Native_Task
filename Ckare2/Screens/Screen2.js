@@ -13,7 +13,10 @@ import LinearGradient from 'react-native-linear-gradient';
 const Screen3 = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.hed1}>Medicine</Text>
+     <View style={styles.div1}>
+ <View><Image source={require('../assets/backicon2.png')}/></View>
+        <View><Text style={styles.Heading}>Medicines</Text></View>
+      </View>
       <View style={styles.search}>
         <TextInput placeholder="Search Medicine & Health Product"></TextInput>
         <Image style={styles.img1} source={require('../assets/search.png')} />
@@ -90,6 +93,15 @@ const Screen3 = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  Heading: {
+    marginTop: 20,
+    color: 'black',
+    // marginLeft: 80,
+   },
+  div1: {
+    flexDirection: 'row',
+    marginLeft: 20,
+  },
     Fever: {
         marginLeft: 20,
         marginTop: 15,
@@ -220,7 +232,7 @@ const styles = StyleSheet.create({
     height: 22,
   },
   img2: {
-    marginTop: 30,
+    marginTop: 10,
   },
 });
 
