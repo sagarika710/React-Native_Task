@@ -5,6 +5,10 @@ import LinearGradient from 'react-native-linear-gradient'
 const Screen = ({navigation}) => {
     return(
         <View style={styles.container}>
+
+          <View>
+          <Image style={styles.bicon}  source={require('../assets/backicon2.png')} />
+          </View>
             <View style={styles.div}>
             <View style={styles.row1}>
           <Image style={styles.img1} source={require('../assets/lifecare.png')}/> 
@@ -95,6 +99,9 @@ const Screen = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
+  bicon: {
+    marginLeft: 10,
+  },
   Row2: {
     justifyContent: 'center'
   },
@@ -107,23 +114,8 @@ const styles = StyleSheet.create({
       borderRadius: 20,
         width: Dimensions.get('window').width*0.9,
         height: Dimensions.get('window').width*0.09,
-       marginTop: 40,
+       marginTop: 20,
   },
-//   img2: {
-//      marginLeft: 170,
-//   },
-//   img3: {
-//     marginLeft: 135,
-//  },
-//  img4: {
-//   marginLeft: 225,
-// },
-// img5: {
-//   marginLeft: 224,
-// },
-// img6: {
-//   marginLeft: 13,
-// },
 
   pause: {
    marginTop: 5,

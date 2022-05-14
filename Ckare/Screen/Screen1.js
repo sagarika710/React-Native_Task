@@ -5,7 +5,13 @@ import { View, Text,Image,Dimensions,TextInput,StyleSheet } from 'react-native';
 const Screen1  = () => {
     return(
         <View style={styles.container}>
-            <Text style={styles.heading}>Patholabs</Text>
+            <View style={styles.div1}>
+             <View >
+          <Image style={styles.bicon}  source={require('../assets/backicon2.png')} />
+          </View>
+          <View><Text style={styles.heading}>Patholabs</Text>
+            </View>
+            </View>
             <Text style={styles.location}>Patia, Bhubaneswar</Text>
             <View style={styles.search}>
                <TextInput placeholder="Search Patholabs"></TextInput>
@@ -39,6 +45,10 @@ const Screen1  = () => {
     )
 };
 const styles = StyleSheet.create({
+    div1: {
+        flexDirection: 'row',
+        marginTop: 15,
+    },
     img2: {
      alignItems: 'center',
     },
@@ -91,8 +101,8 @@ const styles = StyleSheet.create({
         height: 22,
     },
     heading: {
-        marginHorizontal: 60,
-        marginVertical: 10,
+        marginHorizontal: 10,
+        marginVertical: 15,
         color: 'black',
         fontSize: 15,
     },
