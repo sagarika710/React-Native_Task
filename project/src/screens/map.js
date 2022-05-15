@@ -22,13 +22,7 @@ const Mapp = ({ navigation }) => {
     return (
         <View style={styles.contrainer}>
 
-            {/* {
-                opi.map((dinesh4) => {
-                    return (
-                        <Mapcomp data={dinesh4} />
-                    )
-                })
-            } */}
+           <View style={{height:Dimensions.get('window').height * 1}}>
 <ImageBackground source={map} resizeMode="cover" style={styles.image}></ImageBackground>
 
 
@@ -48,7 +42,7 @@ const Mapp = ({ navigation }) => {
 </View>
 
 <View style={styles.secondrowdiv}>
-    <View><Text>Order Id: Ckare123456</Text></View>
+    <View style={{marginBottom:20}}><Text>Order Id: Ckare123456</Text></View>
    
     <View style={styles.deliverytime}>
         <View style={{justifyContent:'space-evenly', flexDirection:'row'}}>
@@ -91,7 +85,7 @@ const Mapp = ({ navigation }) => {
 
 
            
-
+</View>
 
         </View>
 
@@ -109,8 +103,8 @@ const styles = StyleSheet.create({
     },
     image:{
             borderWidth:1,
-            height:500,
-            width:400,
+            height:Dimensions.get('window').height * 0.6,
+            width:Dimensions.get('window').width * 1,
     },
     firstrowdiv:{
                     justifyContent:'space-between',
@@ -130,10 +124,11 @@ const styles = StyleSheet.create({
         borderTopRightRadius:50,
        paddingVertical:40,
         marginTop:-70,
+        height:Dimensions.get('window').height * 0.6,
     },
     secondrowdiv:{
         justifyContent:'space-between',
-        height:110,
+        
         borderWidth:1,
         borderColor:'#DFDDDD',
         paddingHorizontal:10,
@@ -163,7 +158,8 @@ const styles = StyleSheet.create({
     mainview: {
         // borderWidth: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop:20,
     },
     linearGradient: {
         // flex: 1,

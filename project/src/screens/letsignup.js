@@ -24,8 +24,9 @@ const Letsign = ({ navigation }) => {
         <View style={styles.container}>
 
             <View style={styles.firstdiv}>
+                <View>
                 <Image style={styles.fimg} source={require('../Assests/goimg.png')} />
-
+                </View>
                 <View style={styles.fdiv}>
                     <Text style={styles.heading}>Let's get Started</Text>
                     <Text style={styles.inserttext}>Let’s consult wit doctor now</Text>
@@ -33,26 +34,15 @@ const Letsign = ({ navigation }) => {
                 {/* <TouchableOpacity>
                     <Text style={styles.continuebtn} onPress={() => navigation.navigate('Home')}>Get Started</Text>
                 </TouchableOpacity> */}
-{/* 
+<View>
                 {
      tpi.map((dinesh1)=> {
          return(
              <Button1 data={dinesh1}/>
          )
      }) 
-  }  */}
-   <View style={styles.mainview}>
-            <View style={styles.detailsview}>
-                <TouchableOpacity onPress={() => navigation.navigate('Homesign')}>
-
-                    <LinearGradient colors={['#00E0C5', '#009987',]} style={styles.linearGradient} >
-                        <Text style={styles.buttonText} >
-                            Continue
-                        </Text>
-                    </LinearGradient>
-                </TouchableOpacity>
-            </View>
-        </View>
+  } 
+  </View>
   
 
             </View>
@@ -84,7 +74,10 @@ const styles = StyleSheet.create({
 
     },
     fimg: {
-        marginTop: 40,
+        marginTop: 30,
+        width: Dimensions.get('window').width * 1,
+        height: Dimensions.get('window').height * 0.5,
+
     },
     heading: {
         fontWeight: '500',
@@ -109,30 +102,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#009987',
 
     },
-    mainview: {
-        // borderWidth: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    linearGradient: {
-        // flex: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
-        borderRadius: 30,
-        width: Dimensions.get('window').width * 0.80,
-    },
-    buttonText: {
-        fontSize: 18,
-        // fontFamily: 'Gill Sans',
-        textAlign: 'center',
-        // margin: 10,
-        color: 'white',
-        marginVertical: 10,
-        backgroundColor: 'transparent',
-
-        paddingVertical: 2,
-    },
-
 })
 
 export default Letsign;

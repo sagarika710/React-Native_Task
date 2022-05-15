@@ -26,7 +26,9 @@ import Orderprice from './src/screens/orderprice';
 import Mapp from './src/screens/map';
 import Orderid from './src/screens/orderid';
 import Mapp2 from './src/screens/map2';
-
+import Bill from './src/screens/bill';
+import Bill2 from './src/screens/bill2';
+import Rate from './src/screens/rate';
 
 
 const Stack = createNativeStackNavigator();
@@ -34,7 +36,7 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerShown={false} screenOptions={{headerTitle: 'Test', headerShown: false}} initialRouteName="Let">
+      <Stack.Navigator headerShown={false} screenOptions={{headerTitle: 'Test', headerShown: false}} initialRouteName="Mapp">
       <Stack.Screen name="Let" component={Let} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Wel" component={Wel} />
@@ -56,7 +58,10 @@ function App() {
       <Stack.Screen name="Testhistory" component={Testhistory} />
       <Stack.Screen name="Ordertwo" component={Ordertwo} />
       <Stack.Screen name="Mapp2" component={Mapp2} />
-      <Stack.Screen name="Orderid" component={Orderid} />
+      {/* <Stack.Screen name="Orderid" component={Orderid} /> */}
+      <Stack.Screen name="Bill" component={Bill} />
+      <Stack.Screen name="Bill2" component={Bill2} />
+      <Stack.Screen name="Rate" component={Rate} />
       
 
       </Stack.Navigator>

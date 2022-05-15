@@ -24,8 +24,9 @@ const Let = ({ navigation }) => {
         <View style={styles.container}>
 
             <View style={styles.firstdiv}>
+                <View>
                 <Image style={styles.fimg} source={require('../Assests/goimg.png')} />
-
+                </View>
                 <View style={styles.fdiv}>
                     <Text style={styles.heading}>Let's get Started</Text>
                     <Text style={styles.inserttext}>Let’s consult wit doctor now</Text>
@@ -33,7 +34,7 @@ const Let = ({ navigation }) => {
                 {/* <TouchableOpacity>
                     <Text style={styles.continuebtn} onPress={() => navigation.navigate('Home')}>Get Started</Text>
                 </TouchableOpacity> */}
-
+<View>
                 {
      tpi.map((dinesh1)=> {
          return(
@@ -41,6 +42,7 @@ const Let = ({ navigation }) => {
          )
      }) 
   } 
+  </View>
   
 
             </View>
@@ -72,7 +74,10 @@ const styles = StyleSheet.create({
 
     },
     fimg: {
-        marginTop: 40,
+        marginTop: 30,
+        width: Dimensions.get('window').width * 1,
+        height: Dimensions.get('window').height * 0.5,
+
     },
     heading: {
         fontWeight: '500',
