@@ -4,10 +4,11 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import Constants from 'expo-constants';
-
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function AddressAndPaymentComponent() {
+    const navigation = useNavigation();
     return (
         <View>
             {/* first row */}

@@ -47,7 +47,7 @@ export default function AddressAndPayment2({navigation}) {
             </View>
           </View>
           <Text style={styles.headingTxts}>Phone Number</Text>
-          <TextInput style={styles.mediumInputDiv} keyboardType= 'numeric' />
+          <TextInput style={styles.mediumInputDiv} keyboardType= 'numeric' maxLength={10} />
         </View>
 
         {/* button */}

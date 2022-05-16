@@ -135,16 +135,16 @@ export default function Medicine3ByCategory({ navigation }) {
                         <View>
                             <Text style={styles.paymentSummaryTxt}>Payment Method</Text>
                         </View>
-                        <View style={styles.paymentMethodTopDiv}>
+                        <TouchableOpacity style={styles.paymentMethodTopDiv} onPress={() => navigation.navigate('Medicine3ByCategory')}>
                             <View style={styles.paymentMethodLeftDiv}>
                                 <View>
-                                    <AntDesign name="creditcard" size={15} color="#3E64FF" onPress={() => navigation.navigate('Medicine3ByCategory')} />
+                                    <AntDesign name="creditcard" size={15} color="#3E64FF" />
                                 </View>
                                 <View>
-                                    <Text style={styles.onlineTxt} onPress={() => navigation.navigate('Medicine3ByCategory')} >Online</Text>
+                                    <Text style={styles.onlineTxt} >Online</Text>
                                 </View>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                         <View style={styles.paymentMethodBottomDiv}>
                             <View style={styles.paymentMethodLeftDiv}>
                                 <View>

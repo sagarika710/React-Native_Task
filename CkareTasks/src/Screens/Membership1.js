@@ -24,7 +24,7 @@ export default function Membership1({navigation}) {
       <View style={{alignItems: 'center'}}>
         <LinearGradient colors={[ '#00E0C5','#009987']} style={styles.takeFreeTrialBtnDiv} >
           <TouchableOpacity style={styles.takeFreeTrialBtn} onPress ={() => navigation.navigate('Membership2') } >
-            <Text style={styles.takeFreeTrialBtnTxt} >Take a free Trail</Text>
+            <Text style={styles.takeFreeTrialBtnTxt} >Take a free Trial</Text>
           </TouchableOpacity>
         </LinearGradient>
       </View>

@@ -4,7 +4,7 @@ import bgImage from '../assets/greenBackground.png';
 import { LinearGradient } from 'expo-linear-gradient';
 import Constants from 'expo-constants';
 
-export default function Membership3({navigation}) {
+export default function Membership3({ navigation }) {
   return (
     // <View>
     <ImageBackground source={bgImage} style={styles.container}>
@@ -12,81 +12,83 @@ export default function Membership3({navigation}) {
         <Text style={styles.goPremiumTxt} onPress={() => navigation.navigate('Membership2')} >Go Premium</Text>
       </View>
       <View style={styles.midBoxDiv}>
-      <ScrollView  horizontal={true} showsHorizontalScrollIndicator={false}> 
-        <View style={styles.midBox}>
-          <Text style={styles.midBoxTxt}>SOS for premium members</Text>
-          <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
-          <Text style={styles.midBoxTxt}>appointment remainder</Text>
-          <Text style={styles.midBoxTxt}>Mental support</Text>
-          <Text style={styles.midBoxTxt}>Questionnaire</Text>
-          <View style={styles.midBoxbottomdiv}>
-            <View style={styles.midBoxbottomdivleft}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.midBox}>
+            <Text style={styles.midBoxTxt}>SOS for premium members</Text>
+            <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
+            <Text style={styles.midBoxTxt}>appointment remainder</Text>
+            <Text style={styles.midBoxTxt}>Mental support</Text>
+            <Text style={styles.midBoxTxt}>Questionnaire</Text>
+            <View style={styles.midBoxbottomdiv}>
+              <View style={styles.midBoxbottomdivleft}>
                 <Text style={styles.midBoxbottomdiv400}>₹400</Text>
                 <Text style={styles.midBoxbottomdiv800}>₹800</Text>
-            </View>
-            <View style={styles.midBoxbottomdivright}>
-                 <Text style={styles.midBoxbottomdiv1month}>1 Month</Text>
+              </View>
+              <View style={styles.midBoxbottomdivright}>
+                <Text style={styles.midBoxbottomdiv1month}>1 Month</Text>
+              </View>
             </View>
           </View>
-        </View>
-        <View style={styles.midBox}>
-          <Text style={styles.midBoxTxt}>SOS for premium members</Text>
-          <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
-          <Text style={styles.midBoxTxt}>appointment remainder</Text>
-          <Text style={styles.midBoxTxt}>Mental support</Text>
-          <Text style={styles.midBoxTxt}>Questionnaire</Text>
-          <View style={styles.midBoxbottomdiv}>
-            <View style={styles.midBoxbottomdivleft}>
+          <View style={styles.midBox}>
+            <Text style={styles.midBoxTxt}>SOS for premium members</Text>
+            <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
+            <Text style={styles.midBoxTxt}>appointment remainder</Text>
+            <Text style={styles.midBoxTxt}>Mental support</Text>
+            <Text style={styles.midBoxTxt}>Questionnaire</Text>
+            <View style={styles.midBoxbottomdiv}>
+              <View style={styles.midBoxbottomdivleft}>
                 <Text style={styles.midBoxbottomdiv400}>₹600</Text>
                 <Text style={styles.midBoxbottomdiv800}>₹1000</Text>
-            </View>
-            <View style={styles.midBoxbottomdivright}>
-                 <Text style={styles.midBoxbottomdiv1month}>3 Month</Text>
+              </View>
+              <View style={styles.midBoxbottomdivright}>
+                <Text style={styles.midBoxbottomdiv1month}>3 Month</Text>
+              </View>
             </View>
           </View>
-        </View>
-        <View style={styles.midBox}>
-          <Text style={styles.midBoxTxt}>SOS for premium members</Text>
-          <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
-          <Text style={styles.midBoxTxt}>appointment remainder</Text>
-          <Text style={styles.midBoxTxt}>Mental support</Text>
-          <Text style={styles.midBoxTxt}>Questionnaire</Text>
-          <View style={styles.midBoxbottomdiv}>
-            <View style={styles.midBoxbottomdivleft}>
+          <View style={styles.midBox}>
+            <Text style={styles.midBoxTxt}>SOS for premium members</Text>
+            <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
+            <Text style={styles.midBoxTxt}>appointment remainder</Text>
+            <Text style={styles.midBoxTxt}>Mental support</Text>
+            <Text style={styles.midBoxTxt}>Questionnaire</Text>
+            <View style={styles.midBoxbottomdiv}>
+              <View style={styles.midBoxbottomdivleft}>
                 <Text style={styles.midBoxbottomdiv400}>₹800</Text>
                 <Text style={styles.midBoxbottomdiv800}>₹1200</Text>
-            </View>
-            <View style={styles.midBoxbottomdivright}>
-                 <Text style={styles.midBoxbottomdiv1month}>6 Month</Text>
+              </View>
+              <View style={styles.midBoxbottomdivright}>
+                <Text style={styles.midBoxbottomdiv1month}>6 Month</Text>
+              </View>
             </View>
           </View>
-        </View>
-        <View style={styles.midBox}>
-          <Text style={styles.midBoxTxt}>SOS for premium members</Text>
-          <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
-          <Text style={styles.midBoxTxt}>appointment remainder</Text>
-          <Text style={styles.midBoxTxt}>Mental support</Text>
-          <Text style={styles.midBoxTxt}>Questionnaire</Text>
-          <View style={styles.midBoxbottomdiv}>
-            <View style={styles.midBoxbottomdivleft}>
+          <View style={styles.midBox}>
+            <Text style={styles.midBoxTxt}>SOS for premium members</Text>
+            <Text style={styles.midBoxTxt}>Just type and get doctors.</Text>
+            <Text style={styles.midBoxTxt}>appointment remainder</Text>
+            <Text style={styles.midBoxTxt}>Mental support</Text>
+            <Text style={styles.midBoxTxt}>Questionnaire</Text>
+            <View style={styles.midBoxbottomdiv}>
+              <View style={styles.midBoxbottomdivleft}>
                 <Text style={styles.midBoxbottomdiv400}>₹1200</Text>
                 <Text style={styles.midBoxbottomdiv800}>₹1800</Text>
-            </View>
-            <View style={styles.midBoxbottomdivright}>
-                 <Text style={styles.midBoxbottomdiv1month}>12 Month</Text>
+              </View>
+              <View style={styles.midBoxbottomdivright}>
+                <Text style={styles.midBoxbottomdiv1month}>12 Month</Text>
+              </View>
             </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
       </View>
-      <View style={{alignItems: 'center'}}>
-        <LinearGradient colors={[ '#00E0C5','#009987']} style={styles.takeFreeTrialBtnDiv} >
-          <TouchableOpacity style={styles.takeFreeTrialBtn} onpress={() => navigation.navigate('Medicine1ByCategory')} >
-            <Text style={styles.takeFreeTrialBtnTxt}  >Become a Member</Text>
+
+      {/* button */}
+      <View style={{ alignItems: 'center' }}>
+        <LinearGradient colors={['#00E0C5', '#009987']} style={styles.takeFreeTrialBtnDiv} >
+          <TouchableOpacity style={styles.takeFreeTrialBtn} onPress={() => navigation.navigate('Medicine1ByCategory')}>
+            <Text style={styles.takeFreeTrialBtnTxt} >Become a Member</Text>
           </TouchableOpacity>
         </LinearGradient>
       </View>
-      
+
 
     </ImageBackground>
     // </View>

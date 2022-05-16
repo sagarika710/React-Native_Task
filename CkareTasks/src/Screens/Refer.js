@@ -79,6 +79,7 @@ export default function Refer({ navigation }) {
             <Text style={styles.inviteTxt}>Invite  your friends to join CKARE and to get</Text>
             <Text style={styles.inviteTxt}>Rs.85 in cashback for each friend</Text>
           </View>
+          
           <View style={{ alignItems: 'center' }}>
             <LinearGradient colors={['#00E0C5', '#009987']} style={styles.takeFreeTrialBtnDiv} >
               <TouchableOpacity style={styles.takeFreeTrialBtn} onPress={() => navigation.navigate('Membership1')}>
@@ -86,6 +87,7 @@ export default function Refer({ navigation }) {
               </TouchableOpacity>
             </LinearGradient>
           </View>
+          
         </View>
       </LinearGradient>
     </View>

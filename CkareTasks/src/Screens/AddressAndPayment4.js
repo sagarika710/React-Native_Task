@@ -18,16 +18,16 @@ export default function AddressAndPayment4({navigation}) {
           <View>
             <Text style={styles.paymentSummaryTxt}>Payment Method</Text>
           </View>
-          <View style={styles.paymentMethodTopDiv} >
-            <View style={styles.paymentMethodLeftDiv}>
+          <TouchableOpacity style={styles.paymentMethodTopDiv} onPress={() => navigation.navigate('AddressAndPayment3')}>
+            <View style={styles.paymentMethodLeftDiv} >
               <View>
-                <AntDesign name="creditcard" size={15} color="#3E64FF" onPress={() => navigation.navigate('AddressAndPayment3')} />
+                <AntDesign name="creditcard" size={15} color="#3E64FF" />
               </View>
               <View>
-                <Text style={styles.onlineTxt} onPress={() => navigation.navigate('AddressAndPayment3')}>Online</Text>
+                <Text style={styles.onlineTxt} >Online</Text>
               </View>
             </View>
-          </View>
+          </TouchableOpacity>
           <View style={styles.paymentMethodBottomDiv}>
             <View style={styles.paymentMethodLeftDiv}>
               <View>
@@ -49,7 +49,7 @@ export default function AddressAndPayment4({navigation}) {
       {/* button */}
       <View style={{ alignItems: 'center' }}>
         <LinearGradient colors={['#00E0C5', '#009987']} style={styles.proceedToPayBtnDiv}>
-          <TouchableOpacity style={styles.proceedToPayBtn}>
+          <TouchableOpacity style={styles.proceedToPayBtn} onPress={() => navigation.navigate('AmbulanceOrder1')}>
             <Text style={styles.proceedToPayBtnTxt} >Proceed To Pay</Text>
           </TouchableOpacity>
         </LinearGradient>

@@ -34,16 +34,16 @@ export default function AddressAndPayment3({ navigation }) {
               </View>
             </View>
           </View>
-          <View style={styles.paymentMethodBottomDiv} >
+          <TouchableOpacity style={styles.paymentMethodBottomDiv} onPress={() => navigation.navigate('AddressAndPayment4')} >
             <View style={styles.paymentMethodLeftDiv}>
               <View>
-                <MaterialCommunityIcons name="cash" size={15} color="#09960E" onPress={() => navigation.navigate('AddressAndPayment4')}  />
+                <MaterialCommunityIcons name="cash" size={15} color="#09960E" />
               </View>
               <View>
-                <Text style={styles.onlineTxt} onPress={() => navigation.navigate('AddressAndPayment4')} >Cash</Text>
+                <Text style={styles.onlineTxt} >Cash</Text>
               </View>
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
 
@@ -83,6 +83,13 @@ const styles = StyleSheet.create({
     borderColor: '#e1e1e1',
     marginBottom: 25,
   },
+  paymentSummaryTxt: {
+    color: '#222',
+    fontSize: 12,
+    fontWeight: '600',
+    letterSpacing: 0.3,
+    marginBottom: 15,
+},
   paymentMethodTopDiv: {
     width: 304,
     height: 40,

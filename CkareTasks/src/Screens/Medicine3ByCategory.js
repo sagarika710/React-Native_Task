@@ -154,16 +154,16 @@ export default function Medicine3ByCategory({ navigation }) {
                                 </View>
                             </View>
                         </View>
-                        <View style={styles.paymentMethodBottomDiv}>
+                        <TouchableOpacity style={styles.paymentMethodBottomDiv} onPress={() => navigation.navigate('Medicine4ByCategory')}>
                             <View style={styles.paymentMethodLeftDiv}>
                                 <View>
-                                    <MaterialCommunityIcons name="cash" size={15} color="#09960E"  onPress={() => navigation.navigate('Medicine4ByCategory')} />
+                                    <MaterialCommunityIcons name="cash" size={15} color="#09960E"   />
                                 </View>
                                 <View>
-                                    <Text style={styles.onlineTxt}  onPress={() => navigation.navigate('Medicine4ByCategory')}>Cash</Text>
+                                    <Text style={styles.onlineTxt} >Cash</Text>
                                 </View>
                             </View>
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
 
